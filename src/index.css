@@ -7,7 +7,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+title {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App{
+max-width: 800px;
+margin: 30px auto;
+text-align: center;
+}
+nav{
+    text-align: center;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+    margin: 10px 0 0;
+    padding: 10px 0;
+}
+nav ul {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+}
+nav ul li {
+  display: block;
+  flex: 0 1 auto;
+  list-style-type: none;
+}
+.category-list {
+padding: 20px;
+margin-bottom: 20px;
+}
+.category-list ul {
+  padding: 0;
+  list-style-type: none;
+}
+.category-list li {
+padding: 10px;
+margin: 10px auto;
+border-radius: 10px;
+}
+li a:hover {
+  background-color: whitesmoke;
 }
