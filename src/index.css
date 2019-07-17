@@ -1,4 +1,14 @@
+#market, #about, #categories, #home {
+  color: white;
+  margin: 5em;
+}
+
 body {
+  background-image: url("hands.jpg");
+  /* background-image: linear-gradient (blue red) */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #cccccc;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -22,7 +32,8 @@ nav{
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
     margin: 10px 0 0;
-    padding: 10px 0;
+    padding: 10px 5px;
+    height: 5px;
 }
 nav ul {
       display: flex;
@@ -32,12 +43,15 @@ nav ul {
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: white;
+      background-color: silver;
 }
 nav ul li {
   display: block;
   flex: 3 1 auto;
+  padding: 10px 90px;
   list-style-type: none;
+  font-family: fantasy;
+  
 }
 .category-list {
 padding: 20px;
@@ -53,5 +67,34 @@ margin: 10px auto;
 border-radius: 15px;
 }
 li a:hover {
-  background-color: #c5c5b8;
+  background-color: silver;
+  width: 800px;
 }
+
+ /* media queries */
+
+  /* Portrait and Landscape */
+  @media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+  
+  }
+  
+  /* Portrait */
+  @media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+  
+  }
+  
+  /* Landscape */
+  @media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+  
+  }

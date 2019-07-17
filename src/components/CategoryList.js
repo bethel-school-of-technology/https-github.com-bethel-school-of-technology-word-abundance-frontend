@@ -4,7 +4,7 @@ class CategoryList extends Component {
     render() {
         return (
             <div className="category-list">
-                <ul>
+                <ul id="categories">
                     <li>Maintenance</li>
                     <li>Tech</li>
                     <li>Visual Arts</li>
