@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import Home from './components/Home';
 import About from './components/About';
 import CategoryList from './components/CategoryList';
-import { BrowserRouter as Router, Route,  } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import SignUp from './components/SignUp';
+import MarketPlace from './components/Marketplace';
+import Contact from './components/Contact';
+import Product from './components/Product';
+import Service from './components/Service';
+import Login from './components/Login';
+import Orders from './components/Orders';
+import Search from './components/Search';
+import { BrowserRouter as Router, Route,  } from 'react-router-dom';
+
 
 import './index.css';
-// import hands from '../src/hands';
 
 const App = () =>
     (
@@ -19,8 +26,13 @@ const App = () =>
                 <Route path='/about' component={About} />
                 <Route path='/categories' component={CategoryList} />
                 <Route path='/signup' component={SignUp} />
-
-                {/* <img src={ hands } /> */}
+                <Route path='/marketplace' component={MarketPlace} />
+                <Route path='/contact' component={Contact} />
+                <Route path='/product' component={Product} />
+                <Route path='/service' component={Service} />
+                <Route path='/login' component={Login} />
+                <Route path='/orders' component={Orders} />
+                <Route path='/search' component={Search} />
 
             </div>
         </Router>

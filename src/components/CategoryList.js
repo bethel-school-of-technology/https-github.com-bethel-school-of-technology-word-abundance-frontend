@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Search from './Search';
 class CategoryList extends Component {
     render() {
         return (
@@ -12,6 +12,7 @@ class CategoryList extends Component {
                     <li>Business</li>
                     <li>Administrative</li>
                 </ul>
+                
             </div>
         );
     }

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import CategoryList from './CategoryList';
 
 class Marketplace extends Component {
     render() {
         return (
             <div>
-                <br />
-                <p id="market">Home page content</p>
+                <CategoryList/>
             </div>
         );
     }
 }
 export default Marketplace;
+

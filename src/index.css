@@ -1,11 +1,14 @@
-#market, #about, #categories, #home {
+#market, #about, #categories, #home, #contact {
   color: white;
   margin: 5em;
 }
 
+DropDown {
+  display: 'block',
+}
+
 body {
   background-image: url("hands.jpg");
-  /* background-image: linear-gradient (blue red) */
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: #cccccc;
@@ -34,6 +37,7 @@ nav{
     margin: 10px 0 0;
     padding: 10px 5px;
     height: 5px;
+    /* display: inline-block; */
 }
 nav ul {
       display: flex;
