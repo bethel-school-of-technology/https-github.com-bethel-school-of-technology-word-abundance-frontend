@@ -14,7 +14,6 @@ import Orders from './components/Orders';
 import Search from './components/Search';
 import { BrowserRouter as Router, Route,  } from 'react-router-dom';
 
-
 import './index.css';
 
 const App = () =>
@@ -33,7 +32,9 @@ const App = () =>
                 <Route path='/login' component={Login} />
                 <Route path='/orders' component={Orders} />
                 <Route path='/search' component={Search} />
+               
 
+                <p id="AbundantLogo">Abundant</p>
             </div>
         </Router>
     );

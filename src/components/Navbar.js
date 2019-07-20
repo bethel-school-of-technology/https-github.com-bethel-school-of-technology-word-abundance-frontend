@@ -5,6 +5,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 
 
+
 class Navbar extends Component {
     render() {
         return (
@@ -18,13 +19,13 @@ class Navbar extends Component {
 
                 <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
+    Marketplace
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+    <Dropdown.Item href="#/action-1">Maintenance</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">Tech</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Music</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>        
                     </Link></li>

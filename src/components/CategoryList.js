@@ -4,6 +4,7 @@ class CategoryList extends Component {
     render() {
         return (
             <div className="category-list">
+                <Search/>
                 <ul id="categories">
                     <li>Maintenance</li>
                     <li>Tech</li>
@@ -11,8 +12,7 @@ class CategoryList extends Component {
                     <li>Music</li>
                     <li>Business</li>
                     <li>Administrative</li>
-                </ul>
-                
+                </ul>  
             </div>
         );
     }
