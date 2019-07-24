@@ -15,11 +15,11 @@ const images = [
 class App extends Component {
     render() {
         return (
-
-            <View style={styles.container}>
-                <BackgroundCarousel images ={images}/>
-            </View>
-            <Carousel>
+            <div className='carousel'>
+                <View style={styles.container}>
+                    <BackgroundCarousel images={images} />
+                </View>
+                <Carousel>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
@@ -56,8 +56,8 @@ class App extends Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-          
 
+            </div>
         );
     }
 }
