@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
+import { React, Component } from 'react'
+import axios from 'axios';
 import './App.css';
+import Marketplace from './components/Marketplace';
+import Carousel from 'react-bootstrap/Carousel';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Abundant App <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const images = [
+    'https://unsplash.com/photos/4K2lIP0zc_k',
+    'https://unsplash.com/photos/gcsNOsPEXfs',
+    'https://unsplash.com/photos/8KfCR12oeUM',
+    'https://unsplash.com/photos/90FzfXFEEjo',
+];
+
+class App extends Component {
+    render() {
+        return (
+
+            <View style={styles.container}>
+                <BackgroundCarousel images ={images}/>
+            </View>
+            <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src=""
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>Home</h3>
+                            <p>The community App to connect your ideas with the audience you're looking for</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src=""
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Contact</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src=""
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+                            <h3>Third slide label</h3>
+                            <p>About</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+          
+
+        );
+    }
 }
 
 export default App;
