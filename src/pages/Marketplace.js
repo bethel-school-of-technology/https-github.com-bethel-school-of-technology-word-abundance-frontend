@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
-import CategoryList from './CategoryList';
+import CategoryList from '../components/CategoryList';
 
 class Marketplace extends Component {
     render() {
