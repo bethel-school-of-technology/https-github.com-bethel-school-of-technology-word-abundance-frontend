@@ -1,5 +1,5 @@
 #AbundantLogo {
-  color: steelblue;
+  color: black;
   font-size: xx-large;
   font-family: fantasy;
   padding: 2em;
@@ -17,8 +17,8 @@
 }
 
 .About, .Home, .Contact {
-  text-align: center;
-  color: steelblue;
+  text-align: left;
+  color: black;
   font-family: fantasy;
   padding: 4em;
 }
@@ -56,8 +56,7 @@ nav{
     text-align: center;
     /* display: flex; */
     flex:auto;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: fantasy;
     margin: auto;
     padding: 20px 0px;
     height: 7px;
@@ -73,6 +72,7 @@ nav ul {
       margin: 0;
       padding: 0;
       background-color: whitesmoke;
+      
 }
 nav ul li {
   padding: 1.7em;
@@ -81,7 +81,8 @@ nav ul li {
 	flex-wrap: nowrap;
 	justify-content: flex-start;
 	align-items: stretch;
-	align-content: center stretch;
+  align-content: center stretch;
+  
 }
 .category-list {
 padding: 20px;
@@ -102,9 +103,22 @@ margin-bottom: 20px;
 	align-content: stretch;
 }
 li a:hover {
-  background-color: white;
+  background-color: transparent;
+  color: slategray;
+  padding: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 0px transparent;
   width: 100%;
   
+}
+
+.dropdown {
+  /* display: none; */
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 160px;
+  z-index: 1;
 }
 
  /* media queries */
