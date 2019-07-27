@@ -4,7 +4,7 @@ export class UserService {
     }
 }
 
-class ArticleServcice {
+class ArticleService {
     getAllArticles(){
 
     }

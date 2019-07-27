@@ -1,65 +1,70 @@
-import { React, Component } from 'react'
-import axios from 'axios';
-import './App.css';
-import Marketplace from './components/Marketplace';
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { 
+    BrowserRouter as Router, Route 
+} from 'react-router-dom';
 
+import {
+    Home,
+    About,
+    Contact,
+    Marketplace,
+    SignUp
+} from './pages';
 
-const images = [
-    'https://unsplash.com/photos/4K2lIP0zc_k',
-    'https://unsplash.com/photos/gcsNOsPEXfs',
-    'https://unsplash.com/photos/8KfCR12oeUM',
-    'https://unsplash.com/photos/90FzfXFEEjo',
-];
+import {
+    // SignUp,
+    // UserLogin,
+} from './pages/Layout/SignUp';
 
-class App extends Component {
-    render() {
-        return (
+import {
+    Search, SearchBar, Button
+} from './containers'
 
-            <View style={styles.container}>
-                <BackgroundCarousel images ={images}/>
-            </View>
-            <Carousel>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src=""
-                            alt="First slide"
-                        />
-                        <Carousel.Caption>
-                            <h3>Home</h3>
-                            <p>The community App to connect your ideas with the audience you're looking for</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src=""
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Contact</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src=""
-                            alt="Third slide"
-                        />
-
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>About</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
-          
-
-        );
-    }
+import {
+    Landing
 }
+    from './pages/Layout/Landing'
+
+import Navbar from './containers/Navbar';
+
+import Tech from './pages/UserService.js/Tech';
+import Card from './components/Card';
+
+// import CategoryList from './Components/CategoryList';
+// import Product from './Components/Product';
+// import Service from './Components/Service';
+// import Orders from './Components/Orders';
+
+const App = () =>
+    (
+        <Router>
+            <div>
+                <Navbar />
+                <br />
+                <Route exact path='/' component={Home} />
+                <Route path='/Contact' component={Contact} />
+                <Route path='/About' component={About} />
+                <Route path='/Marketplace' component={Marketplace} />
+                <Route path='/Tech' component={Tech} />
+                <Route path='/Card' component={Card} />
+                {/* <Route path='/SignUp' component={SignUp} /> */}
+
+{/* <Route path='/Landing' component={Landing} /> */}
+                
+
+
+
+                {/* <Route path='/categories' component={CategoryList} />
+                <Route path='/product' component={Product} />
+                <Route path='/service' component={Service} />
+                <Route path='/orders' component={Orders} />  */}
+
+            </div>
+        </Router>
+    );
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 export default App;

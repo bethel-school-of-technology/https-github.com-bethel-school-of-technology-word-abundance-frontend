@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class Search extends Component {
-    render() {
-        return (
-            <div className="search">
-                <br/>
-                <p id='search'>Search </p>
-            </div>
-        );
-    }
-}
-export default Search;
+const Search = () => (
+    <div>
+        Search Component
+    </div>
+)
+
+export default Search

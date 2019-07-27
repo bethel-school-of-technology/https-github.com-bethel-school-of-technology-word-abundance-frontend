@@ -39,15 +39,15 @@ class About extends Component {
      }
  }
  export default About;
-// class About extends Component {
-//     render() {
+class About extends Component {
+    render() {
 
-//         return (
-//             <div className="about">
-//                 <br />
-//                 <p id='about'>About Abundant </p>
-//             </div>
-//         );
-//     }
-// }
-// export default About;
+        return (
+            <div className="about">
+                <br />
+                <p id='about'>About Abundant </p>
+            </div>
+        );
+    }
+}
+export default About;

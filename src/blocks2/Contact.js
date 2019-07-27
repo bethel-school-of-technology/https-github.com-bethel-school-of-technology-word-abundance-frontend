@@ -5,7 +5,7 @@ class Contact extends Component {
         return (
             <div className="contact">
                 <br />
-                <p id='contact'>Contact </p>
+                <p id='contact'></p>
             </div>
         );
     }

@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import Search from './Search';
-class CategoryList extends Component {
+
+class Categories extends Component {
     render() {
         return (
-            <div className="category-list">
-                <Search/>
+            <div className="categories">
                 <ul id="categories">
-                    <li>Maintenance</li>
-                    <li>Tech</li>
+                    <li>Maintenance</li> 
+                    <li><a href='./tech'>Tech</a></li>
                     <li>Visual Arts</li>
                     <li>Music</li>
                     <li>Business</li>
                     <li>Administrative</li>
-                </ul>  
+                </ul>
             </div>
         );
     }
 }
-export default CategoryList;
+
+export default Categories;

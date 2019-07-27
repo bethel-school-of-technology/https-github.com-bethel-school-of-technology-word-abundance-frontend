@@ -8,14 +8,15 @@ class Navbar extends Component {
         return (
             <nav>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
+                    <li className=""><Link to="/">Home</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/marketplace">Marketplace</Link></li>
-                    <li><Link to="/signup">Signup</Link></li>
+                    <li><Link to="/SignUp">Signup</Link></li>
                 </ul>
             </nav>
         );
     }
 }
+
 export default Navbar;

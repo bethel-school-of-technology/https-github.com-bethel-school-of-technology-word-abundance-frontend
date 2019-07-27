@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Signup extends Component {
+class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = { value: '' };
@@ -14,13 +14,14 @@ class Signup extends Component {
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+        alert('submitted: ' + this.state.value);
         event.preventDefault();
     }
 
     render() {
         return (
-            <div className="SignupForm">
+        
+            <div className="SignUp">
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         First Name:
@@ -43,12 +44,12 @@ class Signup extends Component {
             <input type="text" value={this.state.value} onChange={this.handleChange} />
                     </label>
                     <label> <br />
-                       City: <br/>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        City: <br />
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />
                     </label>
                     <label> <br />
-                       State: <br/>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        State: <br />
+                        <input type="text" value={this.state.value} onChange={this.handleChange} />
                     </label>
                     <input type="submit" value="Submit" />
                 </form>
@@ -57,4 +58,4 @@ class Signup extends Component {
     }
 }
 
-export default Signup;
+export default SignUp;
