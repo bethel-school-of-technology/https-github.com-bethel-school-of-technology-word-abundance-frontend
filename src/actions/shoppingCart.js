@@ -5,15 +5,16 @@ export class shoppingCart extends Component {
         return (
 
 <form className="ui form">
+<br/>
   <h4 className="ui dividing header">Shipping Information</h4>
   <div className="field">
     <label>Name</label>
     <div className="two fields">
       <div className="field">
-        <input type="text" name="shipping[first-name]" placeholder="First Name">
+        <input type="text" name="shipping[first-name]" placeholder="First Name"/>
       </div>
       <div className="field">
-        <input type="text" name="shipping[last-name]" placeholder="Last Name">
+        <input type="text" name="shipping[last-name]" placeholder="Last Name"/>
       </div>
     </div>
   </div>
@@ -21,10 +22,10 @@ export class shoppingCart extends Component {
     <label>Billing Address</label>
     <div className="fields">
       <div className="twelve wide field">
-        <input type="text" name="shipping[address]" placeholder="Street Address">
+        <input type="text" name="shipping[address]" placeholder="Street Address"/>
       </div>
       <div className="four wide field">
-        <input type="text" name="shipping[address-2]" placeholder="Apt #">
+        <input type="text" name="shipping[address-2]" placeholder="Apt #"/>
       </div>
     </div>
   </div>
@@ -89,7 +90,7 @@ export class shoppingCart extends Component {
     <div className="field">
       <label>Country</label>
       <div className="ui fluid search selection dropdown">
-        <input type="hidden" name="country">
+        <input type="hidden" name="country"/>
         <i className="dropdown icon"></i>
         <div className="default text">Select Country</div>
         <div className="menu">
@@ -343,7 +344,7 @@ export class shoppingCart extends Component {
   <div className="field">
     <label>Card Type</label>
     <div className="ui selection dropdown">
-      <input type="hidden" name="card[type]">
+      <input type="hidden" name="card[type]"/>
       <div className="default text">Type</div>
       <i className="dropdown icon"></i>
       <div className="menu">
@@ -365,11 +366,11 @@ export class shoppingCart extends Component {
   <div className="fields">
     <div className="seven wide field">
       <label>Card Number</label>
-      <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
+      <input type="text" name="card[number]" maxlength="16" placeholder="Card #"/>
     </div>
     <div className="three wide field">
       <label>CVC</label>
-      <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
+      <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC"/>
     </div>
     <div className="six wide field">
       <label>Expiration</label>
@@ -392,7 +393,7 @@ export class shoppingCart extends Component {
           </select>
         </div>
         <div className="field">
-          <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
+          <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year"/>
         </div>
       </div>
     </div>
@@ -401,32 +402,32 @@ export class shoppingCart extends Component {
    <div className="field">
     <label>Send Receipt To:</label>
     <div className="ui fluid multiple search selection dropdown">
-      <input type="hidden" name="receipt">
+      <input type="hidden" name="receipt"/>
       <i className="dropdown icon"></i>
       <div className="default text">Saved Contacts</div>
       <div className="menu">
         <div className="item" data-value="jenny" data-text="Jenny">
-          <img className="ui mini avatar image" src="/images/avatar/small/jenny.jpg">
+          <img className="ui mini avatar image" src="/images/avatar/small/jenny.jpg"/>
           Jenny Hess
         </div>
         <div className="item" data-value="elliot" data-text="Elliot">
-          <img className="ui mini avatar image" src="/images/avatar/small/elliot.jpg">
+          <img className="ui mini avatar image" src="/images/avatar/small/elliot.jpg"/>
           Elliot Fu
         </div>
         <div className="item" data-value="stevie" data-text="Stevie">
-          <img className="ui mini avatar image" src="/images/avatar/small/stevie.jpg">
+          <img className="ui mini avatar image" src="/images/avatar/small/stevie.jpg"/>
           Stevie Feliciano
         </div>
         <div className="item" data-value="christian" data-text="Christian">
-          <img className="ui mini avatar image" src="/images/avatar/small/christian.jpg">
+          <img className="ui mini avatar image" src="/images/avatar/small/christian.jpg"/>
           Christian
         </div>
         <div className="item" data-value="matt" data-text="Matt">
-          <img className="ui mini avatar image" src="/images/avatar/small/matt.jpg">
+          <img className="ui mini avatar image" src="/images/avatar/small/matt.jpg"/>
           Matt
         </div>
         <div className="item" data-value="justen" data-text="Justen">
-          <img className="ui mini avatar image" src="/images/avatar/small/justen.jpg">
+          <img className="ui mini avatar image" src="/images/avatar/small/justen.jpg"/>
           Justen Kitsune
         </div>
       </div>
@@ -435,7 +436,7 @@ export class shoppingCart extends Component {
    <div className="ui segment">
     <div className="field">
       <div className="ui toggle checkbox">
-        <input type="checkbox" name="gift" tabindex="0" className="hidden">
+        <input type="checkbox" name="gift" tabindex="0" className="hidden"/>
         <label>Do not include a receipt in the package</label>
       </div>
     </div>

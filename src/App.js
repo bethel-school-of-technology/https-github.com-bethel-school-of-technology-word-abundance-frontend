@@ -14,6 +14,14 @@ import {
     Marketplace,
 } from './pages';
 
+import { 
+    shoppingCart
+} from './actions/shoppingCart';
+
+import Navbar from './containers/Navbar';
+import Tech from './pages/UserService.js/Tech';
+import Card from './components/Card';
+
 // import {
 //     SideNav
 // }
@@ -34,15 +42,9 @@ import {
 //     SearchBar, Button
 // } from './components'
 
-import {
-    Landing
-}
-    from './pages/Layout/Landing'
+import { Landing } from './pages/Layout/Landing'
 
-import Navbar from './containers/Navbar';
 
-import Tech from './pages/UserService.js/Tech';
-import Card from './components/Card';
 
 // import CategoryList from './Components/CategoryList';
 // import Product from './Components/Product';
@@ -61,6 +63,8 @@ const App = () =>
                 <Route path='/Marketplace' component={Marketplace} />
                 <Route path='/Tech' component={Tech} />
                 <Route path='/Card' component={Card} />
+                <Route path='/shoppingCart' component={shoppingCart} />
+
                 {/* <Route path='/SideNav' component={SideNav} /> */}
 
                 {/* <Route path='/SignUp' component={SignUp} /> */}
