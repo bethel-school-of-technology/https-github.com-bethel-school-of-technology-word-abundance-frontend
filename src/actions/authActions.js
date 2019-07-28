@@ -34,7 +34,7 @@ export const signupUser = (userData, history) => dispatch => {
  * 
  * @param {Grabbing User Data and setting token} userData 
  */
-export const loginUser = userData => dispatch => {
+export const userLogin = userData => dispatch => {
   axios
     .post(`${baseUrl}/auth`, userData)
     .then(res => {

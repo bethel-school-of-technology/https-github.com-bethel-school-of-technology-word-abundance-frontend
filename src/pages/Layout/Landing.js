@@ -18,7 +18,7 @@ const CarouselPage = () => {
           <MDBView>
             <img
               className="d-block w-100"
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+              src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" 
               alt="First slide"
             />
           <MDBMask overlay="black-light" />
@@ -53,7 +53,7 @@ const CarouselPage = () => {
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive">Be apart of the solution</h3>
+            <h3 className="h3-responsive">Be a part of the solution</h3>
             <p>Becoming a Partner</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>

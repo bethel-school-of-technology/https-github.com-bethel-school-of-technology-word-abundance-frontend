@@ -9,8 +9,13 @@
 }
 
 #market, #about, #categories, #home, #contact {
+  
   color: black;
   margin: 5em;
+}
+.market {
+  background-color: transparent;
+  /* background-image: url('./images/laugh.jpg'); */
 }
 
 #search {
@@ -154,8 +159,4 @@ li a:hover {
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) {
   
-  }
-
-  .Landing {
-
   }

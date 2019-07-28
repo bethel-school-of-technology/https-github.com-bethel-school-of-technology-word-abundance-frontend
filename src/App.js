@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+
 import './index.css';
 import { 
     BrowserRouter as Router, Route 
@@ -10,17 +12,27 @@ import {
     About,
     Contact,
     Marketplace,
-    SignUp
 } from './pages';
 
-import {
+// import {
+//     SideNav
+// }
+// from './pages/Layout/SideNav';
+
+
+// import {
     // SignUp,
     // UserLogin,
-} from './pages/Layout/SignUp';
+// } from './actions';
 
-import {
-    Search, SearchBar, Button
-} from './containers'
+// import {
+//     FloatSearch
+// } from './components/Card/FloatSearch';
+
+
+// import {
+//     SearchBar, Button
+// } from './components'
 
 import {
     Landing
@@ -49,6 +61,8 @@ const App = () =>
                 <Route path='/Marketplace' component={Marketplace} />
                 <Route path='/Tech' component={Tech} />
                 <Route path='/Card' component={Card} />
+                {/* <Route path='/SideNav' component={SideNav} /> */}
+
                 {/* <Route path='/SignUp' component={SignUp} /> */}
 
 {/* <Route path='/Landing' component={Landing} /> */}
