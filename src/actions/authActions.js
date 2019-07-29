@@ -1,15 +1,15 @@
 import axios from "axios";
-import { GET_ERRORS, SET_CURRENT_USER } from "./types";
-import setAuthToken from "../utils/setAuthToken";
+import { GET_ERRORS, SET_CURRENT_USER } from "../actions/actionTypes";
+import authToken from "../utils/authToken";
 import jwt_decode from "jwt-decode";
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-// signup user: The general idea is that this portion of code is dispatching 
+// signup user: dispatching 
 //              type and the payload to the reducer to manipulate state to 
 //              inlcude that new user.
 /**
- * 
+ 
  * @param {Posting User Data} userData 
  * @param {go to the appropriate response page} history 
  */
@@ -44,7 +44,7 @@ export const userLogin = userData => dispatch => {
       // SET TOKEN TO LOCAL STORAGE
       localStorage.setItem("jwtToken", res.data);
       // SET TO AUTH HEADER
-      setAuthToken(token);
+      authToken(token);
       // DECODE TOKEN TO GET USER DATA
       const decoded = jwt_decode(res.data);
       // SET CURRENT USER
@@ -77,7 +77,7 @@ export const logoutUser = () => dispatch => {
   // remove token from local storage
   localStorage.removeItem("jwtToken");
   //remove auth header for future requests
-  setAuthToken(false);
+  authToken(false);
   // set current use to {} wich will set isAuthenticated to false
   dispatch(setCurrentUser({}));
 };

@@ -3,15 +3,15 @@ import ReactTransitionGroup from 'react-addons-transition-group'
 import AnimatedFAB from 'material-ui-animated-fab'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 
-// export class Button extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <p> button </p>
-//             </div>
-//         )
-//     }
-// }
+export class Button extends Component {
+    render() {
+        return (
+            <div>
+                <p> button </p>
+            </div>
+        )
+    }
+}
 let fab = ''
 if (smth) {
     fab = (

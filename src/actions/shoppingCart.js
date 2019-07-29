@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-
+import Avatar from 'react-avatar';
 export class shoppingCart extends Component {
     render() {
         return (
-
-<form className="ui form">
+<div className='container'>
+  <div className='row'>
+    <div className='col-sm-1'>
+</div>
+<div className='col-sm-11'>
+<form onSubmit={this.handleChange} className="ui form">
 <br/>
   <h4 className="ui dividing header">Shipping Information</h4>
   <div className="field">
@@ -90,7 +94,7 @@ export class shoppingCart extends Component {
     <div className="field">
       <label>Country</label>
       <div className="ui fluid search selection dropdown">
-        <input type="hidden" name="country"/>
+        {/* <input type="hidden" name="country"/> */}
         <i className="dropdown icon"></i>
         <div className="default text">Select Country</div>
         <div className="menu">
@@ -443,7 +447,9 @@ export class shoppingCart extends Component {
   </div>
   <div className="ui button" tabindex="0">Submit Order</div>
 </form>
-
+</div>
+ </div>
+  </div>
      );
     }
 }

@@ -18,8 +18,8 @@ class SideNav extends Component {
     </a>
     <br/>
                 </div>
-                <div className="pusher">
-
+                <div className="maintenance">
+                    Maintenance
                 </div>
           </div>
         );

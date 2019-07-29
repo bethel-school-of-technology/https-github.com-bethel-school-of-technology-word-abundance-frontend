@@ -21,6 +21,11 @@ import {
 import Navbar from './containers/Navbar';
 import Tech from './pages/UserService.js/Tech';
 import Card from './components/Card';
+import SignUp from './actions/SignUp';
+
+// import Button from './components/Card/Button';
+
+
 
 // import {
 //     SideNav
@@ -28,19 +33,15 @@ import Card from './components/Card';
 // from './pages/Layout/SideNav';
 
 
-// import {
-    // SignUp,
-    // UserLogin,
-// } from './actions';
+
+
 
 // import {
 //     FloatSearch
 // } from './components/Card/FloatSearch';
 
 
-// import {
-//     SearchBar, Button
-// } from './components'
+
 
 import { Landing } from './pages/Layout/Landing'
 
@@ -64,10 +65,12 @@ const App = () =>
                 <Route path='/Tech' component={Tech} />
                 <Route path='/Card' component={Card} />
                 <Route path='/shoppingCart' component={shoppingCart} />
+                <Route path='/signup' component={SignUp} />
+                {/* <Route path='/button' component={Button} /> */}
 
                 {/* <Route path='/SideNav' component={SideNav} /> */}
 
-                {/* <Route path='/SignUp' component={SignUp} /> */}
+                
 
 {/* <Route path='/Landing' component={Landing} /> */}
                 
