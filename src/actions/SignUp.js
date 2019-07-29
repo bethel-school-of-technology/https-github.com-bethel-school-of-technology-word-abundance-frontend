@@ -20,10 +20,16 @@ class SignUp extends Component {
 
     render() {
         return (
-        
+            <div className='container'>
+            <div className='row'>
+              <div className='col-sm-4'>
+          </div>
+          <div className='col-sm-8'>
             <div className="SignUp">
                 <form onSubmit={this.handleSubmit} className>
+                   <br/>
                    <br/> 
+
                    <label>
                         First Name:
                         <br/>
@@ -69,6 +75,9 @@ class SignUp extends Component {
                     <input type="submit" value="Submit" />
                     
                 </form>
+            </div>
+            </div>
+            </div>
             </div>
         );
     }

@@ -27,10 +27,7 @@ import SignUp from './actions/SignUp';
 
 
 
-// import {
-//     SideNav
-// }
-// from './pages/Layout/SideNav';
+// import SideNavPage from './pages/Layout/SideNavPage';
 
 
 
@@ -68,7 +65,7 @@ const App = () =>
                 <Route path='/signup' component={SignUp} />
                 {/* <Route path='/button' component={Button} /> */}
 
-                {/* <Route path='/SideNav' component={SideNav} /> */}
+                {/* <Route path='/SideNavPage' component={SideNavPage} /> */}
 
                 
 

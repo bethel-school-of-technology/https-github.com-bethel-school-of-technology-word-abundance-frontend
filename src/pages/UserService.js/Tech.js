@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Card from '../../components/Card';
-import SideNav from '../Layout/SideNav';
+// import SideNavPage from '../Layout/SideNavPage';
 class Tech extends Component {
     render() {
         return (
             <div>
+            {/* <SideNav/> */}
             <div className='container'>
                 <div className='row'>
                     <div className='col-sm-4'>
-                      {/* <SideNav/> */}
+                      
                     </div>
                     <br />
                     <div className='col-sm-12'>
