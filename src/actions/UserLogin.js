@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { UserLogin } from './authActions';
+// import { UserLogin } from './authActions';
 
 
 export class UserLogin extends Component {
-    constructor() {
-      super();
-      this.state = {
-        email: '',
-        password: '',
-        errors: {},
-      };
-  
-      this.onChange = this.onChange.bind(this);
-      this.onSubmit = this.onSubmit.bind(this);
+  constructor(props) {
+    super(props);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this)
+    this.state = {
+      email:'',
+      password:'',
+      errors: {},
+    };
+  }
+      handleEmailChange(e){
+        this.setState({email:e.target.value})
+    }
+    handlePasswordChange(e){
+        this.setState({password:e.target.value})
     }
   
     componentDidMount() {
