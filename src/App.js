@@ -27,7 +27,7 @@ import SignUp from './actions/SignUp';
 
 
 
-// import SideNavPage from './pages/Layout/SideNavPage';
+import SideNav from './pages/Layout/SideNav';
 
 
 
@@ -63,11 +63,9 @@ const App = () =>
                 <Route path='/Card' component={Card} />
                 <Route path='/shoppingCart' component={shoppingCart} />
                 <Route path='/signup' component={SignUp} />
-                {/* <Route path='/button' component={Button} /> */}
+                <Route path='/SideNav' component={SideNav} />
 
-                {/* <Route path='/SideNavPage' component={SideNavPage} /> */}
-
-                
+                 {/* <Route path='/button' component={Button} /> */}
 
 {/* <Route path='/Landing' component={Landing} /> */}
                 

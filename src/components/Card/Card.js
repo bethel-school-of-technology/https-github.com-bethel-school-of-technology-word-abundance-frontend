@@ -20,7 +20,7 @@ class Card extends Component {
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
-                                <a href='/shoppingCart'>Buy </a>    
+                                <a href='/shoppingCart'>Add To Shopping Cart </a>    
     </div>
                             </div>
                             <br />
@@ -33,7 +33,7 @@ class Card extends Component {
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
-                                    <a href='/shoppingCart'>Buy </a> 
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
     </div>
                             </div>
                             <br />
@@ -46,7 +46,7 @@ class Card extends Component {
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
-                                    <a href='/shoppingCart'>Buy </a> 
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
     </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ class Card extends Component {
                                 <br/>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
-                                    <a href='/shoppingCart'>Buy </a> 
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
     </div>
                             </div>
                             <br />
@@ -82,7 +82,7 @@ class Card extends Component {
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
-                                    <a href='/shoppingCart'>Buy </a> 
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
     </div>
                             </div>
                             <br />
@@ -95,7 +95,7 @@ class Card extends Component {
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
-                                    <a href='/shoppingCart'>Buy </a> 
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
     </div>
                             </div>
                         </div>

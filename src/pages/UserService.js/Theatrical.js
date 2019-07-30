@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import Card from '../../components/Card';
 import SideNav from '../Layout/SideNav';
-class Tech extends Component {
+class Theatrical extends Component {
     render() {
         return (
             <div>
-            
+            <SideNav/>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-sm-2'>
-                      <SideNav/>
+                    <div className='col-sm-4'>
+                      
                     </div>
                     <br />
-                    <div className='col-sm-10'>
-                    <h3> Tech Services</h3>
+                    <div className='col-sm-12'>
+                    <h3> Theatrical Services</h3>
                     <Card />
                     </div>
                 </div>
@@ -22,4 +22,4 @@ class Tech extends Component {
         );
     }
 }
-export default Tech;
+export default Theatrical;
