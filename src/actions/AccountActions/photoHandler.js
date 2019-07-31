@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class About extends Component {
+class photoHandler extends Component {
 
-    
     state = {
         selectedFile: null
     }
@@ -38,16 +37,5 @@ class About extends Component {
          );
      }
  }
- export default About;
-class About extends Component {
-    render() {
-
-        return (
-            <div className="about">
-                <br />
-                <p id='about'>About Abundant </p>
-            </div>
-        );
-    }
-}
-export default About;
+ 
+export default photoHandler;

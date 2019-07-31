@@ -9,21 +9,15 @@ class Home extends Component {
                 <br />
                 <br />
                 <Landing />
+                <div class="ui piled segment">
+                    <h3 class="ui header">Abundant</h3>
+                    <p>Our mission is to join entrepreneurs around the world to bring quality marketing and digital edge to the communities who work so hard to bring us value.</p>
+                    <p>content content content content content content content content content content content.</p>
+                    <p>content content content content content content content content content content content content.</p>
+                </div>
             </div>
         );
     }
 }
-
-// return (
-//     <div>
-//       <Jumbotron fluid>
-//         <Container fluid>
-//           <h1 className="display-3">Fluid jumbotron</h1>
-//           <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-//         </Container>
-//       </Jumbotron>
-//     </div>
-//   );
-// };
 
 export default Home;

@@ -16,12 +16,12 @@ import {
 
 import { 
     shoppingCart
-} from './actions/shoppingCart';
+} from './actions/Shop/shoppingCart';
 
-import Navbar from './containers/Navbar';
+import Navbar from './pages/Layout/Navbar';
 import Tech from './pages/UserService.js/Tech';
 import Card from './components/Card';
-import SignUp from './actions/SignUp';
+import SignUp from './actions/AccountActions/SignUp';
 
 // import Button from './components/Card/Button';
 

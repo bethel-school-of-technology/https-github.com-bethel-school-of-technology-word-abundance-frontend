@@ -4,14 +4,39 @@ class Categories extends Component {
     render() {
         return (
             <div className="categories">
-                <ul id="categories">
-                    <li>Maintenance</li> 
-                    <li><a href='./tech'>Tech</a></li>
-                    <li>Visual Arts</li>
-                    <li>Music</li>
-                    <li>Business</li>
-                    <li>Administrative</li>
-                </ul>
+                <div class="ui segments">
+  <div class="ui segment">
+    <p>Offered by our Community</p>
+  </div>
+  <div class="ui segments">
+    <div class="ui segment">
+      <p>This Week</p>
+    </div>
+    <div class="ui segment">
+      <p>Profiled</p>
+    </div>
+    <div class="ui segment">
+      <p>Events</p>
+    </div>
+  </div>
+  <div class="ui segment">
+  <a href='/maintenance'> <p>Maintenance</p> </a>
+  </div>
+  <div class="ui horizontal segments">
+    <div class="ui segment">
+     <a href='/entertainment'> <p>Entertainment</p> </a>
+    </div>
+    <div class="ui segment">
+    <a href='/business'> <p>Business</p> </a>
+    </div>
+    <div class="ui segment">
+    <a href='/tech'> <p>Tech</p> </a>
+    </div>
+  </div>
+  <div class="ui segment">
+  <a href='/creative'> <p>Creative</p> </a>
+  </div>
+</div>
             </div>
         );
     }
