@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Card from '../../../components/Card';
 import SideNav from '../Layout/SideNav';
-class Landscaping extends Component {
+
+class Plumbing extends Component {
     render() {
         return (
             <div>
@@ -13,7 +14,7 @@ class Landscaping extends Component {
                     </div>
                     <br />
                     <div className='col-sm-12'>
-                    <h3> Landscaping Services</h3>
+                    <h3> Plumbing Services</h3>
                     <Card />
                     </div>
                 </div>
@@ -22,4 +23,4 @@ class Landscaping extends Component {
         );
     }
 }
-export default Landscaping;
+export default Plumbing;

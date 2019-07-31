@@ -19,7 +19,7 @@ import {
 } from './actions/Shop/shoppingCart';
 
 import Navbar from './pages/Layout/Navbar';
-import Tech from './pages/UserService.js/Tech';
+import Tech from './pages/UserService.js/Tech/DevServices.js/BackEnd';
 import Card from './components/Card';
 import SignUp from './actions/AccountActions/SignUp';
 

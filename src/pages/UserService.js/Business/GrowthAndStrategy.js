@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import Card from '../../components/Card';
+import Card from '../../../components/Card';
 import SideNav from '../Layout/SideNav';
-class VisualArts extends Component {
+
+class GrowthAndStrategy extends Component {
     render() {
         return (
             <div>
-            
+            <SideNav/>
             <div className='container'>
                 <div className='row'>
                     <div className='col-sm-4'>
-                  <SideNav/>    
+                      
                     </div>
                     <br />
                     <div className='col-sm-12'>
-                    <h3> Visual Arts</h3>
+                    <h3> Growth And Strategy Services</h3>
                     <Card />
                     </div>
                 </div>
@@ -22,4 +23,4 @@ class VisualArts extends Component {
         );
     }
 }
-export default VisualArts;
+export default GrowthAndStrategy;

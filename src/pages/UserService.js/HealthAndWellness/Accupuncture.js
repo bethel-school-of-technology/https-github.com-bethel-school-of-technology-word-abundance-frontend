@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import Card from '../../../components/Card';
-import SideNav from '../Layout/SideNav';
-class Landscaping extends Component {
+import Card from '../../../../components/Card';
+import SideNav from '../../../Layout/SideNav';
+
+class Accupuncture extends Component {
     render() {
         return (
             <div>
-            <SideNav/>
+            
             <div className='container'>
                 <div className='row'>
-                    <div className='col-sm-4'>
-                      
+                    <div className='col-sm-2'>
+                      <SideNav/>
                     </div>
                     <br />
-                    <div className='col-sm-12'>
-                    <h3> Landscaping Services</h3>
+                    <div className='col-sm-10'>
+                    <h3> Accupuncture Services</h3>
                     <Card />
                     </div>
                 </div>
@@ -22,4 +23,4 @@ class Landscaping extends Component {
         );
     }
 }
-export default Landscaping;
+export default Accupuncture;

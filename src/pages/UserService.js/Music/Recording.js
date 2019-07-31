@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Card from '../../components/Card';
+import Card from '../../../components/Card';
 import SideNav from '../Layout/SideNav';
-class Theatrical extends Component {
+
+class Recording extends Component {
     render() {
         return (
             <div>
@@ -13,7 +14,7 @@ class Theatrical extends Component {
                     </div>
                     <br />
                     <div className='col-sm-12'>
-                    <h3> Theatrical Services</h3>
+                    <h3> Recording Services</h3>
                     <Card />
                     </div>
                 </div>
@@ -22,4 +23,4 @@ class Theatrical extends Component {
         );
     }
 }
-export default Theatrical;
+export default Recording;
