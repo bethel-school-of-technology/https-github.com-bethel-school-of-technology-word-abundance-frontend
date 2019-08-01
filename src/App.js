@@ -25,6 +25,7 @@ import SignUp from './actions/AccountActions/SignUp';
 
 // import Button from './components/Card/Button';
 
+// import { Rate, Star } from './components/Card/Rate';
 
 
 import SideNav from './pages/Layout/SideNav';
@@ -64,6 +65,8 @@ const App = () =>
                 <Route path='/shoppingCart' component={shoppingCart} />
                 <Route path='/signup' component={SignUp} />
                 <Route path='/SideNav' component={SideNav} />
+                {/* <Route path='/Rate' component={Rate} /> */}
+                
 
                  {/* <Route path='/button' component={Button} /> */}
 

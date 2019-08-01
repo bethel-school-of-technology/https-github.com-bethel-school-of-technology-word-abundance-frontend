@@ -12,7 +12,7 @@ class SideNav extends Component {
             <div>
                 <br/>
                 
-                <Button color="primary" onClick={this.toggle}>Product Categories</Button>
+                <Button color="secondary" onClick={this.toggle}>Product Categories</Button>
                 <Fade in={this.state.fadeIn} tag="h5" className="mt-3">
                     <h3>Product Categories</h3>
                     <ul>

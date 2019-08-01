@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-
+import SideNav from '../../pages/Layout/SideNav';
 class ProductCard extends Component {
     render() {
         return (
 
        
             <div className="ui cards raised-card">
-
+                <SideNav/>
                 <div className="ProductCard">
                     <div className="content">
                         <div className="header">Product Description</div>

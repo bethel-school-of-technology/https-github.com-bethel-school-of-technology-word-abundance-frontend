@@ -8,7 +8,8 @@ class Marketplace extends Component {
 
             <div className='market'>
                 <br />
-                <h1>Marketplace</h1>
+                {/* <SideNav/> */}
+                <h2>Marketplace</h2>
                 <Categories />
             </div>
         );
