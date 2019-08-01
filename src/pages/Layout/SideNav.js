@@ -1,7 +1,12 @@
 import React from 'react';
-import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
-class SideNav extends React.Component{
-  render(){
+import {
+  Navbar,
+  Nav, 
+  NavDropdown, 
+  Container
+} from 'react-bootstrap';
+
+export const SideNav = () => {
     return(
       <React.Fragment>
       <Navbar expand="false">
@@ -23,6 +28,3 @@ class SideNav extends React.Component{
       </React.Fragment>
     )
   }
-};
-
-export default SideNav;
