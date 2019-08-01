@@ -9,6 +9,9 @@ class AdminDashboard extends Component {
         return (  
             <React.Fragment>
                 <h1>Admin Dashboard Component</h1>
+                {/* Delete Posts */}
+                {/* Delete Users */}
+                {/* Update Users Password */}
             </React.Fragment>
         );
     }
