@@ -6,7 +6,9 @@ import {
   Container
 } from 'react-bootstrap';
 
-export const SideNav = () => {
+class SideNav extends React.Component {
+  render(){
+    
     return(
       <React.Fragment>
       <Navbar expand="false">
@@ -28,3 +30,6 @@ export const SideNav = () => {
       </React.Fragment>
     )
   }
+}
+
+export default SideNav;
