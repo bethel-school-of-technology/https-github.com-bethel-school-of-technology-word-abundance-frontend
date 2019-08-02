@@ -9,7 +9,7 @@ class Home extends Component {
                 <br />
                 <br />
                 <Landing />
-                <div class="ui piled segment">
+                <div class="ui fluid segment">
                     <h3 class="ui header">Abundant</h3>
                     <p>Our mission is to join entrepreneurs around the world to bring quality marketing and digital edge to the communities who work so hard to bring us value.</p>
                     <p>content content content content content content content content content content content.</p>

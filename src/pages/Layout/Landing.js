@@ -1,10 +1,11 @@
 import React from "react";
-// import SignUp from './SignUp';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
 
+
 const CarouselPage = () => {
   return (
+  <div className='LandingBG'>
     <MDBContainer>
       <MDBCarousel
       activeItem={1}
@@ -16,11 +17,8 @@ const CarouselPage = () => {
       <MDBCarouselInner>
         <MDBCarouselItem itemId="1">
           <MDBView>
-            <img
-              className="d-block w-100"
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" 
-              alt="First slide"
-            />
+          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/smilingBabySmall.jpg')} alt="smilingBaby" style={{ width: "100%"}}/> 
+           
           <MDBMask overlay="black-light" />
           </MDBView>
           <MDBCarouselCaption>
@@ -60,6 +58,7 @@ const CarouselPage = () => {
       </MDBCarouselInner>
     </MDBCarousel>
     </MDBContainer>
+    </div>
   );
 }
 

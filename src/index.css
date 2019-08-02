@@ -18,6 +18,16 @@
   /* background-image: url('./images/laugh.jpg'); */
 }
 
+
+.LandingBG {
+  position: relative;
+  background: url("./images/abundantBG.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 250vh;
+}
+
 #search {
   color: black;
 }
