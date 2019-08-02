@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -8,7 +8,9 @@ import {
   withRouter
 } from "react-router-dom";
 import Dashboard from './Dashboard'
+import Login from './Login'
 // import { userInfo } from "os";
+
 
 ////////////////////////////////////////////////////////////
 // 1. Click the public page
@@ -147,28 +149,6 @@ export function Protected() {
   return <h3>Protected</h3>;
 }
 
-export class Login extends Component {
-  state = { redirectToReferrer: false };
 
-  login = () => {
-    fakeAuth.authenticate(() => {
-      this.setState({ redirectToReferrer: true });
-    });
-  };
-
-  render() {
-    let { from } = this.props.location.state || { from: { pathname: "/" } };
-    let { redirectToReferrer } = this.state;
-
-    if (redirectToReferrer) return <Redirect to={from} />;
-
-    return (
-      <div>
-        <p>You must log in to view the page at {from.pathname}</p>
-        <button onClick={this.login}>Log in</button>
-      </div>
-    );
-  }
-}
 
 export default AuthExample;
