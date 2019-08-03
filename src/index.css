@@ -18,17 +18,30 @@
   color: black;
 }
 
+.magnify {
+  border: solid black;
+  margin: 2em;
+}
+
+.marketgrid {
+  border: solid black;
+  margin: 2em;
+}
+
 
 #market, #about, #categories, #home, #contact {
   
   color: black;
   margin: 5em;
+  background-image: url('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/planner.jpg');
 }
 .market {
   background-color: transparent;
+  text-align: center;
 }
-
-
+.connectHere {
+  color: black;
+}
 .LandingBG {
   position: relative;
   background: url("./images/abundantBG.jpg") no-repeat;

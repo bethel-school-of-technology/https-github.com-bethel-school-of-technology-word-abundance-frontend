@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Categories from '../../containers/Topics.js/Categories';
-// import SideNav from './SideNav';
 
 class Marketplace extends Component {
     render() {
@@ -8,7 +7,7 @@ class Marketplace extends Component {
 
             <div className='market'>
                 <br />
-                {/* <SideNav/> */}
+                <br />
                 <h2>Marketplace</h2>
                 <Categories />
             </div>

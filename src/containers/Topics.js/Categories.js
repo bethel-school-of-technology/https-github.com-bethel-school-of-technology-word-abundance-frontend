@@ -15,7 +15,8 @@ class Categories extends Component {
     return (
       
       <main>
-      <div className="ui placeholder segment">
+      <div className='magnify'>
+        <div className="ui placeholder segment">
         <div className="ui two column stackable center aligned grid">
           <div className="ui vertical divider">Or</div>
           <div className="middle aligned row">
@@ -47,8 +48,9 @@ class Categories extends Component {
           </div>
         </div>
       </div>
-
-      <div classNameName="ui placeholder segment">
+</div>
+      <div className='marketgrid'>
+ <div classNameName="ui placeholder segment">
         <div className="ui segments">
           <div className="ui segment">
             <p>Offered by our Community</p>
@@ -82,6 +84,8 @@ class Categories extends Component {
             <a href='/creative'> <p>Creative</p> </a>
           </div>
         </div>
+      </div>
+      
       </div>
       </main>  
     );

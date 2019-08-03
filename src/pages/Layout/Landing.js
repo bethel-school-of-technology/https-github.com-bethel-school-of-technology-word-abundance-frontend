@@ -37,7 +37,7 @@ const CarouselPage = () => {
           </MDBView>
           <MDBCarouselCaption>
             <h3 className="h3-responsive">Get Connected</h3>
-            <a href='./SignUp'>Your Community Starts Here</a>
+            <div className='connectHere'><a href='./SignUp'>Your Community Starts Here</a></div>
           
           </MDBCarouselCaption>
         </MDBCarouselItem>
