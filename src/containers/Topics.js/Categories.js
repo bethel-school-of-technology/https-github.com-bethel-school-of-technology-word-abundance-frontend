@@ -13,6 +13,7 @@ class Categories extends Component {
 
   render() {
     return (
+      
       <main>
       <div className="ui placeholder segment">
         <div className="ui two column stackable center aligned grid">
@@ -74,7 +75,7 @@ class Categories extends Component {
               <a href='/business'> <p>Business</p> </a>
             </div>
             <div className="ui segment">
-              <a href='/tech'> <p>Tech</p> </a> 
+              <a href='/Frontend'> <p>Tech</p> </a> 
             </div>
           </div>
           <div className="ui segment">

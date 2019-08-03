@@ -14,7 +14,7 @@ class FrontEnd extends Component {
                     </div>
                     <br />
                     <div className='col-sm-12'>
-                    <h3> Front End </h3>
+                    <h3> Front End Services </h3>
                     <Card />
                     </div>
                 </div>

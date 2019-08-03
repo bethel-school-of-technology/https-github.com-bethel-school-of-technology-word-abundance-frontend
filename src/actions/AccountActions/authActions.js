@@ -1,18 +1,16 @@
 import axios from "axios";
-import { GET_ERRORS, SET_CURRENT_USER } from "../TypesAndFields/actionTypes";
+import { GET_ERRORS, SET_CURRENT_USER } from "../../actions/TypesAndFields/actionTypes";
 import authToken from "../../utils/authToken";
 import jwt_decode from "jwt-decode";
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 /**
- 
  * @param {Posting User Data} userData 
  * @param {go to the appropriate response page} history 
  */
 export const signupUser = (userData, history) => dispatch => {
 
-  
   axios
     .post(`${baseUrl}/users/signup`, userData)
     .then(res => history.push("/login"))
@@ -32,9 +30,10 @@ export const userLogin = userData => dispatch => {
   axios
     .post(`${baseUrl}/auth`, userData)
     .then(res => {
-      // SAVE TO LOCAL STORAGE
-      //const { token } = res.data
-      const { token } = res.data; // = token
+     
+      
+      const { token } = res.data; 
+      // = token
       // SET TOKEN TO LOCAL STORAGE
       localStorage.setItem("jwtToken", res.data);
       // SET TO AUTH HEADER

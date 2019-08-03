@@ -8,8 +8,8 @@ class About extends Component {
                 <br />
                 <br />
                 <Landing />
-                <div class="ui raised segment">
-                    <h3 class="ui header">About</h3>
+                <div className="ui raised segment">
+                    <h3 className="ui header">About</h3>
                     <p>Our mission is to join entrepreneurs around the world to bring quality marketing and digital edge to the communities who work so hard to bring us value.</p>
                     <p>content content content content content content content content content content content.</p>
                     <p>content content content content content content content content content content content content.</p>

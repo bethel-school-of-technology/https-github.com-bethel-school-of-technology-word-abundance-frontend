@@ -6,11 +6,11 @@ class BackEnd extends Component {
     render() {
         return (
             <div>
-            
+            <SideNav/>
             <div className='container'>
                 <div className='row'>
                     <div className='col-sm-2'>
-                      <SideNav/>
+                      
                     </div>
                     <br />
                     <div className='col-sm-10'>
