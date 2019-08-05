@@ -26,6 +26,7 @@ import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
 
 import Card from './components/Card';
 import SignUp from './actions/AccountActions/SignUp';
+// import UserLogin from './actions/AccountActions/UserLogin';
 import SideNav from './pages/Layout/SideNav';
 import { Landing } from './pages/Layout/Landing';
 
@@ -47,6 +48,7 @@ const App = () =>
                 <Route path='/Card' component={Card} />
                 <Route path='/shoppingCart' component={shoppingCart} />
                 <Route path='/signup' component={SignUp} />
+                {/* <Route path='/UserLogin' component={UserLogin} /> */}
                 <Route path='/SideNav' component={SideNav} />
 
                   </div>

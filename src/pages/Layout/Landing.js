@@ -28,29 +28,23 @@ const CarouselPage = () => {
         </MDBCarouselItem>
         <MDBCarouselItem itemId="2">
           <MDBView>
-            <img
-              className="d-block w-100"
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
-              alt="Second slide"
-            />
+          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/CommunityNew.jpg')} alt="smilingBaby" style={{ width: "100%"}}/> 
           <MDBMask overlay="black-strong" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive">Get Connected</h3>
-            <div className='connectHere'><a href='./SignUp'>Your Community Starts Here</a></div>
-          
+            <div id='connectHere'><a href='./SignUp'><h4 className="h3-responsive">Get Connected</h4></a>
+            </div>
+          <br/>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="3">
           <MDBView>
-            <img
-              className="d-block w-100"
-              src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
-              alt="Third slide"
-            />
+          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/SolutionsNew2.jpg')} alt="smilingBaby" style={{ width: "100%"}}/> 
+          
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
+            
             <h3 className="h3-responsive">Be a part of the solution</h3>
             <p>Becoming a Partner</p>
           </MDBCarouselCaption>

@@ -13,10 +13,21 @@
  color: black;
 }
 
-#contactNav, #aboutNav, #marketNav, #signupNav {
+#contactNav, #aboutNav, #marketNav, #signupNav, #loginNav {
   font-family: e;
   color: black;
 }
+
+#connectHere {
+  color: black;
+  border: 1px solid white;
+  background-color: white;
+  margin-left: 13em;
+  margin-right: 13em;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
 
 .magnify {
   border: solid black;
@@ -105,6 +116,7 @@ nav{
     margin: auto;
     padding: 20px 0px;
     height: 7px;
+    background-color: purple
     /* width:  */
     /* display: inline-block; */
 }
