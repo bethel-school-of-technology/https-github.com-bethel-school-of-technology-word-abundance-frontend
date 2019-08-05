@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import {Tab, Col, Nav, Row} from 'react-bootstrap';
-import Profile from './Profile';
-import Blog from './Blog';
-import Options from "./Options";
-import Header from './Header';
+import Profile from './Tabs/Profile';
+import Blog from './Tabs/Blog';
+import Options from "./Tabs/Options";
+import requireAuth from '../requireAuth'
+import MyProductsService from './Tabs/Products_Service';
 
 class Dashboard extends Component {
     render() { 
         return (
         <React.Fragment>
-            <Header />
             <div className="container-fluid">
             <div className="row">
             <div className="col-sm-12">
@@ -21,10 +21,13 @@ class Dashboard extends Component {
                 <Nav.Link eventKey="first">Profile</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="second">Blog</Nav.Link>
+                <Nav.Link eventKey="second">My Products/Services</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="third">Options</Nav.Link>
+                <Nav.Link eventKey="third">Blog</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                <Nav.Link eventKey="fourth">Options</Nav.Link>
                 </Nav.Item>
             </Nav>
             </Col>
@@ -34,9 +37,12 @@ class Dashboard extends Component {
                 <Profile />
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                <Blog />
+                <MyProductsService />
                 </Tab.Pane>
                 <Tab.Pane eventKey="third">
+                <Blog />
+                </Tab.Pane>
+                <Tab.Pane eventKey="fourth">
                 <Options />
                 </Tab.Pane>
                 </Tab.Content>
@@ -51,4 +57,4 @@ class Dashboard extends Component {
     }
 }
  
-export default Dashboard;
+export default requireAuth(Dashboard);

@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "proxy": "https://localhost:3001",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,10 +16,14 @@
     "react-bootstrap": "^1.0.0-beta.10",
     "react-containers": "^16.0.5",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.1",
+    "redux": "^4.0.4",
+    "redux-form": "^8.2.5",
+    "redux-thunk": "^2.3.0",
     "semantic-ui": "^2.4.2",
     "semantic-ui-dropdown": "^2.4.1",
     "the-jumbotron": "^3.0.8"
