@@ -1,15 +1,20 @@
 import React from 'react';
-
+import {Tabs, Tab} from 'react-bootstrap';
+ 
 class Blog extends React.Component {
 
     render() { 
     return (  
     <React.Fragment>
         <subheader>SubHeader Component</subheader>
-        <h6>Add New Post</h6>
-        <h6>Edit Posts</h6>
-        <h6>Delete Posts</h6>
-        <h3>Add New Blog Post</h3>
+        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
+        <Tab eventKey="home" title="Home">
+        </Tab>
+        <Tab eventKey="profile" title="Profile">
+        </Tab>
+        <Tab eventKey="contact" title="Contact" disabled>
+        </Tab>
+        </Tabs>
         <div className="col-md-5">
           <div className="form-area">  
               <form>

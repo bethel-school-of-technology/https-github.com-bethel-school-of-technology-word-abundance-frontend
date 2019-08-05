@@ -26,8 +26,8 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/signout">Signout</Nav.Link>
                 <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                <Nav.Link href="/signout">Signout</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
