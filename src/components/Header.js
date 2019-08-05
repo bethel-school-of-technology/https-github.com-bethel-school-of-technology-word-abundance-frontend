@@ -12,17 +12,22 @@ class Header extends React.Component {
           <Navbar.Brand id="logo" href="/">Abundance</Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link to="/">Home</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
                 <NavDropdown title="About">
                   <NavDropdown.Item href="/whoweare">Who We Are</NavDropdown.Item>
                   <NavDropdown.Item href="/meettheteam">Meet The Team</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Our Vision">
+                  <NavDropdown.Item href="/whoweare">Our History</NavDropdown.Item>
+                  <NavDropdown.Item href="/meettheteam">Our Present</NavDropdown.Item>
+                  <NavDropdown.Item href="/meettheteam">Our Future</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Marketplace">
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link to="/signout">Signout</Nav.Link>
-                <Nav.Link to="/dashboard">Dashboard</Nav.Link>
+                <Nav.Link href="/signout">Signout</Nav.Link>
+                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -36,17 +41,22 @@ class Header extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link to="/">Home</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
                 <NavDropdown title="About">
                   <NavDropdown.Item href="/whoweare">Who We Are</NavDropdown.Item>
                   <NavDropdown.Item href="/meettheteam">Meet The Team</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Our Vision">
+                  <NavDropdown.Item href="/whoweare">Our History</NavDropdown.Item>
+                  <NavDropdown.Item href="/meettheteam">Our Present</NavDropdown.Item>
+                  <NavDropdown.Item href="/meettheteam">Our Future</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Marketplace">
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link to="/signup">SignUp</Nav.Link>
-                <Nav.Link to="/signin">SignIn</Nav.Link>
+                <Nav.Link href="/signup">SignUp</Nav.Link>
+                <Nav.Link href="/signin">SignIn</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

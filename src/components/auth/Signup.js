@@ -18,10 +18,27 @@ class Signup extends Component {
       <React.Fragment>
       <div className="container-fluid">
       <div className="row">
-      <div className="col-sm-12">
+      <div className="col-sm-4">
+      </div>
+      <div className="col-sm-4">
       <form onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
-          <label>Email</label>
+        <h3>Join Our Community!</h3>
+          <label>First Name:</label>
+          <Field
+            name="firstName"
+            type="text"
+            component="input"
+            autoComplete="none"
+          /><br />
+          <label>Last Name:</label>
+          <Field
+            name="lastName"
+            type="text"
+            component="input"
+            autoComplete="none"
+          /><br />
+          <label>Email:</label>
           <Field
             name="email"
             type="text"
@@ -41,6 +58,8 @@ class Signup extends Component {
         <div>{this.props.errorMessage}</div>
         <button>Sign Up!</button>
       </form>
+      </div>
+      <div className="col-sm-4">
       </div>
       </div>
       </div>

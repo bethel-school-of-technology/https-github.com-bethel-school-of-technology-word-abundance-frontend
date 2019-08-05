@@ -18,10 +18,13 @@ class Signin extends Component {
     <React.Fragment>
     <div className="container-fluid">
     <div className="row">
-    <div className="col-sm-12">
+    <div className="col-sm-4">
+    </div>
+    <div className="col-sm-4">
       <form onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
-          <label>Email</label>
+          <h3>Login to My Dashboard</h3>
+          <label>Email:</label>
           <Field
             name="email"
             type="text"
@@ -30,7 +33,7 @@ class Signin extends Component {
           />
         </fieldset>
         <fieldset>
-          <label>Password</label>
+          <label>Password:</label>
           <Field
             name="password"
             type="password"
@@ -41,6 +44,8 @@ class Signin extends Component {
         <div>{this.props.errorMessage}</div>
         <button>Sign In!</button>
       </form>
+      </div>
+      <div className="col-sm-4">      
       </div>
       </div>
       </div>

@@ -1,9 +1,3 @@
-/* import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-ReactDOM.render(<App />, document.getElementById('root'));*/
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -41,19 +35,19 @@ ReactDOM.render(
     <Router>
       <App>
         <Route path="/" exact component={Welcome} />
-        {/* <Route path='/' exact component={Home} /> */}
         <Route path='/Contact' component={Contact} />
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />
-        {/* <Route path='/Tech' component={Tech} /> */}
-        {/* <Route path='/Card' component={Card} /> */}
-        {/*<Route path='/shoppingCart' component={shoppingCart} /> */}
-       {/*  <Route path='/signup' component={SignUp} /> */}
-        {/* <Route path='/SideNav' component={SideNav} /> */}
         <Route path="/signup" component={Signup} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/signout" component={Signout} />
         <Route path="/signin" component={Signin} />
+            {/* <Route path='/Tech' component={Tech} /> */}
+        {/* <Route path='/Card' component={Card} /> */}
+        {/*<Route path='/shoppingCart' component={shoppingCart} /> */}
+       {/*  <Route path='/signup' component={SignUp} /> */}
+        {/* <Route path='/SideNav' component={SideNav} /> */}
+    {/* <Route path='/' exact component={Home} /> */}
     {/* <Route path='/Landing' component={Landing} /> */}
     {/* <Route path='/categories' component={CategoryList} />
     <Route path='/product' component={Product} />
