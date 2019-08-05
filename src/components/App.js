@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBar from './Navbar';
+import Header from './Navbar';
 import Footer from './pages/Layout/Footer';
 import './App.css'
 
 export default ({ children }) => {
   return (
     <React.Fragment>
-      <NavBar />
+      <Header />
       {children}
       <Footer />
     </React.Fragment>

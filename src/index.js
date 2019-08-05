@@ -33,7 +33,7 @@ import Welcome from './components/Welcome';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
-import Dashboard from './components/Dashboard/Dashboard';
+import Dashboard from './components/pages/Layout/Dashboard/Dashboard';
 
 
 ReactDOM.render(
