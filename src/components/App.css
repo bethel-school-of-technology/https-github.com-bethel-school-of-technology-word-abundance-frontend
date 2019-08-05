@@ -19,3 +19,15 @@
   color: white;
 }
 
+Footer {
+  opacity: .5;
+  position: bottom;
+  margin-top: 150px;
+  margin-left: 0;
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
