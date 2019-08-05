@@ -1,5 +1,6 @@
 import React from 'react';
+import Landing from './pages/Layout/Landing'
 
 export default () => {
-  return <h3>Welcome! Sign up or sign in!</h3>;
+  return <Landing />;
 };

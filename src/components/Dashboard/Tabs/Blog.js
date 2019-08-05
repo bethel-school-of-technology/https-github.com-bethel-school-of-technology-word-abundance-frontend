@@ -12,7 +12,7 @@ class Blog extends React.Component {
         <h3>Add New Blog Post</h3>
         <div className="col-md-5">
           <div className="form-area">  
-              <form role="form">
+              <form>
               <br styles="clear:both" />
                 <div className="form-group">
                   <input type="text" className="form-control" id="title" name="title" placeholder="Title" required />

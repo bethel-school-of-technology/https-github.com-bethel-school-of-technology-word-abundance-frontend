@@ -39,7 +39,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className="navbar">
-        <Link to="/">Abundance</Link>
+        <Link id="logo" to="/">Abundance</Link>
         {this.renderLinks()}
       </div>
     );
