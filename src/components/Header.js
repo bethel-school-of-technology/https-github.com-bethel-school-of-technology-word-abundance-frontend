@@ -26,6 +26,8 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
+                </Nav>
+                <Nav pullRight>
                 <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                 <Nav.Link href="/signout">Signout</Nav.Link>
             </Nav>
@@ -40,7 +42,7 @@ class Header extends React.Component {
           <Navbar.Brand id="logo" href="/">Abundance</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
+            <Nav className="ml-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <NavDropdown title="About">
                   <NavDropdown.Item href="/whoweare">Who We Are</NavDropdown.Item>
@@ -55,6 +57,8 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
+              </Nav>
+              <Nav pullRight>
                 <Nav.Link href="/signup">SignUp</Nav.Link>
                 <Nav.Link href="/signin">SignIn</Nav.Link>
             </Nav>

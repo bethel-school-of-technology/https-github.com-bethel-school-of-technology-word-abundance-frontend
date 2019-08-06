@@ -6,13 +6,10 @@ class Blog extends React.Component {
     render() { 
     return (  
     <React.Fragment>
-        <subheader>SubHeader Component</subheader>
-        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-        <Tab eventKey="home" title="Home">
+        <Tabs defaultActiveKey="addnewpost" id="uncontrolled-tab-example">
+        <Tab eventKey="addnewpost" title="Add New Post">
         </Tab>
-        <Tab eventKey="profile" title="Profile">
-        </Tab>
-        <Tab eventKey="contact" title="Contact" disabled>
+        <Tab eventKey="editandelete" title="Edit and Delete Posts">
         </Tab>
         </Tabs>
         <div className="col-md-5">

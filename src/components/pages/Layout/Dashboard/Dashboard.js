@@ -5,6 +5,7 @@ import Blog from './Tabs/Blog';
 import Options from "./Tabs/Options";
 import requireAuth from '../../../requireAuth'
 import MyProductsService from './Tabs/Products_Service';
+import Orders from './Tabs/Orders';
 
 class Dashboard extends Component {
     render() { 
@@ -18,16 +19,19 @@ class Dashboard extends Component {
             <Col sm={3}>
             <Nav variant="pills" className="flex-column">
                 <Nav.Item>
-                <Nav.Link eventKey="first">Profile</Nav.Link>
+                <Nav.Link eventKey="first">My Profile</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="second">My Products/Services</Nav.Link>
+                <Nav.Link eventKey="second">My Blog</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="third">Blog</Nav.Link>
+                <Nav.Link eventKey="third">My Products/Services</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="fourth">Options</Nav.Link>
+                <Nav.Link eventKey="fourth">My Orders</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                <Nav.Link eventKey="fifth">Options</Nav.Link>
                 </Nav.Item>
             </Nav>
             </Col>
@@ -37,12 +41,15 @@ class Dashboard extends Component {
                 <Profile />
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
-                <MyProductsService />
-                </Tab.Pane>
-                <Tab.Pane eventKey="third">
                 <Blog />
                 </Tab.Pane>
+                <Tab.Pane eventKey="third">
+                <MyProductsService />
+                </Tab.Pane>
                 <Tab.Pane eventKey="fourth">
+                <Orders />
+                </Tab.Pane>
+                <Tab.Pane eventKey="fifth">
                 <Options />
                 </Tab.Pane>
                 </Tab.Content>
