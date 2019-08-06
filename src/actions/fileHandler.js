@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class photoHandler extends Component {
+class fileHandler extends Component {
 
+    
     state = {
         selectedFile: null
     }
@@ -38,4 +39,4 @@ class photoHandler extends Component {
      }
  }
  
-export default photoHandler;
+export default fileHandler;

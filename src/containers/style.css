@@ -4,3 +4,6 @@
     border: black;
 }
 
+#categories {
+    background-image: url ('./images/light');
+}

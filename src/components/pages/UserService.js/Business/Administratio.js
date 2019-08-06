@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from '../../../components/Card';
-import SideNav from '../Layout/SideNav';
+// import SideNavPage from '../Layout/SideNavPage';
 class Administration extends Component {
     render() {
         return (
             <div>
-            <SideNav/>
+            {/* <SideNav/> */}
             <div className='container'>
                 <div className='row'>
                     <div className='col-sm-4'>
