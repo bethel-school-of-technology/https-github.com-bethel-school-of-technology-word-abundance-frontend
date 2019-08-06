@@ -29,7 +29,6 @@ import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Dashboard from './components/pages/Layout/Dashboard/Dashboard';
 
-
 ReactDOM.render(
   <Provider store={store}>
     <Router>
