@@ -11,7 +11,7 @@ class SideNav extends React.Component {
     
     return(
       <React.Fragment>
-      <Navbar expand="false">
+      <Navbar expand="lg">
       <Container>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

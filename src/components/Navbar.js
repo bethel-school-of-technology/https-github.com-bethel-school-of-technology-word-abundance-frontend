@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Button from 'react-bootstrap/Button';
+//import Dropdown from 'react-bootstrap/Dropdown';
+// import ButtonGroup from 'react-bootstrap/ButtonGroup';
+// import Button from 'react-bootstrap/Button';
 class Navbar extends Component {
 
     render() {
@@ -11,7 +11,7 @@ class Navbar extends Component {
                 <ul>
                     <li className=""><Link to="/">                     
                     <h3 id='AbundantLogo'>ABUNDANT 
-                    <img src='favicon.ico'></img></h3>
+                    <img src='favicon.ico' alt="logo"></img></h3>
                     </Link> 
                     </li>
                     <li><Link to="/contact"><h5 id="contactNav">CONTACT </h5></Link></li>

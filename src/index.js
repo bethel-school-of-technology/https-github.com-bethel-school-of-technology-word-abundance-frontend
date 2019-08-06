@@ -23,11 +23,11 @@ import {
 // import Service from './Components/Service';
 // import Orders from './Components/Orders';
 // import SignUp from '../actions/SignUp';
-import Welcome from './components/Welcome';
+import Home from './components/Home/Home';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
-import Dashboard from './components/pages/Layout/Dashboard/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 
 /* import {
     shoppingCart
@@ -48,7 +48,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <App>
-        <Route path="/" exact component={Welcome} />
+        <Route path="/" exact component={Home} />
         <Route path='/Contact' component={Contact} />
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />

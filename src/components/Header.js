@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Navbar, NavDropdown, Nav} from 'react-bootstrap';
+import {Navbar, NavDropdown, Nav, Button} from 'react-bootstrap';
 import './navbar.css';
 
 class Header extends React.Component {
@@ -10,7 +10,7 @@ class Header extends React.Component {
         <React.Fragment>
         <Navbar bg="light" expand="lg">
         <h3 id='AbundantLogo'>ABUNDANT 
-            <img src='favicon.ico'></img></h3>
+            <img src='favicon.ico' alt="logo"></img></h3>
           {/* <Navbar.Brand id="logo" href="/">Abundance</Navbar.Brand> */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -28,10 +28,11 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/blogs">Blogs</Nav.Link>
                 </Nav>
                 <Nav pullRight>
-                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                <Nav.Link href="/signout">Signout</Nav.Link>
+                <Nav.Link href="/dashboard"><Button>Dashboard</Button></Nav.Link>
+                <Nav.Link href="/signout"><Button>Signout</Button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -59,10 +60,11 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/blogs">Blogs</Nav.Link>
               </Nav>
               <Nav pullRight>
-                <Nav.Link href="/signup">Join Our Community</Nav.Link>
-                <Nav.Link href="/signin">Sign In</Nav.Link>
+                <Nav.Link href="/signup"><Button>>Join Our Community</Button></Nav.Link>
+                <Nav.Link href="/signin"><Button>Sign In</Button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
