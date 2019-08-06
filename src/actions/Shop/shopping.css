@@ -1,0 +1,8 @@
+.ui form {
+    display: flex;
+    padding: 10em;
+    margin: 10;
+}
+.continueShopping {
+    text-align: right; 
+}

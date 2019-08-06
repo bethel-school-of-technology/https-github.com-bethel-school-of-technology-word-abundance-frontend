@@ -1,13 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
- 
-
-
+// import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import jwt_decode from 'jwt-decode';
+import authToken from './utils/authToken';
 import './index.css';
-import { 
-    BrowserRouter as Router, Route 
-} from 'react-router-dom';
-
 import {
     Home,
     About,
@@ -15,100 +11,70 @@ import {
     Marketplace,
 } from './pages';
 
-import { 
+import {
     shoppingCart
-} from './actions/shoppingCart';
+} from './actions/Shop/shoppingCart';
 
-import {
-    ShoppingCartPreview
-} from './actions/shoppingcartpreview/scp';
+import Navbar from './pages/Layout/Navbar';
+import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
+// import FrontEnd from './pages/UserService.js/Tech/DevServices.js/FrontEnd';
 
-import {
-    Products
-} from './blocks2/Product';
-
-import {
-    ProductCreate
-} from './components/ProductCreate';
-
-import {
-    Services
-} from './blocks2/Service';
-
-import {
-    Orders
-} from './blocks2/Orders';
-
-import Navbar from './containers/Navbar';
-import Tech from './pages/UserService.js/Tech';
 import Card from './components/Card';
-import SignUp from './actions/SignUp';
+import SignUp from './actions/AccountActions/SignUp';
+// import UserLogin from './actions/AccountActions/UserLogin';
+import SideNav from './pages/Layout/SideNav';
+import { Landing } from './pages/Layout/Landing';
+import Dashboard from './pages/DashboardEvents/Dashboard';
+import PostList from './pages/Posts/PostList';
+class App extends Component {
+    render() {
+        return (
+            <BrowserRouter>
+                <div className='App'>
+                    <Navbar />
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/Dashboard' component={Dashboard} />
+                        <Route path='/Contact' component={Contact} />
+                        <Route path='/About' component={About} />
+                        <Route path='/Marketplace' component={Marketplace} />
+                        <Route path='/Backend' component={BackEnd} />
+                        <Route path='/Card' component={Card} />
+                        <Route path='/shoppingCart' component={shoppingCart} />
+                        <Route path='/signup' component={SignUp} />
+                        <Route exact path='/PostList' component={PostList} />
+                        {/* <Route path='/UserLogin' component={UserLogin} /> */}
+                        {/* <Route path='/Frontend' component={FrontEnd} /> */}
+                        <Route path='/SideNav' component={SideNav} />
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        );
+    }
+}
 
-// import Button from './components/Card/Button';
+export default App;
 
-
-
-// import SideNavPage from './pages/Layout/SideNavPage';
-
-
-
-
-
-// import {
-//     FloatSearch
-// } from './components/Card/FloatSearch';
-
-
-
-
-import { Landing } from './pages/Layout/Landing'
-
-
-
-// import CategoryList from './Components/CategoryList';
-// import Product from './Components/Product';
-// import Service from './Components/Service';
-// import Orders from './Components/Orders';
-
-const App = () =>
-    (
-        <Router>
-            <div>
-                <Navbar />
-                <br />
-                <Route exact path='/' component={Home} />
-                <Route path='/Contact' component={Contact} />
-                <Route path='/About' component={About} />
-                <Route path='/Marketplace' component={Marketplace} />
-                <Route path='/Tech' component={Tech} />
-                <Route path='/Card' component={Card} />
-                <Route path='/shoppingCart' component={shoppingCart} />
-                <Route path='/signup' component={SignUp} />
-                <Route path='/scp' component={ShoppingCartPreview}/>
-                <Route path='/products' component={Products}/>
-                <Route path='/services' component={Services}/>
-                <Route path='/orders' component={Orders}/>
-                <Route path='/createproduct' component={ProductCreate}/>
-                {/* <Route path='/button' component={Button} /> */}
-
-                {/* <Route path='/SideNavPage' component={SideNavPage} /> */}
-
-                
-
-{/* <Route path='/Landing' component={Landing} /> */}
-                
+{/* <Route path='/Rate' component={Rate} /> */ }
+{/* <Route path='/Landing' component={Landing} /> */ }
+{/* <Route path='/button' component={Button} /> */ }
 
 
 
-                {/* <Route path='/categories' component={CategoryList} />
+{/* <Route path='/categories' component={CategoryList} />
                 <Route path='/product' component={Product} />
                 <Route path='/service' component={Service} />
                 <Route path='/orders' component={Orders} />  */}
+{/* // import store from './store';
+                // import Button from './components/Card/Button';
+                // import { Rate, Star } from './components/Card/Rate';
+                // import { */}
+{/* //     FloatSearch
+                // } from './components/Card/FloatSearch';
 
-            </div>
-        </Router>
-    );
+                // import CategoryList from './Components/CategoryList';
+                // import Product from './Components/Product';
+                // import Service from './Components/Service';
+                // import Orders from './Components/Orders'; */}
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-export default App;
