@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import { reduxForm, Field } from 'redux-form';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 class Signup extends Component {
   state = {
     email: '',
@@ -20,6 +22,10 @@ class Signup extends Component {
     return (
       <div className='container'>
         <form onSubmit={this.handleSubmit} className='white'>
+          <br/>
+          <br/>
+          <br />
+          
           <h5 className='grey-text text-darken-3'>Sign Up</h5>
           <div className='input-field'>
             <label htmlFor='email'>Email</label>

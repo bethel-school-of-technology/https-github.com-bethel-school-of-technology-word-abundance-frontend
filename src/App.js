@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import authToken from './utils/authToken';
+import {Provider} from 'react-redux';
+import store from './store';
 import './index.css';
 import {
     Home,
@@ -21,7 +23,6 @@ import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
 
 import Card from './components/Card';
 import SignUp from './actions/AccountActions/SignUp';
-// import UserLogin from './actions/AccountActions/UserLogin';
 import SideNav from './pages/Layout/SideNav';
 import { Landing } from './pages/Layout/Landing';
 import Dashboard from './pages/DashboardEvents/Dashboard';
@@ -29,6 +30,7 @@ import PostList from './pages/Posts/PostList';
 class App extends Component {
     render() {
         return (
+            <Provider store = {store}>
             <BrowserRouter>
                 <div className='App'>
                     <Navbar />
@@ -42,13 +44,12 @@ class App extends Component {
                         <Route path='/Card' component={Card} />
                         <Route path='/shoppingCart' component={shoppingCart} />
                         <Route path='/signup' component={SignUp} />
-                        <Route exact path='/PostList' component={PostList} />
-                        {/* <Route path='/UserLogin' component={UserLogin} /> */}
-                        {/* <Route path='/Frontend' component={FrontEnd} /> */}
                         <Route path='/SideNav' component={SideNav} />
                     </Switch>
                 </div>
             </BrowserRouter>
+            </Provider>
+
         );
     }
 }

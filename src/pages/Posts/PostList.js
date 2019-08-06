@@ -2,23 +2,71 @@ import React from 'react';
 
 const PostList = () => {
     return (
-        <div className='project-list'>
+        <div className="ui three column grid">
+            <div className="column">
+                <div className="ui segment">
+                    <img src='src/images/hands.jpg' alt='myPhoto1' class='responsive'/>
+                </div>
+                </div>
+                <div className="column">
+                    <div className="ui segment">
+                    <img src='src/images/hands.jpg' alt='myPhoto2' class='responsive'/>
+                       
+                    </div>
+                    </div>
+                    <div className="column">
+                        <div className="ui segment">
+                        <img src='src/images/hands.jpg' alt='myPhoto3' class='responsive'/>      
+                        </div>
+                        </div>
+                        <div className="column">
+                <div className="ui segment">
+                <img src='src/images/hands.jpg' alt='myPhoto4' class='responsive'/>
+                </div>
+                </div>
+                <div className="column">
+                    <div className="ui segment">
+                    <img src='src/images/hands.jpg' alt='myPhoto5' class='responsive'/>   
+                    </div>
+                    </div>
+                    <div className="column">
+                        <div className="ui segment">
+                        <img src='src/images/hands.jpg' alt='myPhoto6' class='responsive'/>      
+                        </div>
+                        </div>
+                        <div className="column">
+                <div className="ui segment">
+                <img src='src/images/hands.jpg' alt='myPhoto7' class='responsive'/>
+                </div>
+                </div>
+                <div className="column">
+                    <div className="ui segment">
+                    <img src='src/images/hands.jpg' alt='myPhoto8' class='responsive'/>   
+                    </div>
+                    </div>
+                    <div className="column">
+                        <div className="ui segment">
+                        <img src='src/images/hands.jpg' alt='myPhoto9' class='responsive'/>      
+                        </div>
+                        </div>
+                        <div className="column">
+                <div className="ui segment">
+                <img src='src/images/hands.jpg' alt='myPhoto10' class='responsive'/>
+                </div>
+                </div>
+                <div className="column">
+                    <div className="ui segment">
+                    <img src='src/images/hands.jpg' alt='myPhoto11' class='responsive'/>   
+                    </div>
+                    </div>
+                    <div className="column">
+                        <div className="ui segment">
+                        <img src='src/images/hands.jpg' alt='myPhoto12' class='responsive'/>      
+                        </div>
+                  </div>
+            </div>
 
-            <div className="card z-depth-0 project-summary">
-                <div className="card-content grey-text text-darken-3">
-                    <span className='card-title'>Post Title</span>
-                    <p> Posted by Olivia</p>
-                    <p className='grey-text'>6th August 2019</p>
-                </div>
-            </div>
-            <div className="card z-depth-0 project-summary">
-                <div className="card-content grey-text text-darken-3">
-                    <span className='card-title'>Post Title</span>
-                    <p> Posted by Olivia</p>
-                    <p className='grey-text'>7th August 2019</p>
-                </div>
-            </div>
-        </div>
     )
 }
+  
 export default PostList;

@@ -10,7 +10,7 @@ class Dashboard extends Component {
                     <div className="col s12 m6">
                         <div className="col s12 m5"></div>
                         <div className="col s12 m5 offset-m1"></div>
-                        <Notifications/>
+                        <Notifications />
                     </div>
                 </div>
             </div>

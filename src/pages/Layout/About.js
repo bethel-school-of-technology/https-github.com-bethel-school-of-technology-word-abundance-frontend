@@ -7,6 +7,7 @@ class About extends Component {
             <div>
                 <br />
                 <br />
+                <br />
                 <Landing />
                 <div className="ui raised segment">
                     <h3 className="ui header">About</h3>
