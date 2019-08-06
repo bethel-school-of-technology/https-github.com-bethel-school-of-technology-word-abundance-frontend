@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Landing from '../pages/Layout/Landing'
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
@@ -8,7 +9,7 @@ class Signout extends Component {
   }
 
   render() {
-    return <div>Sorry to see you go</div>;
+    return <Landing />;
   }
 }
 
