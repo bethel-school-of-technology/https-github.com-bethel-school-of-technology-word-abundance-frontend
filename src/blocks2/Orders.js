@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Search from './Search';
+import Order from '../components/Orders';
+// import Search from '../components/Card/SearchBar';
 
-class Orders extends Component {
+export class Orders extends React.Component {
     render() {
         return (
             <div className="orders">
                 <br/>
-                <p id='orders'>Orders </p>
-                <Search/>
+                <Order />
+                {/* <Search/> */}
             </div>
         );
     }

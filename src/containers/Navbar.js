@@ -13,6 +13,7 @@ class Navbar extends Component {
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/marketplace">Marketplace</Link></li>
                     <li><Link to="/signup">Signup</Link></li>
+                    <li><Link to="/scp">ShoppingCartPreview</Link></li>
                 </ul>
             </nav>
         );

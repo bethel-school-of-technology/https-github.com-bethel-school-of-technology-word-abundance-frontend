@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+ 
 
 
 import './index.css';
@@ -17,6 +18,26 @@ import {
 import { 
     shoppingCart
 } from './actions/shoppingCart';
+
+import {
+    ShoppingCartPreview
+} from './actions/shoppingcartpreview/scp';
+
+import {
+    Products
+} from './blocks2/Product';
+
+import {
+    ProductCreate
+} from './components/ProductCreate';
+
+import {
+    Services
+} from './blocks2/Service';
+
+import {
+    Orders
+} from './blocks2/Orders';
 
 import Navbar from './containers/Navbar';
 import Tech from './pages/UserService.js/Tech';
@@ -63,6 +84,11 @@ const App = () =>
                 <Route path='/Card' component={Card} />
                 <Route path='/shoppingCart' component={shoppingCart} />
                 <Route path='/signup' component={SignUp} />
+                <Route path='/scp' component={ShoppingCartPreview}/>
+                <Route path='/products' component={Products}/>
+                <Route path='/services' component={Services}/>
+                <Route path='/orders' component={Orders}/>
+                <Route path='/createproduct' component={ProductCreate}/>
                 {/* <Route path='/button' component={Button} /> */}
 
                 {/* <Route path='/SideNavPage' component={SideNavPage} /> */}

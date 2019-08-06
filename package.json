@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.20",
+    "@fortawesome/free-brands-svg-icons": "^5.10.0",
+    "@fortawesome/free-regular-svg-icons": "^5.10.0",
+    "@fortawesome/free-solid-svg-icons": "^5.10.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "history": "^4.9.0",
@@ -21,6 +26,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-shopping-cart": "^1.8.31",
     "reactstrap": "^8.0.1",
     "semantic-ui": "^2.4.2",
     "semantic-ui-dropdown": "^2.4.1",
@@ -46,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.0"
   }
 }

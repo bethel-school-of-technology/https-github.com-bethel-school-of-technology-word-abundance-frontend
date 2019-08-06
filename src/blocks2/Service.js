@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Service from '../components/Service';
 
-class Service extends Component {
+export class Services extends React.Component {
     render() {
         return (
             <div className="service">
                 <br/>
-                <p id='service'>Service </p>
+                <Service uri="http://localhost:3001/services"/>
             </div>
         );
     }
 }
-export default Service;
+export default Services;
