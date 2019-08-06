@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Card from '../../../components/Card';
-import SideNavPage from '../Layout/SideNavPage';
+import SideNav from '../Layout/SideNav';
 class Landscaping extends Component {
     render() {
         return (

@@ -1,21 +1,12 @@
 import axios from "axios";
-import { GET_ERRORS, SET_CURRENT_USER } from "../actionTypes";
 import authToken from "../../utils/authToken";
-import jwt_decode from "jwt-decode";
 
-const baseUrl = process.env.REACT_APP_BASE_URL;
-
-// signup user: dispatching 
-//              type and the payload to the reducer to manipulate state to 
-//              inlcude that new user.
 /**
- 
  * @param {Posting User Data} userData 
  * @param {go to the appropriate response page} history 
  */
 export const signupUser = (userData, history) => dispatch => {
 
-  //
   axios
     .post(`${baseUrl}/users/signup`, userData)
     .then(res => history.push("/login"))
@@ -27,10 +18,7 @@ export const signupUser = (userData, history) => dispatch => {
     );
 };
 
-/** This snippet of code is dispatching user data, type and errors. 
- * If the user is an authenticated user it will push the user to 
- * the authenticated portion of the site where the user can see a different header
- * and testimonies page where they can post a testimony 
+/**  
  * 
  * @param {Grabbing User Data and setting token} userData 
  */
@@ -38,9 +26,10 @@ export const userLogin = userData => dispatch => {
   axios
     .post(`${baseUrl}/auth`, userData)
     .then(res => {
-      // SAVE TO LOCAL STORAGE
-      //const { token } = res.data
-      const { token } = res.data; // = token
+     
+      
+      const { token } = res.data; 
+      // = token
       // SET TOKEN TO LOCAL STORAGE
       localStorage.setItem("jwtToken", res.data);
       // SET TO AUTH HEADER

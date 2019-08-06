@@ -8,14 +8,61 @@
   margin: 0em;
 }
 
+#AbundantLogo {
+ font-family: e;
+ color: black;
+ display: inline-flex;
+}
+
+#contactNav, #aboutNav, #marketNav, #signupNav, #loginNav {
+  font-family: e;
+  color: black;
+}
+
+#connectHere {
+  color: black;
+  border: 1px solid white;
+  background-color: white;
+  margin-left: 13em;
+  margin-right: 13em;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+
+.magnify {
+  border: solid black;
+  margin: 2em;
+}
+
+.marketgrid {
+  border: solid black;
+  margin: 2em;
+}
+
+
 #market, #about, #categories, #home, #contact {
   
   color: black;
   margin: 5em;
+  background-image: url('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/planner.jpg');
 }
 .market {
   background-color: transparent;
-  /* background-image: url('./images/laugh.jpg'); */
+  text-align: center;
+}
+.connectHere {
+  color: black;
+}
+.LandingBG {
+  position: relative;
+  background: url("./images/abundantBG.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 400vh;
+  display: inline-block;
+  float: left;
 }
 
 #search {
@@ -36,8 +83,8 @@
 }
 
 body {
-  /* background-image: url('./images//abundant.jpg');
-  background-image: 2vh 2vw; */
+  
+  /* background-image: 2vh 2vw; */ 
   /* background-size: 100vh 100vw; */
   /* background-position: center;
   background-repeat: no-repeat;
@@ -66,12 +113,13 @@ text-align: center;
 }
 nav{
     text-align: center;
-    /* display: flex; */
+    display: flex;
     flex:auto;
     font-family: fantasy;
     margin: auto;
     padding: 20px 0px;
     height: 7px;
+    background-color: purple
     /* width:  */
     /* display: inline-block; */
 }
