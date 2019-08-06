@@ -1,54 +1,102 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
 
 class Signup extends Component {
-  onSubmit = formProps => {
-    this.props.signup(formProps, () => {
-      this.props.history.push('/dashboard');
-    });
-  };
-
-  render() {
-    const { handleSubmit } = this.props;
-
+  state = {
+    email: '',
+    password: '',
+    firstName: '',
+    lastName: ''
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log (this.state)
+  }
+  render(){
     return (
-      <form onSubmit={handleSubmit(this.onSubmit)}>
-        <fieldset>
-          <label>Email</label>
-          <Field
-            name="email"
-            type="text"
-            component="input"
-            autoComplete="none"
-          />
-        </fieldset>
-        <fieldset>
-          <label>Password</label>
-          <Field
-            name="password"
-            type="password"
-            component="input"
-            autoComplete="none"
-          />
-        </fieldset>
-        <div>{this.props.errorMessage}</div>
-        <button>Sign Up!</button>
-      </form>
-    );
+      <div className='container'>
+        <form onSubmit={this.handleSubmit} className='white'>
+          <h5 className='grey-text text-darken-3'>Sign Up</h5>
+          <div className='input-field'>
+            <label htmlFor='email'>Email</label>
+            <input type='email' id='email' onChange={this.handleChange}/>
+          </div>
+          <div className='input-field'>
+            <label htmlFor='password'>Password</label>
+            <input type='password' id='password' onChange={this.handleChange}/>
+          </div>
+          <div className='input-field'>
+            <label htmlFor='lastName'>Last Name</label>
+            <input type='lastName' id='lastName' onChange={this.handleChange}/>
+          </div>
+          <div className='input-field'>
+            <label htmlFor='firstName'>First Name</label>
+            <input type='firstName' id='firstName' onChange={this.handleChange}/>
+          </div>
+          <div className='input-field'>
+            <button className='btn pink lighten-1 z depth-0'>Sign Up</button>
+          </div>
+        </form>
+      </div>
+    )
   }
 }
+export default Signup;
 
-function mapStateToProps(state) {
-  return { errorMessage: state.auth.errorMessage };
-}
+// import { reduxForm, Field } from 'redux-form';
+// import { compose } from 'redux';
+// import { connect } from 'react-redux';
+// import * as actions from '../../actions';
 
-export default compose(
-  connect(mapStateToProps, actions),
-  reduxForm({ form: 'signup' })
-)(Signup);
+// class Signup extends Component {
+//   onSubmit = formProps => {
+//     this.props.signup(formProps, () => {
+//       this.props.history.push('/dashboard');
+//     });
+//   };
+
+//   render() {
+//     const { handleSubmit } = this.props;
+
+//     return (
+//       <form onSubmit={handleSubmit(this.onSubmit)}>
+//         <fieldset>
+//           <label>Email</label>
+//           <Field
+//             name="email"
+//             type="text"
+//             component="input"
+//             autoComplete="none"
+//           />
+//         </fieldset>
+//         <fieldset>
+//           <label>Password</label>
+//           <Field
+//             name="password"
+//             type="password"
+//             component="input"
+//             autoComplete="none"
+//           />
+//         </fieldset>
+//         <div>{this.props.errorMessage}</div>
+//         <button>Sign Up!</button>
+//       </form>
+//     );
+//   }
+// }
+
+// function mapStateToProps(state) {
+//   return { errorMessage: state.auth.errorMessage };
+// }
+
+// export default compose(
+//   connect(mapStateToProps, actions),
+//   reduxForm({ form: 'signup' })
+// )(Signup);
 
 
 // import React, { Component } from 'react';

@@ -11,6 +11,7 @@
 #AbundantLogo {
  font-family: e;
  color: black;
+ display: inline-flex;
 }
 
 #contactNav, #aboutNav, #marketNav, #signupNav, #loginNav {
@@ -59,7 +60,9 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  height: 250vh;
+  height: 400vh;
+  display: inline-block;
+  float: left;
 }
 
 #search {

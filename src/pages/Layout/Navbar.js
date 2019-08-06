@@ -5,15 +5,14 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 class Navbar extends Component {
 
-
     render() {
         return (
             <nav>
                 <ul>
-                    <li className=""><Link to="/">
+                    <li className=""><Link to="/">                     
                     <h3 id='AbundantLogo'>ABUNDANT 
                     <img src='favicon.ico'></img></h3>
-                    </Link>
+                    </Link> 
                     </li>
                     <li><Link to="/contact"><h5 id="contactNav">CONTACT </h5></Link></li>
                     <li><Link to="/about"><h5 id="aboutNav">ABOUT </h5></Link></li>
