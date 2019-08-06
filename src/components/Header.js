@@ -9,7 +9,9 @@ class Header extends React.Component {
       return (
         <React.Fragment>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand id="logo" href="/">Abundance</Navbar.Brand>
+        <h3 id='AbundantLogo'>ABUNDANT 
+            <img src='favicon.ico'></img></h3>
+          {/* <Navbar.Brand id="logo" href="/">Abundance</Navbar.Brand> */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>

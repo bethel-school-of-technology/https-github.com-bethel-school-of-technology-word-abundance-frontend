@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import Avatar from 'react-avatar';
+import Marketplace from '../../pages/Layout/Marketplace';
 export class shoppingCart extends Component {
     render() {
         return (
 <div className='container'>
+  <br/>
+  <div className='continueShopping'>
+    <a href='/marketplace'>Continue Shopping</a>
+    </div>
+  
   <div className='row'>
     <div className='col-sm-1'>
 </div>
@@ -94,7 +100,6 @@ export class shoppingCart extends Component {
     <div className="field">
       <label>Country</label>
       <div className="ui fluid search selection dropdown">
-        {/* <input type="hidden" name="country"/> */}
         <i className="dropdown icon"></i>
         <div className="default text">Select Country</div>
         <div className="menu">

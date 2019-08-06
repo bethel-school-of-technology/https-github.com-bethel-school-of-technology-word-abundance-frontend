@@ -12,6 +12,7 @@ class Blog extends React.Component {
         <Tab eventKey="editandelete" title="Edit and Delete Posts">
         </Tab>
         </Tabs>
+        {/*Post Private or Public  */}
         <div className="col-md-5">
           <div className="form-area">  
               <form>

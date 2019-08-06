@@ -29,6 +29,21 @@ import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Dashboard from './components/pages/Layout/Dashboard/Dashboard';
 
+/* import {
+    shoppingCart
+} from './actions/Shop/shoppingCart';
+ */
+// import Navbar from './pages/Layout/Navbar';
+// import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
+// import FrontEnd from './pages/UserService.js/Tech/DevServices.js/FrontEnd';
+
+//import Card from './components/Card';
+// import SignUp from './actions/AccountActions/SignUp';
+// import UserLogin from './actions/AccountActions/UserLogin';
+// import SideNav from './pages/Layout/SideNav';
+//import { Landing } from './pages/Layout/Landing';
+// import Dashboard1 from './pages/DashboardEvents/Dashboard';
+// import PostList from './pages/Posts/PostList';
 ReactDOM.render(
   <Provider store={store}>
     <Router>
@@ -38,9 +53,15 @@ ReactDOM.render(
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />
         <Route path="/signup" component={Signup} />
+        {/* <Route exact path='/Dashboard1' component={Dashboard1} /> */}
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/signout" component={Signout} />
         <Route path="/signin" component={Signin} />
+       {/*  <Route path='/Backend' component={BackEnd} />
+        <Route path='/Card' component={Card} />
+        <Route path='/shoppingCart' component={shoppingCart} />
+        <Route path='/signup' component={SignUp} />
+        <Route exact path='/PostList' component={PostList} /> */}
             {/* <Route path='/Tech' component={Tech} /> */}
         {/* <Route path='/Card' component={Card} /> */}
         {/*<Route path='/shoppingCart' component={shoppingCart} /> */}

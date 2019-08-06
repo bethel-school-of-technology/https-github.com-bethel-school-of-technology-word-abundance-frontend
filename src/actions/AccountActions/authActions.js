@@ -1,6 +1,6 @@
 import axios from "axios";
-import { GET_ERRORS, SET_CURRENT_USER } from "../actions/actionTypes";
-import authToken from "../utils/authToken";
+import { GET_ERRORS, SET_CURRENT_USER } from "../actionTypes";
+import authToken from "../../utils/authToken";
 import jwt_decode from "jwt-decode";
 
 const baseUrl = process.env.REACT_APP_BASE_URL;

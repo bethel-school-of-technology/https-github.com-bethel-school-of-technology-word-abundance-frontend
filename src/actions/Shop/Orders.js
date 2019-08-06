@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Search from './Search';
+
 
 class Orders extends Component {
     render() {
@@ -7,7 +7,6 @@ class Orders extends Component {
             <div className="orders">
                 <br/>
                 <p id='orders'>Orders </p>
-                <Search/>
             </div>
         );
     }
