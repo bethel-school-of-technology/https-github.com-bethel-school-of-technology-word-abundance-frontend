@@ -42,7 +42,8 @@ class Header extends React.Component {
       return (
       <React.Fragment>
        <Navbar bg="light" expand="lg">
-          <Navbar.Brand id="logo" href="/">Abundance</Navbar.Brand>
+       <h3 id='AbundantLogo'>ABUNDANT 
+            <img src='favicon.ico' alt="logo"></img></h3>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -63,7 +64,7 @@ class Header extends React.Component {
                 <Nav.Link href="/blogs">Blogs</Nav.Link>
               </Nav>
               <Nav pullRight>
-                <Nav.Link href="/signup"><Button>>Join Our Community</Button></Nav.Link>
+                <Nav.Link href="/signup"><Button>Join Our Community</Button></Nav.Link>
                 <Nav.Link href="/signin"><Button>Sign In</Button></Nav.Link>
             </Nav>
           </Navbar.Collapse>
