@@ -1,6 +1,6 @@
 import React from 'react';
 import {Tabs, Tab} from 'react-bootstrap';
-import AddPost from './Dashboard/Blog/AddPost';
+import AddPost from './AddPost';
  
 class Blog extends React.Component {
   render(){

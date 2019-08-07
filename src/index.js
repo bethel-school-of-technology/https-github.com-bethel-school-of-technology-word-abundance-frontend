@@ -29,7 +29,7 @@ import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Dashboard from './components/Dashboard/Dashboard';
-import Blog from './components/blogs'
+//import Blog from './components/Blog/PublicBlogs'
 
 /* import {
     shoppingCart
@@ -55,7 +55,7 @@ ReactDOM.render(
         <Route path='/Contact' component={Contact} />
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />
-        <Route path='/blogs' component={Blog} />
+        {/* <Route path='/blogs' component={Blog} /> */}
         <Route path="/signup" component={Signup} />
         {/* <Route exact path='/Dashboard1' component={Dashboard1} /> */}
         <Route path="/dashboard" component={Dashboard} />
