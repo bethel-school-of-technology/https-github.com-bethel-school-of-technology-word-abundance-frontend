@@ -1,8 +1,8 @@
 // import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
-import authToken from './utils/authToken';
+// import jwt_decode from 'jwt-decode';
+// import authToken from './utils/authToken';
 import {Provider} from 'react-redux';
 import store from './store';
 import './index.css';
@@ -45,6 +45,7 @@ class App extends Component {
                         <Route path='/shoppingCart' component={shoppingCart} />
                         <Route path='/signup' component={SignUp} />
                         <Route path='/SideNav' component={SideNav} />
+                        <Route path="/signin" component={Signin} />
                     </Switch>
                 </div>
             </BrowserRouter>
