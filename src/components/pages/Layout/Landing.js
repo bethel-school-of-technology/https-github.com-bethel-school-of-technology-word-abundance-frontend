@@ -5,8 +5,7 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 
 const CarouselPage = () => {
   return (
-  <div className='LandingBG' >
-      <MDBContainer>
+    <MDBContainer>
       <MDBCarousel
       activeItem={1}
       length={3}
@@ -31,7 +30,11 @@ const CarouselPage = () => {
         </MDBCarouselItem>
         <MDBCarouselItem itemId="2">
           <MDBView>
-          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/CommunityNew.jpg')} alt="CommunityNew" style={{ width: "100%"}}/> 
+            <img
+              className="d-block w-100"
+              src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+              alt="Second slide"
+            />
           <MDBMask overlay="black-strong" />
           </MDBView>
           <MDBCarouselCaption>
@@ -42,8 +45,11 @@ const CarouselPage = () => {
         </MDBCarouselItem>
         <MDBCarouselItem itemId="3">
           <MDBView>
-          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/SolutionsNew2.jpg')} alt="SolutionsNew2" style={{ width: "100%"}}/> 
-          
+            <img
+              className="d-block w-100"
+              src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+              alt="Third slide"
+            />
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
@@ -54,8 +60,6 @@ const CarouselPage = () => {
       </MDBCarouselInner>
     </MDBCarousel>
     </MDBContainer>
- 
-    </div>
   );
 }
 

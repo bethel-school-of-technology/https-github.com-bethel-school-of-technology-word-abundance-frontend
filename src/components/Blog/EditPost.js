@@ -3,8 +3,6 @@ import axios from 'axios';
 import moment from 'moment';
 import { connect } from 'react-redux';
 
-import { Form } from '../../components/Article';
-
 class EditPost extends React.Component {
   componentDidMount() {
     const { onLoad } = this.props;
@@ -21,7 +19,6 @@ class EditPost extends React.Component {
           <div className="col-12 col-lg-6 offset-lg-3">
             <h1 className="text-center">LightBlog</h1>
           </div>
-          <Form />
         </div>
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">

@@ -4,11 +4,9 @@ import Landing from './Landing';
 class Contact extends Component {
     render() {
         return (
-            <div class='contactBody'>
+            <div>
                 <br />
                 <br />
-                <br />
-
                 <Landing />
                 <br />
                 <h1>Contact</h1>

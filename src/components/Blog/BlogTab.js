@@ -1,6 +1,7 @@
 import React from 'react';
 import {Tabs, Tab} from 'react-bootstrap';
 import AddPost from './AddPost';
+import EditPost from './EditPost'
  
 class Blog extends React.Component {
   render(){
@@ -12,6 +13,7 @@ class Blog extends React.Component {
         </Tab>
         <Tab eventKey="editandelete" title="Edit and Delete Posts">
         </Tab>
+        <EditPost />
         </Tabs>
         {/*Post Private or Public  */}
         </React.Fragment>
