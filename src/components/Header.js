@@ -30,7 +30,7 @@ class Header extends React.Component {
                 </NavDropdown>
                 <Nav.Link href="/blogs">Blogs</Nav.Link>
                 </Nav>
-                <Nav pullRight>
+                <Nav pullright="true">
                 <Nav.Link href="/dashboard"><Button>Dashboard</Button></Nav.Link>
                 <Nav.Link href="/signout"><Button>Signout</Button></Nav.Link>
             </Nav>

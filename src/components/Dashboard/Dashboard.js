@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Tab, Col, Nav, Row} from 'react-bootstrap';
 import Profile from './Tabs/Profile';
-import Blog from './Tabs/Blog';
+import Blog from '../Blog';
 import Options from "./Tabs/Options";
 import requireAuth from '../requireAuth'
 import MyProductsService from './Tabs/Products_Service';
