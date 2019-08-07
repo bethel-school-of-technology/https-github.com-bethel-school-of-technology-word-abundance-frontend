@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {Navbar, NavDropdown, Nav, Button} from 'react-bootstrap';
-import './navbar.css';
 
 class Header extends React.Component {
   renderLinks() {

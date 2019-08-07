@@ -1,8 +1,8 @@
 import React from 'react';
-import Landing from '../pages/Layout/Landing';
+import Landing from './pages/Layout/Landing';
 // import SideNav from '../pages/Layout/SideNav'
 import {Card, Button} from 'react-bootstrap';
-import './Home.css'
+import './Children.css'
 
 export default () => {
   return (

@@ -11,6 +11,8 @@ import {
   Contact,
   Marketplace,
 } from './components/pages';
+
+
 /* import { 
   shoppingCart
 } from '../actions/shoppingCart'; */
@@ -24,12 +26,12 @@ import {
 // import Service from './Components/Service';
 // import Orders from './Components/Orders';
 // import SignUp from '../actions/SignUp';
-import Home from './components/Home/Home';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Dashboard from './components/UserDashboard/UserDashboard';
 import Blog from './components/Blog/PublicBlogs'
+import Children from './components/Children';
 
 /* import {
     shoppingCart
@@ -46,11 +48,12 @@ import Blog from './components/Blog/PublicBlogs'
 //import { Landing } from './pages/Layout/Landing';
 // import Dashboard1 from './pages/DashboardEvents/Dashboard';
 // import PostList from './pages/Posts/PostList';
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={createHistory()}>
       <App>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={Children} />
         <Route path='/Contact' component={Contact} />
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />
