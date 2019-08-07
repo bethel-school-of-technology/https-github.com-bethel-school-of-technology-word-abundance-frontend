@@ -26,7 +26,7 @@ import {
 // import Service from './Components/Service';
 // import Orders from './Components/Orders';
 // import SignUp from '../actions/SignUp';
-import Signup from './components/auth/Signup';
+// import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
 import Dashboard from './components/UserDashboard/UserDashboard';
@@ -57,8 +57,8 @@ ReactDOM.render(
         <Route path='/Contact' component={Contact} />
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />
-        <Route path='/blogs' component={Blog} /> */}
-        <Route path="/signup" component={Signup} />
+        <Route path='/blogs' component={Blog} />
+       {/*  <Route path="/signup" component={Signup} /> */}
         {/* <Route exact path='/Dashboard1' component={Dashboard1} /> */}
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/signout" component={Signout} />
