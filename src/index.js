@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import store from './store'
@@ -28,8 +28,8 @@ import Home from './components/Home/Home';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import Signout from './components/auth/Signout';
-import Dashboard from './components/Dashboard/Dashboard';
-//import Blog from './components/Blog/PublicBlogs'
+import Dashboard from './components/UserDashboard/UserDashboard';
+import Blog from './components/Blog/PublicBlogs'
 
 /* import {
     shoppingCart
@@ -49,13 +49,12 @@ import Dashboard from './components/Dashboard/Dashboard';
 ReactDOM.render(
   <Provider store={store}>
     <Router history={createHistory()}>
-      <Switch>
       <App>
         <Route path="/" exact component={Home} />
         <Route path='/Contact' component={Contact} />
         <Route path='/About' component={About} />
         <Route path='/Marketplace' component={Marketplace} />
-        {/* <Route path='/blogs' component={Blog} /> */}
+        <Route path='/blogs' component={Blog} /> */}
         <Route path="/signup" component={Signup} />
         {/* <Route exact path='/Dashboard1' component={Dashboard1} /> */}
         <Route path="/dashboard" component={Dashboard} />
@@ -78,8 +77,6 @@ ReactDOM.render(
     <Route path='/service' component={Service} />
     <Route path='/orders' component={Orders} />  */}
       </App>
-      </Switch>
     </Router>
   </Provider>,
-  document.getElementById('root')
-);
+  document.getElementById('root'));

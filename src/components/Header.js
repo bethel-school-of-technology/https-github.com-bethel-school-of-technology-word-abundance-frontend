@@ -15,15 +15,8 @@ class Header extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <NavDropdown title="About">
-                  <NavDropdown.Item href="/whoweare">Who We Are</NavDropdown.Item>
-                  <NavDropdown.Item href="/meettheteam">Meet The Team</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown title="Our Vision">
-                  <NavDropdown.Item href="/whoweare">Our History</NavDropdown.Item>
-                  <NavDropdown.Item href="/meettheteam">Our Present</NavDropdown.Item>
-                  <NavDropdown.Item href="/meettheteam">Our Future</NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link href="/contact">Contact</Nav.Link>
                 <NavDropdown title="Marketplace">
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
@@ -48,15 +41,8 @@ class Header extends React.Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <NavDropdown title="About">
-                  <NavDropdown.Item href="/whoweare">Who We Are</NavDropdown.Item>
-                  <NavDropdown.Item href="/meettheteam">Meet The Team</NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown title="Our Vision">
-                  <NavDropdown.Item href="/whoweare">Our History</NavDropdown.Item>
-                  <NavDropdown.Item href="/meettheteam">Our Present</NavDropdown.Item>
-                  <NavDropdown.Item href="/meettheteam">Our Future</NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link href="/contact">Contact</Nav.Link>
                 <NavDropdown title="Marketplace">
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>

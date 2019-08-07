@@ -5,7 +5,7 @@ class Product extends Component {
         return (
             <div className="product">
                 <br/>
-                <p id='product'>Products </p>
+                <p id='product'>Products</p>
             </div>
         );
     }

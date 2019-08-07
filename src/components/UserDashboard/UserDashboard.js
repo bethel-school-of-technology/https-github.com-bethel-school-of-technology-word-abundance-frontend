@@ -7,7 +7,7 @@ import requireAuth from '../requireAuth'
 import MyProductsService from './Tabs/Products_Service';
 import Orders from './Tabs/Orders';
 
-class Dashboard extends Component {
+class UserDashboard extends Component {
     render() { 
         return (
         <React.Fragment>
@@ -64,4 +64,4 @@ class Dashboard extends Component {
     }
 }
  
-export default requireAuth(Dashboard);
+export default requireAuth(UserDashboard);
