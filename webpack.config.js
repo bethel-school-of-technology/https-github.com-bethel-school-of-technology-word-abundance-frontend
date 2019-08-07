@@ -1,4 +1,4 @@
-const { resolve } = require("path");
+/* const { resolve } = require("path");
 const webpack = require("webpack");
 
 module.exports = {
@@ -29,4 +29,4 @@ module.exports = {
       }
     ]
   }
-};
+}; */
