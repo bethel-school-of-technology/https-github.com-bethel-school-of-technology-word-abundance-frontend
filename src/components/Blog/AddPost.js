@@ -17,8 +17,9 @@ class AddPost extends React.Component {
     
   handleSubmit(){
     const { title, body, author } = this.state;
-
-    return axios.post('http://localhost:3001/articles', {
+    console.log(this.state);
+    alert(`Your blog post has been submitted for approval! Please allow 24 Hours for review.`)
+    return axios.post('http://localhost:3001/blogs', {
       title,
       body,
       author,
@@ -43,19 +44,19 @@ class AddPost extends React.Component {
           onChange={(ev) => this.handleChangeField('title', ev)}
           value={title}
           className="form-control my-3"
-          placeholder="Article Title"
+          placeholder="Blog Title"
         />
         <textarea
           onChange={(ev) => this.handleChangeField('body', ev)}
           className="form-control my-3"
-          placeholder="Article Body"
+          placeholder="Blog Body"
           value={body}>
         </textarea>
         <input
           onChange={(ev) => this.handleChangeField('author', ev)}
           value={author}
           className="form-control my-3"
-          placeholder="Article Author"
+          placeholder="Blog Author"
         />
         <button onClick={this.handleSubmit} className="btn btn-primary float-right">Submit</button>
       </div>

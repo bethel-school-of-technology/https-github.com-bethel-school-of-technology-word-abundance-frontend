@@ -2,17 +2,20 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
-import AddPost  from './AddPost';
+//import Blog  from './AddPost';
 
 class Blog extends React.Component {
   componentDidMount() {
     const { onLoad } = this.props;
 
-    axios('http://localhost:8000/api/articles')
-      .then((res) => onLoad(res.data));
+    axios.get('http://localhost:3001/blogs')
+      .then((response) => onLoad(response.data));
+      console.log(this.data)
+      
   }
   render() {
-    const { articles } = this.props;
+    const { blogs } = this.props;
+    console.log(this.props)
 
     return (
       <div className="container">
@@ -20,23 +23,22 @@ class Blog extends React.Component {
           <div className="col-12 col-lg-6 offset-lg-3">
             <h1 className="text-center">LightBlog</h1>
           </div>
-          <AddPost />
         </div>
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            {articles.map((article) => {
+            {blogs.map((blog) => {
               return (
                 <div className="card my-3">
                   <div className="card-header">
-                    {article.title}
+                    {blog.title}
                   </div>
                   <div className="card-body">
-                    {article.body}
+                    {blog.body}
                   </div>
                   <div className="card-footer">
-                    <i>{article.author}
+                    <i>{blog.author}
                       <p className="float-right">
-                        {new Date(article.createdAt).toLocaleDateString()}
+                        {new Date(blog.createdAt).toLocaleDateString()}
                       </p>
                     </i>
                   </div>
@@ -51,11 +53,11 @@ class Blog extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  articles: state.blogs.articles,
+  blogs: state.blogs.blogs,
 });
 
 const mapDispatchToProps = dispatch => ({
-  onLoad: data => dispatch({ type: 'ARTICLES_LOADED', data }),
+  onLoad: data => dispatch({ type: 'BLOGS_LOADED', data }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Blog);

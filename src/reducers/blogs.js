@@ -1,37 +1,37 @@
-/* export default (state={articles: []}, action) => {
+/* export default (state={blog: []}, action) => {
   switch(action.type) {
-    case 'ARTICLES_LOADED':
+    case 'BLOG_LOADED':
       return {
         ...state,
-        articles: action.data.articles,
+        blogs: action.data.blogs,
       };
-    case 'SUBMIT_ARTICLE':
+    case 'SUBMIT_BLOG':
       return {
         ...state,
-        articles: ([action.data.article]).concat(state.articles),
+        blogs: ([action.data.blog]).concat(state.blogs),
       };
-    case 'DELETE_ARTICLE':
+    case 'DELETE_BLOG':
       return {
         ...state,
-        articles: state.articles.filter((article) => article._id !== action.id),
+        blogs: state.blogs.filter((blog) => blog._id !== action.id),
       };
     case 'SET_EDIT':
       return {
         ...state,
-        articleToEdit: action.article,
+        blogToEdit: action.blog,
       };
-    case 'EDIT_ARTICLE':
+    case 'EDIT_BLOG':
       return {
         ...state,
-        articles: state.articles.map((article) => {
-          if(article._id === action.data.article._id) {
+        blogs: state.blogs.map((blog) => {
+          if(blog._id === action.data.blog._id) {
             return {
-              ...action.data.article,
+              ...action.data.blog,
             }
           }
-          return article;
+          return blog;
         }),
-        articleToEdit: undefined,
+        blogToEdit: undefined,
       }
     default:
       return state;
