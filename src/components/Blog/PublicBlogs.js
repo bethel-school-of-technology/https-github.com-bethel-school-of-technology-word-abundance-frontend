@@ -20,17 +20,18 @@ class Blog extends React.Component {
       
   }
   render() {
-    const { blogs } = this.props;
+    // const { blogs } = this.props;
     console.log(this.props)
 
     return (
+      <React.Fragment>
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-6 offset-lg-3">
             <h1 className="text-center">Abundant Blogs</h1>
           </div>
         </div>
-        <div className="row pt-5">
+        {/* <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
             {blogs && blogs.map((blog) => {
               return (
@@ -52,8 +53,24 @@ class Blog extends React.Component {
               )
             })}
           </div>
-        </div>
+        </div> */}
+            <div className="list-group"> 
+            <a href="#abc" className="list-group-item active">
+              <h4 className="list-group-item-heading">List group item heading</h4>
+              <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a>
+            <a href="#abc" className="list-group-item">
+              <h4 className="list-group-item-heading">List group item heading</h4>
+              <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a> 
+            <a href="#abc" className="list-group-item">
+              <h4 className="list-group-item-heading">List group item heading</h4>
+              <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+            </a> 
+          </div>
       </div>
+      </React.Fragment>
+
     );
   }
 }
