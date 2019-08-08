@@ -1,8 +1,7 @@
-import { createStore, applyMiddleware, combineReducers} from 'redux';
-import reduxThunk from 'redux-thunk';
-// import reducers from './reducers';
-import auth from './reducers/auth'
-import { reducer as formReducer } from 'redux-form';
+import { createStore, applyMiddleware, combineReducers } from "redux";
+import reduxThunk from "redux-thunk";
+import auth from "./reducers/auth";
+import { reducer as formReducer } from "redux-form";
 
 const blogReducer = (state={blog: []}, action) => {
   switch(action.type) {
@@ -47,11 +46,13 @@ const blogReducer = (state={blog: []}, action) => {
 const reducers = combineReducers({
   auth,
   blogs: blogReducer,
-  form: formReducer,
+  form: formReducer
 });
-const store = createStore(
-    reducers, {auth: { authenticated: localStorage.getItem('token') }},
-    applyMiddleware(reduxThunk)
-  );
 
-  export default store;
+const store = createStore(
+  reducers,
+  { auth: { authenticated: localStorage.getItem("token") } },
+  applyMiddleware(reduxThunk)
+);
+
+export default store;

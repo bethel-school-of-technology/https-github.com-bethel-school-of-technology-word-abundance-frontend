@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {Tab, Col, Nav, Row} from 'react-bootstrap';
-import Profile from './Tabs/Profile';
 import Blog from '../Blog/BlogTab';
 import Options from "./Tabs/Options";
-import requireAuth from '../requireAuth'
+import requireAuth from '../auth/requireAuth'
 import MyProductsService from './Tabs/Products_Service';
-import Orders from './Tabs/Orders';
+import DataStorage from './Tabs/StorageDataTable';
+import Main from './Tabs/Main'
 
 class UserDashboard extends Component {
     render() { 
@@ -28,7 +28,7 @@ class UserDashboard extends Component {
                 <Nav.Link eventKey="third">My Products/Services</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="fourth">My Orders</Nav.Link>
+                <Nav.Link eventKey="fourth">Data Storage</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                 <Nav.Link eventKey="fifth">Options</Nav.Link>
@@ -38,7 +38,7 @@ class UserDashboard extends Component {
             <Col sm={9}>
                 <Tab.Content>
                 <Tab.Pane eventKey="first">
-                <Profile />
+                <Main />
                 </Tab.Pane>
                 <Tab.Pane eventKey="second">
                 <Blog />
@@ -47,7 +47,7 @@ class UserDashboard extends Component {
                 <MyProductsService />
                 </Tab.Pane>
                 <Tab.Pane eventKey="fourth">
-                <Orders />
+                <DataStorage />
                 </Tab.Pane>
                 <Tab.Pane eventKey="fifth">
                 <Options />

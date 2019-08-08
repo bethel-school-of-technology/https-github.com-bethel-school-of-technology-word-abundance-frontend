@@ -1,39 +1,41 @@
-/* export default (state={blog: []}, action) => {
-  switch(action.type) {
-    case 'BLOG_LOADED':
+const blogs = function blogreducers (state = { blog: [] }, action) {
+  switch (action.type) {
+    case "BLOG_LOADED":
       return {
         ...state,
-        blogs: action.data.blogs,
+        blogs: action.data.blogs
       };
-    case 'SUBMIT_BLOG':
+    case "SUBMIT_BLOG":
       return {
         ...state,
-        blogs: ([action.data.blog]).concat(state.blogs),
+        blogs: [action.data.blog].concat(state.blogs)
       };
-    case 'DELETE_BLOG':
+    case "DELETE_BLOG":
       return {
         ...state,
-        blogs: state.blogs.filter((blog) => blog._id !== action.id),
+        blogs: state.blogs.filter(blog => blog._id !== action.id)
       };
-    case 'SET_EDIT':
+    case "SET_EDIT":
       return {
         ...state,
-        blogToEdit: action.blog,
+        blogToEdit: action.blog
       };
-    case 'EDIT_BLOG':
+    case "EDIT_BLOG":
       return {
         ...state,
-        blogs: state.blogs.map((blog) => {
-          if(blog._id === action.data.blog._id) {
+        blogs: state.blogs.map(blog => {
+          if (blog._id === action.data.blog._id) {
             return {
-              ...action.data.blog,
-            }
+              ...action.data.blog
+            };
           }
           return blog;
         }),
-        blogToEdit: undefined,
-      }
+        blogToEdit: undefined
+      };
     default:
       return state;
   }
-}; */
+};
+
+export default blogs;

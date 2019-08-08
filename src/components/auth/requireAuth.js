@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 export default ChildComponent => {
-  class ComposedComponent extends Component {
+  class ComposedComponent extends React.Component {
     // Our component just got rendered
     componentDidMount() {
       this.shouldNavigateAway();

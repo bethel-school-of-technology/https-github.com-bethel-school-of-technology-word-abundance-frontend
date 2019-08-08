@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Landing from '../pages/Layout/Landing'
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
+import React from "react";
+import Landing from "../pages/Layout/Landing";
+import { connect } from "react-redux";
+import * as actions from "../../actions";
 
-class Signout extends Component {
+class Signout extends React.Component {
   componentDidMount() {
     this.props.signout();
   }
@@ -13,4 +13,7 @@ class Signout extends Component {
   }
 }
 
-export default connect(null, actions)(Signout);
+export default connect(
+  null,
+  actions
+)(Signout);
