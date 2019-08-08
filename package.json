@@ -9,6 +9,7 @@
     "history": "^4.9.0",
     "material-ui-animated-fab": "^1.0.3",
     "mdbreact": "^4.18.1",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0-rc.0",
     "react-bootstrap": "^1.0.0-beta.10",

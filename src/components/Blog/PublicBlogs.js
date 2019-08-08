@@ -2,15 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
-//import Blog  from './AddPost';
-
 class Blog extends React.Component {
   componentDidMount() {
     const { onLoad } = this.props;
 
     axios.get('http://localhost:3001/blogs')
-      .then((response) => onLoad(response.data));
-      console.log(this.data)
+      .then((res) => onLoad(res.data));
+      //.then((res) => res.data);
       
   }
   render() {
@@ -19,14 +17,14 @@ class Blog extends React.Component {
 
     return (
       <div className="container">
-        <div className="row pt-5">
+        <div className="row">
           <div className="col-12 col-lg-6 offset-lg-3">
-            <h1 className="text-center">LightBlog</h1>
+            <h1 className="text-center">Abundant Blogs</h1>
           </div>
         </div>
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            {blogs.map((blog) => {
+            {blogs && blogs.map((blog) => {
               return (
                 <div className="card my-3">
                   <div className="card-header">
