@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 
 class Blog extends React.Component {
   componentDidMount() {
-    const { onLoad } = this.props;
+    //const { onLoad } = this.props;
 
-    axios.get('http://localhost:3001/blogs')
-      .then((res) => onLoad(res.data));
-      //.then((res) => res.data);
+    return axios.get('http://localhost:3001/blogs')
+      //.then((res) => onLoad(res.data));
+      /* .then(result => {
+        this.setState({
+          blogs: result.data.blogs
+        })
+      }); */
       
   }
   render() {

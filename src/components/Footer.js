@@ -5,7 +5,7 @@ function Footer() {
     return (
     <React.Fragment>
     <footer>
-      Copyright &copy; {new Date().getFullYear()} Abundance App
+      Copyright &copy; {new Date().getFullYear()} Abundant App
     </footer>
     </React.Fragment>
     )
