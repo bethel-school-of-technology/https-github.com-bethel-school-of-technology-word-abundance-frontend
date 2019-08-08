@@ -9,9 +9,18 @@ class Contact extends Component {
                 <br />
                 <br />
 
-                <Landing />
-                <br />
-                <h1>Contact</h1>
+                 <h4>Contact Us</h4>
+                <div className="ui form">
+                    <div className="field">
+                        <label>Text</label>
+                        <textarea></textarea>
+                    </div>
+                    <div className="field">
+                        <label>Short Text</label>
+                        <textarea rows="2"></textarea>
+                    </div>
+                </div>
+               
             </div>
         );
     }

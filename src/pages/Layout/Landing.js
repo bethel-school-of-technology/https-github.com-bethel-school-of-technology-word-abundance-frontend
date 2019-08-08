@@ -6,6 +6,7 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 const CarouselPage = () => {
   return (
   <div className='LandingBG' >
+    
       <MDBContainer>
       <MDBCarousel
       activeItem={1}
@@ -40,20 +41,21 @@ const CarouselPage = () => {
         <MDBCarouselItem itemId="3">
           <MDBView>
           <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/SolutionsNew2.jpg')} alt="SolutionsNew2" style={{ width: "100%"}}/> 
-          
+
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            
-            <h3 className="h3-responsive">Be a part of the solution</h3>
-            <p>Becoming a Partner</p>
+             
+            <h4 className="h3-responsive">
+            <p>Be a part of the solution</p>
+            </h4>
           </MDBCarouselCaption>
         </MDBCarouselItem>
       </MDBCarouselInner>
     </MDBCarousel>
     </MDBContainer>
  
-    </div>
+   </div>
   );
 }
 
