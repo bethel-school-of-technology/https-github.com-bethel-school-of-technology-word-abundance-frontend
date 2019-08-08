@@ -1,18 +1,22 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { connect } from 'react-redux';
 
 class Blog extends React.Component {
-  componentDidMount() {
+  async componentDidMount() {
     //const { onLoad } = this.props;
 
-    return axios.get('http://localhost:3001/blogs')
+    //await axios.get('http://localhost:3001/blogs')
       //.then((res) => onLoad(res.data));
-      /* .then(result => {
+      /*  .then(result => {
         this.setState({
-          blogs: result.data.blogs
+          blog: result.data.blog
         })
       }); */
+      const url = "http://localhost:3001/blogs";
+      const response = await fetch(url);
+      const data = await response.json;
+      console.log(data);
       
   }
   render() {
