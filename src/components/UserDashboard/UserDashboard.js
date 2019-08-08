@@ -4,8 +4,8 @@ import Blog from '../Blog/BlogTab';
 import Options from "./Tabs/Options";
 import requireAuth from '../auth/requireAuth'
 import MyProductsService from './Tabs/Products_Service';
-import DataStorage from './Tabs/StorageDataTable';
 import Main from './Tabs/Main'
+import Profile from './Tabs/Profile';
 
 class UserDashboard extends Component {
     render() { 
@@ -47,7 +47,7 @@ class UserDashboard extends Component {
                 <MyProductsService />
                 </Tab.Pane>
                 <Tab.Pane eventKey="fourth">
-                <DataStorage />
+                <Profile />
                 </Tab.Pane>
                 <Tab.Pane eventKey="fifth">
                 <Options />

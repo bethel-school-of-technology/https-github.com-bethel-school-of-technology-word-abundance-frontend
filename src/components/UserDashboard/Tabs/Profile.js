@@ -1,21 +1,16 @@
-/* import React, { Component } from "react";
-
-//Import Firebase
-import firebase, { messaging } from "firebase";
-
-//Import npm bulma
-import "bulma/css/bulma.css";
-
-//Import npm react-filepond
+import React, { Component } from "react";
 import { FilePond, File, registerPlugin } from "react-filepond";
+import firebase from "firebase";
+import StorageDataTable from "./StorageDataTable";
+
+//import './App.css';
 
 // Import FilePond styles
 import "filepond/dist/filepond.min.css";
 
-// FilePond Register plugin
+// Register plugin
 import FilePondImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
-import StorageDataTable from "./StorageDataTable";
 registerPlugin(FilePondImagePreview);
 
 class Profile extends Component {
@@ -25,8 +20,9 @@ class Profile extends Component {
     this.state = {
       files: [], //File Upload
       uploadValue: 0, //Process Upload
-      filesMetadata: [], //Metadata Firebase
-      rows: [] //DataTable
+      filesMetadata: [], // Metadata Firebase
+      rows: [], // DataTable
+      message: []
     };
 
     // Initialize Firebase
@@ -39,56 +35,6 @@ class Profile extends Component {
       messagingSenderId: "322600101425"
     };
     firebase.initializeApp(config);
-  }
-
-  componentWillMount() {
-    this.getMetaDataFromDatabase();
-  }
-
-  //Metadata Firebase
-  getMetaDataFromDatabase() {
-    console.log("getMetaDataFromDatabase");
-    const databaseRef = firebase.database().ref("/filepond");
-
-    databaseRef.on("value", snapshot => {
-      this.setState(
-        {
-          filesMetadata: snapshot.val()
-        },
-        () => this.addMetadataToList()
-      );
-    });
-  }
-  //โหลดข้อมูลเข้า list table
-  addMetadataToList() {
-    let i = 1;
-    let rows = [];
-
-    //Loop add data to rows
-    for (let key in this.state.filesMetadata) {
-      let fileData = this.state.filesMetadata[key];
-
-      let objRows = {
-        no: i++,
-        key: key, //ใช้เพื่อ Delete
-        name: fileData.metadataFile.name,
-        downloadURLs: fileData.metadataFile.downloadURLs,
-        fullPath: fileData.metadataFile.fullPath,
-        size: fileData.metadataFile.size,
-        contentType: fileData.metadataFile.contentType
-      };
-
-      rows.push(objRows);
-    }
-
-    this.setState(
-      {
-        rows: rows
-      },
-      () => {
-        console.log("Set Rows");
-      }
-    );
   }
 
   handleInit() {
@@ -116,20 +62,13 @@ class Profile extends Component {
           uploadValue: percentage
         });
       },
-      error => {
-        //Error
-        this.setState({
-          messag: `Upload error : ${error.message}`
-        });
-      },
       () => {
         //Success
         this.setState({
-          messag: `Upload Success`,
+          message: `Upload Success`,
           picture: task.snapshot.downloadURL //เผื่อนำไปใช้ต่อในการแสดงรูปที่ Upload ไป
         });
 
-        //Get metadata
         storageRef
           .getMetadata()
           .then(metadata => {
@@ -142,26 +81,25 @@ class Profile extends Component {
               downloadURLs: metadata.downloadURLs[0]
             };
 
-            //Process save metadata
             const databaseRef = firebase.database().ref("/filepond");
-            databaseRef.push({ metadataFile });
+
+            databaseRef.push({
+              metadataFile
+            });
           })
           .catch(function(error) {
             this.setState({
-              messag: `Upload error : ${error.message}`
+              message: `Upload error : ${error.message}`
             });
           });
       }
     );
   }
-  
 
   render() {
-    const { rows, filesMetadata } = this.state;
     return (
       <div className="App">
         <div className="Margin-25">
-          {/* Pass FilePond properties as attributes */}
           <FilePond
             allowMultiple={true}
             maxFiles={3}
@@ -169,19 +107,16 @@ class Profile extends Component {
             server={{ process: this.handleProcessing.bind(this) }}
             oninit={() => this.handleInit()}
           >
-            {/* Set current files using the <File/> component */}
             {this.state.files.map(file => (
               <File key={file} source={file} />
             ))}
           </FilePond>
-          <StorageDataTable
-          rows={rows}
-          filesMetadata={filesMetadata}
-          deleteData={this.deleteMetaDataFromDatabase}/>
+
+          <StorageDataTable />
         </div>
       </div>
     );
   }
 }
 
-// export default Profile;
+export default Profile;
