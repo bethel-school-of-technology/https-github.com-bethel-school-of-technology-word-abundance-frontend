@@ -22,11 +22,6 @@ class Blog extends React.Component {
   render() {
     // const { blogs } = this.props;
     console.log(this.props)
-    
-    const divStyle = {
-      height: '300px',
-      width: '300px'
-    };
 
     return (
       <React.Fragment>
@@ -70,7 +65,6 @@ class Blog extends React.Component {
             </a> 
             <a href="#abc" className="list-group-item">
               <h4 className="list-group-item-heading">List group item heading</h4>
-              <img src="https://firebasestorage.googleapis.com/v0/b/final-project-d40f0.appspot.com/o/filepond%2Fa.jpg.jpg?alt=media&token=f75b20b0-e918-4f15-9b56-204793f19122" style={divStyle} alt="" />
               <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
             </a> 
           </div>
