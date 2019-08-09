@@ -1,7 +1,7 @@
 // import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+// import jwt_decode from 'jwt-decode';
 import authToken from './utils/authToken';
 import './index.css';
 import {
@@ -26,6 +26,12 @@ import SideNav from './pages/Layout/SideNav';
 import { Landing } from './pages/Layout/Landing';
 import Dashboard from './pages/DashboardEvents/Dashboard';
 import PostList from './pages/Posts/PostList';
+import ProductCreate from './components/ProductCreate';
+import ServiceCreate from './components/ServiceCreate';
+import Product from './components/Product';
+import Service from './components/Service';
+// import Signin from './components/auth/Signin';
+
 class App extends Component {
     render() {
         return (
@@ -43,6 +49,11 @@ class App extends Component {
                         <Route path='/shoppingCart' component={shoppingCart} />
                         <Route path='/signup' component={SignUp} />
                         <Route exact path='/PostList' component={PostList} />
+                        <Route path='/ProductCreate' component={ProductCreate} />
+                        <Route path='/ServiceCreate' component={ServiceCreate} />
+                        <Route path='/products' component={Product} />
+                        <Route path='/services' component={Service} />
+                        {/* <Route path='/login' component={Signin}/> */}
                         {/* <Route path='/UserLogin' component={UserLogin} /> */}
                         {/* <Route path='/Frontend' component={FrontEnd} /> */}
                         <Route path='/SideNav' component={SideNav} />

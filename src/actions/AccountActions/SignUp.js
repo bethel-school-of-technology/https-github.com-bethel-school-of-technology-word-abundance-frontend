@@ -1,51 +1,78 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// import axios from 'axios';
+// const signupAPI = 'http://localhost:3001/signup';
 
-class Signup extends Component {
-  state = {
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: ''
-  }
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value
-    })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log (this.state)
-  }
-  render(){
-    return (
-      <div className='container'>
-        <form onSubmit={this.handleSubmit} className='white'>
-          <h5 className='grey-text text-darken-3'>Sign Up</h5>
-          <div className='input-field'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='lastName'>Last Name</label>
-            <input type='lastName' id='lastName' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='firstName'>First Name</label>
-            <input type='firstName' id='firstName' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <button className='btn pink lighten-1 z depth-0'>Sign Up</button>
-          </div>
-        </form>
-      </div>
-    )
-  }
-}
-export default Signup;
+// class Signup extends Component {
+//   constructor(props){
+//     super(props);
+//   this.state = {
+//     email: '',
+//     password: '',
+//     firstName: '',
+//     lastName: ''
+//   }
+
+//   this.handleChange = this.handleChange.bind(this);
+//     this.handleSubmit = this.handleSubmit.bind(this);
+
+// }
+  
+//   handleChange = (e) => {
+//     this.setState({
+//       [e.target.id]: e.target.value
+//     })
+//   }
+//   handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log (this.state)
+//   }
+
+  
+
+//   callSignupAPI() {
+//     axios.post(signupAPI)
+//         .then(response => this.setState({
+//             signup: response.data
+//         }))
+// }
+// componentWillMount() {
+//     this.callSignupAPI();
+// }
+
+
+
+//   render(){
+//     return (
+//       <div className='container'>
+//         <br></br>
+//         <br></br>
+//         <form onSubmit={this.handleSubmit} className='white'>
+//           <h5 className='grey-text text-darken-3'>Sign Up</h5>
+//           <div className='input-field'>
+//             <label htmlFor='email'>Email</label>
+//             <input type='email' id='email' onChange={this.handleChange}/>
+//           </div>
+//           <div className='input-field'>
+//             <label htmlFor='password'>Password</label>
+//             <input type='password' id='password' onChange={this.handleChange}/>
+//           </div>
+//           <div className='input-field'>
+//             <label htmlFor='lastName'>Last Name</label>
+//             <input type='lastName' id='lastName' onChange={this.handleChange}/>
+//           </div>
+//           <div className='input-field'>
+//             <label htmlFor='firstName'>First Name</label>
+//             <input type='firstName' id='firstName' onChange={this.handleChange}/>
+//           </div>
+//           <div className='input-field'>
+//             <button type='submit' className='btn pink lighten-1 z depth-0'>Sign Up</button>
+//           </div>
+//         </form>
+//       </div>
+//     )
+//   }
+// }
+// export default Signup;
 
 // import { reduxForm, Field } from 'redux-form';
 // import { compose } from 'redux';
@@ -228,3 +255,75 @@ export default Signup;
 // })
 
 // export default connect(mapStateToProps, { signupUser })(withRouter(Signup));
+
+import React from 'react';
+import axios from 'axios'
+ 
+class Signup extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      lastName: '',
+      firstName: '',
+    }
+    this.handleChangeField = this.handleChangeField.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+    
+  handleSubmit(){
+    const { email, password, lastName, firstName } = this.state;
+    return axios.post('http://localhost:3001/signup', {
+      email,
+      password,
+      lastName,
+      firstName
+    });
+  }
+  handleChangeField(key, event) {
+    this.setState({
+      [key]: event.target.value,
+    });
+  }
+    render() { 
+      const { email, password, lastName, firstName } = this.state;
+    return (  
+    <React.Fragment>
+        {/*Post Private or Public  */}
+        <div className="col-12 col-lg-6 offset-lg-3">
+          <br></br>
+        <input
+          onChange={(ev) => this.handleChangeField('email', ev)}
+          value={email}
+          className="form-control my-3"
+          placeholder="Email"
+        />
+        <input type='password'
+          onChange={(ev) => this.handleChangeField('password', ev)}
+          className="form-control my-3"
+          placeholder="Password"
+          value={password}
+        />
+        <input
+          onChange={(ev) => this.handleChangeField('firstName', ev)}
+          value={firstName}
+          className="form-control my-3"
+          placeholder="First Name"
+        />
+        <input
+          onChange={(ev) => this.handleChangeField('lastName', ev)}
+          value={lastName}
+          className="form-control my-3"
+          placeholder="Last Name"
+        />
+        <button onClick={this.handleSubmit} className="btn btn-primary float-right">Submit</button>
+      </div>
+    </React.Fragment>
+      )
+    }
+}
+            
+    
+ 
+export default Signup;

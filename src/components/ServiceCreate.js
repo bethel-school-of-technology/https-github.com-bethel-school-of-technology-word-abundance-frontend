@@ -12,17 +12,15 @@ const options = [
 ]
 
  
-class ProductCreate extends React.Component {
+class ServiceCreate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
       category: '',
       description: '',
-      price: '',
-      quantity: '',
-      instock: '',
-      productImage: '',
+      hourlyrate: '',
+      serviceImage: '',
         }
     this.handleChangeField = this.handleChangeField.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,15 +28,13 @@ class ProductCreate extends React.Component {
   }
     
   handleSubmit(){
-    const { name, category, description, price, quantity, instock, productImage } = this.state;
-    return axios.post('http://localhost:3001/products', {
+    const { name, category, description, hourlyrate, serviceImage } = this.state;
+    return axios.post('http://localhost:3001/services', {
       name,
       category,
       description,
-      price,
-      quantity,
-      instock,
-      productImage
+      hourlyrate,
+      serviceImage
     });
   }
   handleChangeField(key, event) {
@@ -51,12 +47,13 @@ class ProductCreate extends React.Component {
   }
   
     render() { 
-      const { name, category, description, price, quantity, instock, productImage } = this.state;
+      const { name, category, description, hourlyrate, serviceImage } = this.state;
       
     return (  
     
     <React.Fragment>
         {/*Post Private or Public  */}
+        <br></br>
         <br></br>
         <br></br>
         <div className="col-12 col-lg-6 offset-lg-3">
@@ -83,31 +80,15 @@ class ProductCreate extends React.Component {
         </textarea>
 
         <input type='number'
-          onChange={(ev) => this.handleChangeField('price', ev)}
-          value={price}
+          onChange={(ev) => this.handleChangeField('hourlyrate', ev)}
+          value={hourlyrate}
           className="form-control my-3"
-          placeholder="Price"
+          placeholder="Hourly Rate"
         />
-
-        <input type='number'
-          onChange={(ev) => this.handleChangeField('quantity', ev)}
-          value={quantity}
-          className="form-control my-3"
-          placeholder="Quantity"
-        />
-
-        <div className="form-control my-3" placeholder="Instock">
-        <label htmlFor='instock' placeholder="Instock">Instock    </label>
-        <input type='checkbox'
-        placeholder="Instock"
-          onChange={(ev) => this.handleChangeField('instock', ev)}
-          value={instock}          
-        />
-        </div>
 
         <input type='file'
-          onChange={(ev) => this.handleChangeField('productImage', ev)}
-          value={productImage}
+          onChange={(ev) => this.handleChangeField('serviceImage', ev)}
+          value={serviceImage}
           className="form-control my-3"
           placeholder="Select Image"
         />
@@ -121,4 +102,4 @@ class ProductCreate extends React.Component {
             
     
  
-export default ProductCreate;
+export default ServiceCreate;

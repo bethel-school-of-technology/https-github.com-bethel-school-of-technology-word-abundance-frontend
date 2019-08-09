@@ -9,14 +9,14 @@ export class ShoppingCartPreview extends React.Component {
         cart: [],
         };
     }
-    callCartAPI() {
-        axios.get(cartAPI)
-            .then(result => this.setState({
-                cart: result.data.cart
-            }))
-    }
+    
     componentWillMount() {
-        this.callCartAPI();
+        axios.get(cartAPI)
+            .then(result => {
+                this.setState({
+                cart: result.data.cart
+            })
+        })
     }
 
     render() {
@@ -24,16 +24,49 @@ export class ShoppingCartPreview extends React.Component {
         console.log(this.state.cart);
         return (
             <main>
-                <div>
+                <div className='container-fluid'>
+                    <div className='row'>
+                        <div className='col-sm-12'>
+                            <div className="ui cards raised-card">
+                                <div className="card" style={{ width: '100%' }}>
+                                    <div className="content">
+                                        {cart.map(cart => (
+                                            <div className="key"
+                                                key={cart._id}>
+                                                <div className="header">In Your Shopping Cart:</div>
+                                                <div className="card-body">
+                                                    <h5 className="product">Product: {cart.product}</h5>
+                                                    <h5 className="service">Service: {cart.service}</h5>
+                                                </div>
+                                                <br></br>
+                                                <br></br>
+                                                <div className="ui bottom attached button">
+                                                    <i className="add icon"></i>
+                                                    <br></br>
+                                                    <br></br>                                         
+                                                    <a href='/shoppingCart'>Click here to purchase </a>
+                                                </div>
+                                            </div>
+                                        )
+                                        )
+                                        }
+                                    </div>
+                                </div>
+                                <br></br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* <div>
                     <br></br>
                     <div className='container-fluid'>
                         <div className='row'>
                             <div className='col-sm-12'>
                                 <div className="ui cards raised-card">
-                                    <div className="card">
+                                    <div className="card" style={{width: '100%'}}>
                                         <div className="content">
 
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAj6UHakAUKuUN2HOC5A0e5knBqjsCVmYXKIfo-Pp8PPjewaxuZQ" class="card-img-top" alt="..." />
+                                            
                                             <br></br>
                                             <br></br>
                                             <div className="hidden">{cart.map(cart =>
@@ -65,7 +98,7 @@ export class ShoppingCartPreview extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </main>
         )
     }

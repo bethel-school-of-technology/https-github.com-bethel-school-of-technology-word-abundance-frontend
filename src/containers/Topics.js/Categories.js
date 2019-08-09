@@ -20,35 +20,57 @@ class Categories extends Component {
         <div className="ui two column stackable center aligned grid">
           <div className="ui vertical divider"></div>
           <div className="middle aligned row">
-            <div className="column">
+          <div className="column">
               <div className="ui icon header">
-                <i className="search icon"></i>
-                Find Service
-        </div>
-              <div className="field">
-                <div className="ui search">
-                  <div className="ui icon input">
-                    <input className="prompt" type="text" placeholder="Search services..." />
-                    <i className="search icon"></i>
-                  </div>
-
-                  <div className="results"></div>
-                </div>
+                <i className="plus icon"></i>
+                Add New Product
+              </div>
+              <div className="ui secondary button">
+                <a href='/ProductCreate'>Create</a>
               </div>
             </div>
             <div className="column">
               <div className="ui icon header">
                 <i className="plus icon"></i>
                 Add New Service
-        </div>
+              </div>
               <div className="ui secondary button">
-                <a href='/createService'>Create</a>
+                <a href='/ServiceCreate'>Create</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 </div>
+
+<div className='magnify'>
+        <div className="ui placeholder segment">
+        <div className="ui two column stackable center aligned grid">
+          <div className="ui vertical divider"></div>
+          <div className="middle aligned row">
+          <div className="column">
+              <div className="ui icon header">
+                <i className=""></i>
+                Product's Page
+              </div>
+              <div className="ui secondary button">
+                <a href='/products'>Click here to view</a>
+              </div>
+            </div>
+            <div className="column">
+              <div className="ui icon header">
+                <i className=""></i>
+                Service's Page
+              </div>
+              <div className="ui secondary button">
+                <a href='/services'>Click here to view</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
       <div className='marketgrid'>
  <div classNameName="ui placeholder segment">
         <div className="ui segments">
