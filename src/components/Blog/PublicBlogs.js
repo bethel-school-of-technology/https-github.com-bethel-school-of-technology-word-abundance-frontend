@@ -1,51 +1,40 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { connect } from 'react-redux';
 
-class Blog extends React.Component {
-  async componentDidMount() {
-    //const { onLoad } = this.props;
 
-    //await axios.get('http://localhost:3001/blogs')
-      //.then((res) => onLoad(res.data));
-      /*  .then(result => {
-        this.setState({
-          blog: result.data.blog
-        })
-      }); */
-      const url = "http://localhost:3001/blogs";
-      const response = await fetch(url);
-      const data = await response.json;
-      console.log(data);
-      
+class Home extends React.Component {
+  async componentDidMount() {
+
+    await axios('http://localhost:3001/blogs')
+      .then((res) => res.data);
+      console.log(this.data);
   }
   render() {
-    // const { blogs } = this.props;
-    console.log(this.props)
+    const { articles } = this.props;
 
     return (
-      <React.Fragment>
       <div className="container">
-        <div className="row">
+        <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            <h1 className="text-center">Abundant Blogs</h1>
+            <h1 className="text-center">LightBlog</h1>
           </div>
         </div>
-        {/* <div className="row pt-5">
+        <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            {blogs && blogs.map((blog) => {
+            {articles.map((article) => {
               return (
                 <div className="card my-3">
                   <div className="card-header">
-                    {blog.title}
+                    {article.title}
                   </div>
                   <div className="card-body">
-                    {blog.body}
+                    {article.body}
                   </div>
                   <div className="card-footer">
-                    <i>{blog.author}
+                    <i>{article.author}
                       <p className="float-right">
-                        {new Date(blog.createdAt).toLocaleDateString()}
+                        {new Date(article.createdAt).toLocaleDateString()}
                       </p>
                     </i>
                   </div>
@@ -53,35 +42,18 @@ class Blog extends React.Component {
               )
             })}
           </div>
-        </div> */}
-            <div className="list-group"> 
-            <a href="#abc" className="list-group-item active">
-              <h4 className="list-group-item-heading">List group item heading</h4>
-              <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#abc" className="list-group-item">
-              <h4 className="list-group-item-heading">List group item heading</h4>
-              <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a> 
-            <a href="#abc" className="list-group-item">
-              <h4 className="list-group-item-heading">List group item heading</h4>
-              <p className="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a> 
-          </div>
-          
+        </div>
       </div>
-      </React.Fragment>
-
     );
   }
 }
 
 const mapStateToProps = state => ({
-  blogs: state.blogs.blogs,
+  articles: state.home.articles,
 });
 
 const mapDispatchToProps = dispatch => ({
-  onLoad: data => dispatch({ type: 'BLOGS_LOADED', data }),
+  onLoad: data => dispatch({ type: 'HOME_PAGE_LOADED', data }),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Blog);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

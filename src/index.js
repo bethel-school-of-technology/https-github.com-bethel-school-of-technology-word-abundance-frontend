@@ -14,8 +14,8 @@ import Blog from "./components/Blog/PublicBlogs";
 import Home from "./components/Home";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={createHistory()}>
+  <Router history={createHistory()}>
+    <Provider store={store}>
       <App>
         <Route path="/" exact component={Home} />
         <Route path="/Contact" component={Contact} />
@@ -26,7 +26,7 @@ ReactDOM.render(
         <Route path="/signout" component={Signout} />
         <Route path="/signin" component={Signin} />
       </App>
-    </Router>
-  </Provider>,
+    </Provider>
+  </Router>,
   document.getElementById("root")
 );
