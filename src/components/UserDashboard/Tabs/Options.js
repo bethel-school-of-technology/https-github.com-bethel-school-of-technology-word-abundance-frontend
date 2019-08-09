@@ -1,6 +1,5 @@
 import React from "react";
 import { Tabs, Tab } from "react-bootstrap";
-import '../../../../node_modules/bulma/css/bulma.css'
 class Options extends React.Component {
   constructor(props) {
     super(props);

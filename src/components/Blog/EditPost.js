@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { connect } from 'react-redux';
@@ -64,4 +64,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(EditPost);
+)(EditPost); */
