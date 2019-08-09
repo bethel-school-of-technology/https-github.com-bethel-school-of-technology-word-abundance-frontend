@@ -101,8 +101,9 @@ class Profile extends Component {
       <div className="App">
         <div className="Margin-25">
           <FilePond
-            allowMultiple={true}
-            maxFiles={3}
+            allowMultiple={false}
+            maxFiles={1}
+            status={0}
             ref={ref => (this.pond = ref)}
             server={{ process: this.handleProcessing.bind(this) }}
             oninit={() => this.handleInit()}
@@ -111,7 +112,6 @@ class Profile extends Component {
               <File key={file} source={file} />
             ))}
           </FilePond>
-
           <StorageDataTable />
         </div>
       </div>

@@ -19,10 +19,10 @@ class UserDashboard extends Component {
                   <Col sm={3}>
                     <Nav variant="pills" className="flex-column">
                       <Nav.Item>
-                        <Nav.Link eventKey="first">My Profile</Nav.Link>
+                        <Nav.Link eventKey="first">My Blog</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">My Blog</Nav.Link>
+                        <Nav.Link eventKey="second">My Profile</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">
@@ -40,10 +40,10 @@ class UserDashboard extends Component {
                   <Col sm={9}>
                     <Tab.Content>
                       <Tab.Pane eventKey="first">
-                        <Main />
+                      <Blog />
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <Blog />
+                      <Main />
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <MyProductsService />

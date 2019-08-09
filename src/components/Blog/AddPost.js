@@ -34,6 +34,10 @@ class AddPost extends React.Component {
     });
   }
 
+  formReset = () => { 
+    document.getElementById("formData").reset();
+  }
+
   render() {
     const { title, body, author } = this.state;
 
@@ -41,6 +45,7 @@ class AddPost extends React.Component {
       <React.Fragment>
         {/*Post Private or Public  */}
         <div className="col-12 col-lg-6 offset-lg-3">
+          <form id="formData">
           <input
             onChange={ev => this.handleChangeField("title", ev)}
             value={title}
@@ -60,11 +65,19 @@ class AddPost extends React.Component {
             placeholder="Blog Author"
           />
           <button
+            onClick={this.formReset}
+            className="btn btn-primary float-right"
+          >
+            Reset
+          </button>
+          <button
             onClick={this.handleSubmit}
             className="btn btn-primary float-right"
           >
             Submit
           </button>
+          </form>
+          
         </div>
       </React.Fragment>
     );
