@@ -7,8 +7,7 @@ class Home extends React.Component {
   async componentDidMount() {
 
     await axios.get('http://localhost:3001/blogs')
-      const result = response => response.data;
-      console.log(this.data);
+    .then((res) => (res.data));
   }
   render() {
     const { blogs } = this.props;
