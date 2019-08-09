@@ -1,45 +1,58 @@
-import React from 'react';
-import axios from 'axios';
-import { connect } from 'react-redux';
+import React from "react";
+import axios from "axios";
+import { connect } from "react-redux";
+
+// import '../../../../node_modules/bulma/css/bulma.css'
 
 
 class Home extends React.Component {
-  async componentDidMount() {
-
-    await axios.get('http://localhost:3001/blogs')
-    .then((res) => (res.data));
+  constructor(props) {
+    super(props);
+    this.state = {
+      blog: []
+    };
   }
+  async componentDidMount() {
+    let posts = await axios.get("http://localhost:3001/blogs")
+    .then(result => {
+      this.setState({
+        blogs: result.data.blogs
+      });
+      console.log(this.blogs);
+    });
+
+    
+  }
+
   render() {
-    const { blogs } = this.props;
+    const { blogs } = this.state;
 
     return (
       <div className="container">
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            <h1 className="text-center">Abundant Blogs</h1>
+            <h2 className="text-center">Abundant Blogs</h2>
           </div>
         </div>
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            {blogs && blogs.map((blogs) => {
-              return (
-                <div className="card my-3">
-                  <div className="card-header">
-                    {blogs.title}
+            {blogs &&
+              blogs.map(blogs => {
+                return (
+                  <div className="card my-3">
+                    <div className="card-header">{blogs.title}</div>
+                    <div className="card-body">{blogs.body}</div>
+                    <div className="card-footer">
+                      <i>
+                        {blogs.author}
+                        <p className="float-right">
+                          {new Date(blogs.createdAt).toLocaleDateString()}
+                        </p>
+                      </i>
+                    </div>
                   </div>
-                  <div className="card-body">
-                    {blogs.body}
-                  </div>
-                  <div className="card-footer">
-                    <i>{blogs.author}
-                      <p className="float-right">
-                        {new Date(blogs.createdAt).toLocaleDateString()}
-                      </p>
-                    </i>
-                  </div>
-                </div>
-              )
-            })}
+                );
+              })}
           </div>
         </div>
       </div>
@@ -48,11 +61,14 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  blogs: state.blogs.blogs,
+  blogs: state.blogs.blog
 });
 
 const mapDispatchToProps = dispatch => ({
-  onLoad: data => dispatch({ type: 'HOME_PAGE_LOADED', data }),
+  componentDidMount: data => dispatch({ type: "BLOG_LOADED", data })
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

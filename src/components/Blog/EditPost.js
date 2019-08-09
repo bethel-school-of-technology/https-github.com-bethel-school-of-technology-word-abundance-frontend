@@ -4,60 +4,64 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 
 class EditPost extends React.Component {
-  componentDidMount() {
-    const { onLoad } = this.props;
-
-    axios('http://localhost:8000/api/articles')
-      .then((res) => onLoad(res.data));
+  constructor(props) {
+    super(props);
+    this.state = {
+      blog: []
+    };
   }
+  async componentDidMount() {
+    let posts = await axios.get("http://localhost:3001/blogs")
+    .then(result => {
+      this.setState({
+        blogs: result.data.blogs
+      });
+      console.log(this.blogs);
+    });
+
+    
+  }
+
   render() {
-    const { articles } = this.props;
+    const { blogs } = this.state;
 
     return (
       <div className="container">
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
-            <h1 className="text-center">LightBlog</h1>
-          </div>
-        </div>
-        <div className="row pt-5">
-          <div className="col-12 col-lg-6 offset-lg-3">
-            {articles.map((article) => {
-              return (
-                <div className="card my-3">
-                  <div className="card-header">
-                    {article.title}
-                  </div>
-                  <div className="card-body">
-                    {article.body}
-                    <p className="mt-5 text-muted"><b>{article.author}</b> {moment(new Date(article.createdAt)).fromNow()}</p>
-                  </div>
-                  <div className="card-footer">
-                    <div className="row">
-                      <button className="btn btn-primary mx-3">
-                        Edit
-                      </button>
-                      <button className="btn btn-danger">
-                        Delete
-                      </button>
+            {blogs &&
+              blogs.map(blogs => {
+                return (
+                  <div className="card my-3">
+                    <div className="card-header">{blogs.title}</div>
+                    <div className="card-body">{blogs.body}</div>
+                    <div className="card-footer">
+                      <i>
+                        {blogs.author}
+                        <p className="float-right">
+                          {new Date(blogs.createdAt).toLocaleDateString()}
+                        </p>
+                      </i>
                     </div>
                   </div>
-                </div>
-              )
-            })}
+                );
+              })}
           </div>
-        </div>
+      </div>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  articles: state.blogs.articles,
+  blogs: state.blogs.blog
 });
 
 const mapDispatchToProps = dispatch => ({
-  onLoad: data => dispatch({ type: 'ARTICLES_LOADED', data }),
+  componentDidMount: data => dispatch({ type: "BLOG_LOADED", data })
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditPost);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(EditPost);
