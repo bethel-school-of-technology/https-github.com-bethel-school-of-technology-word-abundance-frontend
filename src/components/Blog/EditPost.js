@@ -64,7 +64,10 @@ class EditPost extends React.Component {
 
                     </div>
                     <div className="card-footer">
-                      <button onClick={() => this.handleEdit(blogs)}  className="btn btn-primary mx-3">
+                      {/* <button onClick={() => this.handleEdit(blogs)}  className="btn btn-primary mx-3">
+                        Edit
+                      </button> */}
+                      <button className="btn btn-primary mx-3">
                         Edit
                       </button>
                       <button onClick={() => this.handleDelete(blogs._id)} className="btn btn-danger">
