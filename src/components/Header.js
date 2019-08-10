@@ -20,6 +20,8 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/productcreate">Product Create</Nav.Link>
+                <Nav.Link href="/servicecreate">Service Create</Nav.Link>
                 <Nav.Link href="/blogs">Blogs</Nav.Link>
                 </Nav>
                 <Nav pullright="true">
@@ -46,7 +48,8 @@ class Header extends React.Component {
                   <NavDropdown.Item href="/products">Products</NavDropdown.Item>
                   <NavDropdown.Item href="/services">Services</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/blogs">Blogs</Nav.Link>
+                <Nav.Link href="/productcreate">Product Create</Nav.Link>
+                <Nav.Link href="/servicecreate">Service Create</Nav.Link>
               </Nav>
               <Nav pullRight>
                 <Nav.Link href="/signup"><Button>Join Our Community</Button></Nav.Link>

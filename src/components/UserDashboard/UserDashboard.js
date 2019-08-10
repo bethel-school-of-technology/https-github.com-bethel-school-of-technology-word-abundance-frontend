@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import { Tab, Col, Nav, Row } from "react-bootstrap";
-import Blog from "../Blog/BlogTab";
-import Options from "./Tabs/Options";
 import requireAuth from "../auth/requireAuth";
-import MyProductsService from "./Tabs/Products_Service";
-import Main from "./Tabs/Main";
-import Profile from "./Tabs/Profile";
+import Blog from "../Blog/BlogTab";
+import FileUploader from './Tabs/FileUploader'
+
+import ProductsCreate from '../pages/ProductCreate';
+import ServiceCreate from '../pages/ServiceCreate';
+//import MyProductsService from "./Tabs/Products_Service";
+//import Main from "./Tabs/Main";
+//import Options from "./Tabs/Options";
+
 
 class UserDashboard extends Component {
   render() {
@@ -22,18 +26,15 @@ class UserDashboard extends Component {
                         <Nav.Link eventKey="first">My Blog</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">My Profile</Nav.Link>
+                        <Nav.Link eventKey="second">Add Product</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">
-                          My Products/Services
+                          Add Service
                         </Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="fourth">Data Storage</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="fifth">Options</Nav.Link>
+                        <Nav.Link eventKey="fourth">File Uploader</Nav.Link>
                       </Nav.Item>
                     </Nav>
                   </Col>
@@ -43,16 +44,13 @@ class UserDashboard extends Component {
                       <Blog />
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                      <Main />
+                      <ProductsCreate />
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <MyProductsService />
+                        <ServiceCreate />
                       </Tab.Pane>
                       <Tab.Pane eventKey="fourth">
-                        <Profile />
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="fifth">
-                        <Options />
+                        <FileUploader />
                       </Tab.Pane>
                     </Tab.Content>
                   </Col>

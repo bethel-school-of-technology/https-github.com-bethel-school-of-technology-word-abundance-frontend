@@ -13,7 +13,7 @@ import FilePondImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 registerPlugin(FilePondImagePreview);
 
-class Profile extends Component {
+class FileUploader extends Component {
   constructor(props) {
     super(props);
 
@@ -119,4 +119,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+export default FileUploader;

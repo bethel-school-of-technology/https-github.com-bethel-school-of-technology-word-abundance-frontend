@@ -12,6 +12,8 @@ import Signout from "./components/auth/Signout";
 import Dashboard from "./components/UserDashboard/UserDashboard";
 import Blog from "./components/Blog/PublicBlogs";
 import Home from "./components/Home";
+import ProductCreate from './components/pages/ProductCreate';
+import ServiceCreate from './components/pages/ServiceCreate';
 
 ReactDOM.render(
   <Router history={createHistory()}>
@@ -25,6 +27,8 @@ ReactDOM.render(
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/signout" component={Signout} />
         <Route path="/signin" component={Signin} />
+        <Route path='/productcreate' component={ProductCreate} />
+        <Route path='/servicecreate' component={ServiceCreate} />
       </App>
     </Provider>
   </Router>,
