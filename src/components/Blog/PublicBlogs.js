@@ -35,16 +35,16 @@ class Home extends React.Component {
       <React.Fragment>
       <div className="container">
         <div className="row pt-5">
-          <div className="col-12 col-lg-6 offset-lg-3">
+          <div className="col-12">
             <h2 className="text-center">Abundant Blogs</h2>
           </div>
         </div>
-        <div className="row pt-5">
-          <div className="col-12 col-lg-6 offset-lg-3">
+        <div className="row pt-5  justify-content-center">
+          <div className="col-12">
             {blogs &&
               blogs.map(blogs => {
                 return (
-                  <div className="card my-3">
+                  <div className="card mb-5 justify-content-center">
                     <div className="card-header">{blogs.title}</div>
                     <div className="card-body">
                     {blogs.body}

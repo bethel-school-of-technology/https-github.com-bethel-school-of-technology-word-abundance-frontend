@@ -1,7 +1,3 @@
-// export { default as authActions } from '/authActions';
-// export { default as fileHandler } from '/fileHandler';
-// export { default as shoppingCart } from '/shoppingCart';
-
 import axios from 'axios';
 import { AUTH_USER, AUTH_ERROR } from './types';
 

@@ -18,9 +18,9 @@ class Form extends React.Component {
   handleSubmit() {
     const { title, body, author } = this.state;
     const apiUrl = "http://localhost:3001/blogs";
-    alert(
+   /*  alert(
       `Your blog post has been submitted for approval! Please allow 24 Hours for review.`
-    );
+    ); */
     return axios.post(apiUrl, {
       title,
       body,
@@ -54,7 +54,7 @@ class Form extends React.Component {
     return (
       <React.Fragment>
         {/*Post Private or Public  */}
-        <div className="col-12 col-lg-6 offset-lg-3">
+        <div className="col-12">
           <form id="formData">
           <input
             onChange={ev => this.handleChangeField("title", ev)}
