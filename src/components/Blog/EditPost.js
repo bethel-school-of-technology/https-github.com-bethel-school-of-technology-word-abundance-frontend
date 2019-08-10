@@ -44,34 +44,33 @@ class EditPost extends React.Component {
       <div className="container">
         <div className="row pt-3">
           <div className="col-12">
+            <table className="border border-dark">
+              <thead>
+                <tr>
+                  <td className="border border-dark m-3 p-3 text-center">Date & Time Created</td>
+                  <td className="border border-dark m-3 p-3 text-center">Post Id</td>
+                  <td className="border border-dark m-3 p-3 text-center">Title</td>
+                  <td className="border border-dark m-3 p-3 text-center">Edit Post</td>
+                  <td className="border border-dark m-3 p-3 text-center">Delete Post</td>
+                </tr>
+              </thead>
             {blogs &&
               blogs.map(blogs => {
                 return (
-                  <div className="card my-3">
-                    <div className="card-header">{blogs.title}</div>
-                    <div className="card-body">
-                    {blogs.body} <br />
-                    <b>{blogs.author}
-                    <p className="float-right">
-                          {new Date(blogs.createdAt).toLocaleDateString()}
-                    </p>
-                    </b>
-
-                    </div>
-                    <div className="card-footer">
-                      {/* <button onClick={() => this.handleEdit(blogs)}  className="btn btn-primary mx-3">
-                        Edit
-                      </button> */}
-                      <button className="btn btn-primary mx-3">
-                        Edit
-                      </button>
-                      <button onClick={() => this.handleDelete(blogs._id)} className="btn btn-danger">
-                        Delete
-                      </button>
-                    </div>
-                  </div>
+                  <>
+                  <tbody>
+                  <tr className="border">
+                  <td className="border border-dark m-3 p-3 text-center">{blogs.createdAt}</td>
+                    <td className="border border-dark m-3 p-3 text-center">{blogs._id}</td>
+                    <td className="border border-dark m-3 p-3 text-center">{blogs.title}</td>
+                    <td className="border border-dark m-3 p-3 text-center"><button onClick={() => this.handleDelete(blogs._id)} className="btn btn-info">Edit</button></td>
+                    <td className="border border-dark m-3 p-3 text-center"><button onClick={() => this.handleDelete(blogs._id)} className="btn btn-danger">Delete</button></td>
+                  </tr>
+                  </tbody>
+                  </>
                 );
               })}
+              </table>
           </div>
         </div>
       </div>
