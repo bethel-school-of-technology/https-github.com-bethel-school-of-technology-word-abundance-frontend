@@ -7,7 +7,7 @@ import * as actions from '../../actions';
 class Signup extends Component {
   onSubmit = formProps => {
     this.props.signup(formProps, () => {
-      this.props.history.push('/dashboard');
+      this.props.history.push('/home');
     });
   };
 
@@ -24,7 +24,7 @@ class Signup extends Component {
       <form onSubmit={handleSubmit(this.onSubmit)}>
         <fieldset>
         <h3>Join Our Community!</h3>
-         {/*  <label>First Name:</label>
+          <label>First Name:</label>
           <Field
             name="firstName"
             type="text"
@@ -37,7 +37,7 @@ class Signup extends Component {
             type="text"
             component="input"
             autoComplete="none"
-          /><br /> */}
+          /><br />
           <label>Email:</label>
           <Field
             name="email"

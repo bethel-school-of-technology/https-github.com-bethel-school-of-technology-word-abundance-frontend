@@ -4,8 +4,8 @@ import requireAuth from "../auth/requireAuth";
 import Blog from "../Blog/BlogTab";
 import FileUploader from './Tabs/FileUploader'
 
-import ProductsCreate from '../pages/ProductCreate';
-import ServiceCreate from '../pages/ServiceCreate';
+import ProductsDEMO from './Tabs/ProductDEMO';
+import ServiceDEMO from './Tabs/ServiceDEMO';
 //import MyProductsService from "./Tabs/Products_Service";
 //import Main from "./Tabs/Main";
 //import Options from "./Tabs/Options";
@@ -44,10 +44,10 @@ class UserDashboard extends Component {
                       <Blog />
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                      <ProductsCreate />
+                      <ProductsDEMO />
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <ServiceCreate />
+                        <ServiceDEMO />
                       </Tab.Pane>
                       <Tab.Pane eventKey="fourth">
                         <FileUploader />

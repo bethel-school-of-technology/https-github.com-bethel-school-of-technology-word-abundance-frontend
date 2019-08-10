@@ -12,7 +12,7 @@ const options = [
 ]
 
  
-class ProductCreate extends React.Component {
+class ProductDEMO extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -121,4 +121,4 @@ class ProductCreate extends React.Component {
             
     
  
-export default ProductCreate;
+export default ProductDEMO;

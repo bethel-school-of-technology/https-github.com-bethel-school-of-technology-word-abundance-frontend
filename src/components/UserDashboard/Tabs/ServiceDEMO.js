@@ -12,7 +12,7 @@ const options = [
 ]
 
  
-class ServiceCreate extends React.Component {
+class ServiceDEMO extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -102,4 +102,4 @@ class ServiceCreate extends React.Component {
             
     
  
-export default ServiceCreate;
+export default ServiceDEMO;
