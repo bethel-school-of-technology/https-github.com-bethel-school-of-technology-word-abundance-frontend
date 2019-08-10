@@ -52,7 +52,7 @@ class Header extends React.Component {
                 <Nav.Link href="/servicecreate">Service Create</Nav.Link>
               </Nav>
               <Nav.Link href="/blogs">Blogs</Nav.Link>
-              <Nav pullRight>
+              <Nav pullRight="true">
                 <Nav.Link href="/signup"><Button>Join Our Community</Button></Nav.Link>
                 <Nav.Link href="/signin"><Button>Sign In</Button></Nav.Link>
             </Nav>
