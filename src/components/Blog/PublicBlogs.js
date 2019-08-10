@@ -17,15 +17,22 @@ class Home extends React.Component {
         blogs: result.data.blogs
       });
       console.log(this.blogs);
-    });
-
-    
+    });    
   }
+  
+  handleDelete(id) {
+    const { onDelete } = this.state;
+
+    return axios.delete(`http://localhost:3001/blogs/${id}`)
+      .then(() => onDelete(id));
+  }
+  
 
   render() {
     const { blogs } = this.state;
 
     return (
+      <React.Fragment>
       <div className="container">
         <div className="row pt-5">
           <div className="col-12 col-lg-6 offset-lg-3">
@@ -39,14 +46,15 @@ class Home extends React.Component {
                 return (
                   <div className="card my-3">
                     <div className="card-header">{blogs.title}</div>
-                    <div className="card-body">{blogs.body}</div>
+                    <div className="card-body">
+                    {blogs.body}
+                    </div>
                     <div className="card-footer">
-                      <i>
-                        {blogs.author}
-                        <p className="float-right">
+                    <b>{blogs.author}
+                    <p className="float-right">
                           {new Date(blogs.createdAt).toLocaleDateString()}
-                        </p>
-                      </i>
+                    </p>
+                    </b>
                     </div>
                   </div>
                 );
@@ -54,6 +62,7 @@ class Home extends React.Component {
           </div>
         </div>
       </div>
+      </React.Fragment>
     );
   }
 }
@@ -63,7 +72,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  componentDidMount: data => dispatch({ type: "BLOG_LOADED", data })
+  componentDidMount: data => dispatch({ type: "BLOG_LOADED", data }),
+  onDelete: id => dispatch({ type: 'DELETE_BLOG', id })
 });
 
 export default connect(
