@@ -10,7 +10,7 @@ class Signup extends Component {
       this.props.history.push('/home');
     });
   };
-
+  
   render() {
     const { handleSubmit } = this.props;
 
