@@ -17,7 +17,7 @@ import ProductCreate from './components/ProductCreate';
 import ServiceCreate from './components/ServiceCreate';
 import Product from './components/Product'
 import Service from './components/Service'
-
+import Contact from './pages/Contact'
 
 ReactDOM.render(
   <Router history={createHistory()}>
