@@ -20,13 +20,13 @@ class Signup extends Component {
   }
   render(){
     return (
-      <div className='container'>
+      <div className='signupContainer'>
         <form onSubmit={this.handleSubmit} className='white'>
           <br/>
           <br/>
           <br />
           
-          <h5 className='grey-text text-darken-3'>Sign Up</h5>
+          <h5 className='grey-text text-darken-3'>THANK YOU FOR CONNECTING</h5>
           <div className='input-field'>
             <label htmlFor='email'>Email</label>
             <input type='email' id='email' onChange={this.handleChange}/>
@@ -44,7 +44,7 @@ class Signup extends Component {
             <input type='firstName' id='firstName' onChange={this.handleChange}/>
           </div>
           <div className='input-field'>
-            <button className='btn pink lighten-1 z depth-0'>Sign Up</button>
+            <button className='btn pink lighten-1 z depth-0'>Submit</button>
           </div>
         </form>
       </div>

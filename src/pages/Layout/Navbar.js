@@ -39,9 +39,9 @@ componentDidUpdate(){
                     <img src='favicon.ico'></img></h3>
                     </Link> 
                     </li>
-                    <li><Link to="/contact"><h5 id="contactNav">CONTACT </h5></Link></li>
                     <li><Link to="/about"><h5 id="aboutNav">ABOUT </h5></Link></li>
-                    <li><Link to="/marketplace"><h5 id="marketNav">STORE </h5></Link></li>
+                    <li><Link to="/marketplace"><h5 id="marketNav">STORE </h5></Link></li> 
+                    <li><Link to="/contact"><h5 id="contactNav">CONTACT </h5></Link></li>    
                     <li><Link to="/login"><h5 id="loginNav">LOGIN </h5></Link></li>
                     <li><Link to="/signup"><h5 id="signupNav">SIGNUP</h5></Link></li>     
                 </ul>

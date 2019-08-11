@@ -15,6 +15,7 @@ class Categories extends Component {
     return (
       
       <main>
+       
       <div className='magnify'>
         <div className="ui placeholder segment">
         <div className="ui two column stackable center aligned grid">
@@ -23,6 +24,7 @@ class Categories extends Component {
             <div className="column">
               <div className="ui icon header">
                 <i className="search icon"></i>
+                
                 Find Service
         </div>
               <div className="field">

@@ -56,24 +56,39 @@
   color: black;
 }
 
-/* #homeBody { */
-/* background: url("./images/abundantBG.jpg") no-repeat; */
-/* background: cover; */
-/* border: solid red; */
-/* background-color: blue; */
-/* } */
+Form {
+ padding: 2em;
+ margin: 2em;
+} 
+
+#contactStyle {
+  text-align: center;
+  margin: 2em;
+}
+.aboutAbundant {
+  background-image: url('./images/hands.jpg');
+  background-size: cover;
+  
+}
+
+.contactBody{
+  background: rgb((0), 0, 0, 6);
+}
+.textField {
+  margin-top: 100px;
+}
+.signupContainer {
+  margin: 2em;
+}
 
 .LandingBG {
   position: relative;
   background: url("./images/abundantBG.jpg") no-repeat;
-  width: 100;
-  height: 100vh;
-  margin: 1em;
-  background-size: cover;
+  background-size: 50% 100%;
   background-attachment: fixed;
   background-position: center;
-  display: flex;
-  float: center;
+  height: 150vh;
+  display: inherit;
 }
 
 #search {

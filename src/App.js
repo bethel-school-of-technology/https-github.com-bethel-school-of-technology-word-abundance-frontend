@@ -24,8 +24,10 @@ import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
 import Card from './components/Card';
 import SignUp from './actions/AccountActions/SignUp';
 import SideNav from './pages/Layout/SideNav';
-import { Landing } from './pages/Layout/Landing';
+// import { Landing } from './pages/Layout/Landing';
 import Dashboard from './pages/DashboardEvents/Dashboard';
+
+// import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import PostList from './pages/Posts/PostList';
 class App extends Component {
     render() {

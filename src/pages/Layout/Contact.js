@@ -1,27 +1,56 @@
 import React, { Component } from 'react';
-import Landing from './Landing';
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 
+
+import Signup from '../../actions/AccountActions/SignUp';
 class Contact extends Component {
+    constructor() {
+        super()
+        this.state= {
+            name: '',
+            email: '',
+            message: ''
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+    handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value})
+    }
     render() {
         return (
-            <div class='contactBody'>
-                <br />
-                <br />
-                <br />
-
-                 <h4>Contact Us</h4>
-                <div className="ui form">
-                    <div className="field">
-                        <label>Text</label>
-                        <textarea></textarea>
-                    </div>
-                    <div className="field">
-                        <label>Short Text</label>
-                        <textarea rows="2"></textarea>
-                    </div>
-                </div>
+            
+            <Form onSubmit={this.handleChange} style={ {width: 'auto'}}>
+           <FormGroup >
                
-            </div>
+                    <Label for='firstName'>First Name: </Label>
+                    <Input
+                    type='text'
+                    name='firstName'
+                    onChange={this.handleChange}/>
+                        </FormGroup>     
+                        
+                        <FormGroup>
+                            <Label for='lastName'>Last Name:</Label>
+                       <Input
+                       type='text'
+                       name='lastName'
+                       onChange={this.handleChange}/>
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for='email'>Email:</Label>
+                       <Input
+                       type='text'
+                       name='email'
+                       onChange={this.handleChange}/>
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for='message'>Message:</Label>
+                       <Input
+                       type='textarea'
+                       name='message'
+                       onChange={this.handleChange}/>
+                        </FormGroup>
+            </Form>
         );
     }
 }
