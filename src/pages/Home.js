@@ -1,5 +1,5 @@
 import React from 'react';
-import Landing from './pages/Layout/Landing';
+import Carousel from '../components/Carousel';
 import '../css/Home.css'
 
 
@@ -9,7 +9,7 @@ export default () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12">
-          <Landing />
+          <Carousel />
           </div>
         </div>
       </div>

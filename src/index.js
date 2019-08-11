@@ -4,20 +4,20 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import createHistory from "history/createBrowserHistory";
 import store from "./store";
-import App from "./components/App";
-import { About, Contact, Marketplace } from "./components/pages";
+import App from "./App";
 
 import SignUp from './components/auth/Signup'
 import Signin from "./components/auth/Signin";
 import Signout from "./components/auth/Signout";
-import Dashboard from "./components/UserDashboard/UserDashboard";
-import Blog from "./components/Blog/PublicBlogs";
-import Home from "./components/Home";
-import ProductCreate from './components/ProductCreate';
-import ServiceCreate from './components/ServiceCreate';
-import Product from './components/Product'
-import Service from './components/Service'
+import Dashboard from "./pages/UserDashboard/UserDashboard";
+import Blog from "./pages/Blog/PublicBlogs";
+import Home from "./pages/Home";
+import ProductCreate from './pages/Marketplace/ProductCreate';
+import ServiceCreate from './pages/Marketplace/ServiceCreate';
+import Product from './pages/Marketplace/Product'
+import Service from './pages/Marketplace/Service'
 import Contact from './pages/Contact'
+import About from './pages/About'
 
 ReactDOM.render(
   <Router history={createHistory()}>
@@ -27,7 +27,6 @@ ReactDOM.render(
         <Route path="/home" exact component={Home} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
-        <Route path="/marketplace" component={Marketplace} />
         <Route path="/blogs" component={Blog} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path='/signup' component={SignUp} />

@@ -1,0 +1,80 @@
+import React from "react";
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBMask,
+  MDBContainer
+} from "mdbreact";
+
+const Carousel = () => {
+  return (
+    <div className="LandingBG">
+      <MDBContainer>
+        <MDBCarousel
+          activeItem={1}
+          length={3}
+          showControls={true}
+          showIndicators={true}
+          className="z-depth-1"
+        >
+          <MDBCarouselInner>
+            <MDBCarouselItem itemId="1">
+              <MDBView>
+                <img
+                  src={require("../images/smilingBabySmall.jpg")}
+                  alt="smilingBaby"
+                  style={{ width: "100%" }}
+                />
+
+                <MDBMask overlay="black-light" />
+              </MDBView>
+              <MDBCarouselCaption>
+                <h3 className="h3-responsive">Abundant Mission</h3>
+                <p>Nothing is Impossible</p>
+              </MDBCarouselCaption>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="2">
+              <MDBView>
+                <img
+                  src={require("../images/CommunityNew.jpg")}
+                  alt="CommunityNew"
+                  style={{ width: "100%" }}
+                />
+                <MDBMask overlay="black-strong" />
+              </MDBView>
+              <MDBCarouselCaption>
+                <div id="connectHere">
+                  <a href="../components/auth/Signup.js">
+                    <h4 className="h3-responsive">Get Connected</h4>
+                  </a>
+                </div>
+                <br />
+              </MDBCarouselCaption>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="3">
+              <MDBView>
+                <img
+                  src={require("../images/SolutionsNew2.jpg")}
+                  alt="SolutionsNew2"
+                  style={{ width: "100%" }}
+                />
+
+                <MDBMask overlay="black-slight" />
+              </MDBView>
+              <MDBCarouselCaption>
+                <h4 className="h3-responsive">
+                  <p>Be a part of the solution</p>
+                </h4>
+              </MDBCarouselCaption>
+            </MDBCarouselItem>
+          </MDBCarouselInner>
+        </MDBCarousel>
+      </MDBContainer>
+    </div>
+  );
+};
+
+export default Carousel;

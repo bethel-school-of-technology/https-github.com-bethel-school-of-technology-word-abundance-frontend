@@ -1,5 +1,5 @@
 import React from "react";
-import Landing from "../pages/Layout/Landing";
+import Carousel from "../Carousel";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
@@ -9,7 +9,7 @@ class Signout extends React.Component {
   }
 
   render() {
-    return <Landing />;
+    return <Carousel />;
   }
 }
 
