@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './components.css';
+import '../../css/Marketplace.css';
 
 const productsAPI = 'http://localhost:3001/products';
 

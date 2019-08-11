@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './components.css';
+import '../../css/Marketplace.css';
 // import { throwStatement } from '@babel/types';
 // import { read } from 'fs';
 const servicesAPI = 'http://localhost:3001/services';

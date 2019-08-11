@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Tab, Col, Nav, Row } from "react-bootstrap";
-import requireAuth from "../auth/requireAuth";
+import requireAuth from "../../components/auth/requireAuth";
 import Blog from "../Blog/BlogTab";
 import FileUploader from './Tabs/FileUploader'
 
