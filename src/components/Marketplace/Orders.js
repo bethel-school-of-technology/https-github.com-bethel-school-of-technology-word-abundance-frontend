@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-// import Search from './Search';
+import React from 'react'
 import axios from 'axios';
 const ordersAPI = 'http://localhost:3001/orders';
 

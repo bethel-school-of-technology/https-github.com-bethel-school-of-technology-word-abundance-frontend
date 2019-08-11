@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 import './components.css';
 
-// import { throwStatement } from '@babel/types';
-// import { read } from 'fs';
 const productsAPI = 'http://localhost:3001/products';
 
 
