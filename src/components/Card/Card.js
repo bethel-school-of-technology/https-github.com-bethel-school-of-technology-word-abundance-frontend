@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import Rate from '../Card/Rate';
+// import Rate from './Rate'
 // import {Button} from '../Button';
 class Card extends Component {
     render() {
         return (
-
-       
-<div>
+    
+        <div>
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-sm-12'>
@@ -14,7 +13,7 @@ class Card extends Component {
 
                             <div className="card">
                                 <div className="content">
-                                    <Rate/>
+                                    {/* <Rate/> */}
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
                                         <p>By <a href='https://www.facebook.com/olivia.k.wall'>Olivia</a></p>
