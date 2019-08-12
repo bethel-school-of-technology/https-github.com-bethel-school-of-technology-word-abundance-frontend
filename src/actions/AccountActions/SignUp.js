@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
+
 import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
@@ -20,34 +22,35 @@ class Signup extends Component {
   }
   render(){
     return (
-      <div className='signupContainer'>
-        <form onSubmit={this.handleSubmit} className='white'>
-          <br/>
-          <br/>
-          <br />
-          
-          <h5 className='grey-text text-darken-3'>THANK YOU FOR CONNECTING</h5>
-          <div className='input-field'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='lastName'>Last Name</label>
-            <input type='lastName' id='lastName' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='firstName'>First Name</label>
-            <input type='firstName' id='firstName' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <button className='btn pink lighten-1 z depth-0'>Submit</button>
-          </div>
-        </form>
-      </div>
+      <div className='form-area-signup'>
+                <h4>Sign Up</h4>
+            <Form id='signUpStyle' onSubmit={this.handleChange} style={{ width: 'auto' }}>
+                
+                <FormGroup >
+
+                    <Label for='firstName'>First Name: </Label>
+                    <Input 
+                        type='text'
+                        name='firstName'
+                        onChange={this.handleChange} />
+                </FormGroup>
+
+                <FormGroup>
+                    <Label for='lastName'>Last Name:</Label>
+                    <Input
+                        type='text'
+                        name='lastName'
+                        onChange={this.handleChange} />
+                </FormGroup>
+                <FormGroup>
+                    <Label for='email'>Email:</Label>
+                    <Input
+                        type='text'
+                        name='email'
+                        onChange={this.handleChange} />
+                </FormGroup>
+            </Form>
+            </div>
     )
   }
 }

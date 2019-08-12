@@ -56,19 +56,93 @@
   color: black;
 }
 
-Form {
- padding: 2em;
- margin: 2em;
-} 
 
-#contactStyle {
-  text-align: center;
-  margin: 2em;
+.form-area {
+position: relative;
+margin-top: 23em;
+left: 50%;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+background: rgba(0,0,0,0.0);
+background-size: stretch; 
+padding: 100px;
 }
-.aboutAbundant {
-  background-image: url('./images/hands.jpg');
+.form-area-signup {
+position: relative;
+margin-top: 23em;
+left: 50%;
+transform: translate(-50%, -50%);
+box-sizing: border-box;
+background: rgba(0,0,0,0.0);
+background-size: stretch; 
+padding: 100px;
+}
+#contactStyle {
+ margin: 0em;
+ padding: 0em;
+ background-image: url('./images/PlannerNew2.jpg');
+ -webkit-background-size: cover;
+ background-size: cover;
+ font-family: 'Times New Roman', Times, serif;
+} 
+#signUpStyle {
+  margin: 0em;
+  padding: 0em;
+  background-image: url('./images/abundantBG.jpg');
+  -webkit-background-size: cover;
   background-size: cover;
-  
+  font-family: 'Times New Roman', Times, serif;
+}
+.form-area input,select {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.form-area-signup input,select {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.form-area input,select [type=text],
+.form-area input,select [type=text] {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  height: 40px;
+  color: #ffffff;
+}
+.form-area-signup input,select [type=text],
+.form-area-signup input,select [type=text] {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  height: 40px;
+  color: #ffffff;
+}
+
+.form-area select {
+  margin-top: 20px;
+  padding: 10px 0;
+}
+.form-area-signup select {
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+
+.aboutAbundant {
+  margin: 7em;
+  padding: 0em;
+  background-image: url('./images/abundantBG.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  font-family: 'Times New Roman', Times, serif;
+  background-size: 50% 300%;
+  background-position: center;
+  height: 10vh;
+  display: inherit;
+  background-color: transparent;
+  display: fluid;
 }
 
 .contactBody{
@@ -76,9 +150,6 @@ Form {
 }
 .textField {
   margin-top: 100px;
-}
-.signupContainer {
-  margin: 2em;
 }
 
 .LandingBG {
