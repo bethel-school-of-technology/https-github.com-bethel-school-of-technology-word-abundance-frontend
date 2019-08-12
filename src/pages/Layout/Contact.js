@@ -50,6 +50,9 @@ class Contact extends Component {
                         name='message'
                         onChange={this.handleChange} />
                 </FormGroup>
+                <FormGroup ref="form" onSubmit={this.handleSubmit}>
+            <button type="submit">Submit</button>
+          </FormGroup>
             </Form>
             </div>
         );

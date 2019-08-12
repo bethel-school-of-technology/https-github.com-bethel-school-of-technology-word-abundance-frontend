@@ -19,15 +19,12 @@ import {
 
 import Navbar from './pages/Layout/Navbar';
 import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
-// import FrontEnd from './pages/UserService.js/Tech/DevServices.js/FrontEnd';
-
+import FrontEnd from './pages/UserService.js/Tech/DevServices.js/FrontEnd';
 import Card from './components/Card';
 import SignUp from './actions/AccountActions/SignUp';
 import SideNav from './pages/Layout/SideNav';
-// import { Landing } from './pages/Layout/Landing';
 import Dashboard from './pages/DashboardEvents/Dashboard';
 
-// import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import PostList from './pages/Posts/PostList';
 class App extends Component {
     render() {
@@ -42,11 +39,14 @@ class App extends Component {
                         <Route path='/Contact' component={Contact} />
                         <Route path='/About' component={About} />
                         <Route path='/Marketplace' component={Marketplace} />
-                        <Route path='/Backend' component={BackEnd} />
                         <Route path='/Card' component={Card} />
                         <Route path='/shoppingCart' component={shoppingCart} />
                         <Route path='/signup' component={SignUp} />
                         <Route path='/SideNav' component={SideNav} />
+                        <Route path='/BackEnd' component={BackEnd} />
+                        <Route path='/FrontEnd' component={FrontEnd} />
+                        
+
                     </Switch>
                 </div>
             </BrowserRouter>

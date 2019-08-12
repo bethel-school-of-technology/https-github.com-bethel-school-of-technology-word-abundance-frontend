@@ -31,12 +31,12 @@
 
 
 .magnify {
-  border: solid black;
+  border: none;
   margin: 2em;
 }
 
 .marketgrid {
-  border: solid black;
+  border: none;
   margin: 2em;
 }
 
@@ -80,7 +80,7 @@ padding: 100px;
 #contactStyle {
  margin: 0em;
  padding: 0em;
- background-image: url('./images/PlannerNew2.jpg');
+ background-image: url('./images/abundantBG.jpg');
  -webkit-background-size: cover;
  background-size: cover;
  font-family: 'Times New Roman', Times, serif;
@@ -129,11 +129,19 @@ padding: 100px;
   padding: 10px 0;
 }
 
+.form-area input [type=submit]{
+  border: none;
+  height: 40px;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+}
 
 .aboutAbundant {
   margin: 7em;
   padding: 0em;
-  background-image: url('./images/abundantBG.jpg');
+  background-image: url('./images/CommunityNew.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   font-family: 'Times New Roman', Times, serif;

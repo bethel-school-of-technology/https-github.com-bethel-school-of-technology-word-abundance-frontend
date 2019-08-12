@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Card from '../../../../components/Card';
-import SideNav from '../Layout/SideNav';
+// import SideNav from '../Layout/SideNav';
 
 class FrontEnd extends Component {
     render() {
         return (
             <div>
-            <SideNav/>
+            {/* <SideNav/> */}
             <div className='container'>
                 <div className='row'>
                     <div className='col-sm-4'>

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
-
-import { reduxForm, Field } from 'redux-form';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+// import { reduxForm, Field } from 'redux-form';
+// import { compose } from 'redux';
+// import { connect } from 'react-redux';
 class Signup extends Component {
   state = {
     email: '',
@@ -18,39 +17,49 @@ class Signup extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log (this.state)
+    console.log(this.state)
   }
-  render(){
+  render() {
     return (
       <div className='form-area-signup'>
-                <h4>Sign Up</h4>
-            <Form id='signUpStyle' onSubmit={this.handleChange} style={{ width: 'auto' }}>
-                
-                <FormGroup >
+        <h4>Sign Up</h4>
+        <Form id='signUpStyle' onSubmit={this.handleChange} style={{ width: 'auto' }}>
 
-                    <Label for='firstName'>First Name: </Label>
-                    <Input 
-                        type='text'
-                        name='firstName'
-                        onChange={this.handleChange} />
-                </FormGroup>
+          <FormGroup >
 
-                <FormGroup>
-                    <Label for='lastName'>Last Name:</Label>
-                    <Input
-                        type='text'
-                        name='lastName'
-                        onChange={this.handleChange} />
-                </FormGroup>
-                <FormGroup>
-                    <Label for='email'>Email:</Label>
-                    <Input
-                        type='text'
-                        name='email'
-                        onChange={this.handleChange} />
-                </FormGroup>
-            </Form>
-            </div>
+            <Label for='firstName'>First Name: </Label>
+            <Input
+              type='text'
+              name='firstName'
+              onChange={this.handleChange} />
+          </FormGroup>
+
+          <FormGroup>
+            <Label for='lastName'>Last Name:</Label>
+            <Input
+              type='text'
+              name='lastName'
+              onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for='email'>Email:</Label>
+            <Input
+              type='text'
+              name='email'
+              onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for='password'>Create Password</Label>
+            <Input
+              type='password'
+              name='password'
+              onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup ref="form" onSubmit={this.handleSubmit}>
+            <button type="submit">Submit</button>
+          </FormGroup>
+        </Form>
+      </div>
     )
   }
 }
@@ -150,7 +159,7 @@ export default Signup;
 //     e.preventDefault();
 
 //    const {email, password, name } = this.state;
-    
+
 //     // Check For Errors
 //     if (password=== '') {
 //       this.setState({ errors: { password: 'password is required' } });
@@ -179,7 +188,7 @@ export default Signup;
 
 //   render() {
 //     const { errors } = this.state;
-    
+
 //     return (
 //       <div className="landing">
 //         <div className="dark-overlay landing-inner text-light">
