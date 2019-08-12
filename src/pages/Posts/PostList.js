@@ -5,7 +5,7 @@ const PostList = () => {
         <div className="ui three column grid">
             <div className="column">
                 <div className="ui segment">
-                    <img src='src/images/hands.jpg' alt='myPhoto1' class='responsive'/>
+                    <img src='./images/hands.jpg' alt='myPhoto1' class='responsive'/>
                 </div>
                 </div>
                 <div className="column">
@@ -16,7 +16,7 @@ const PostList = () => {
                     </div>
                     <div className="column">
                         <div className="ui segment">
-                        <img src='src/images/hands.jpg' alt='myPhoto3' class='responsive'/>      
+                 <img src='/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/CommunityNew.jpg' alt='myPhoto3' class='responsive'/>      
                         </div>
                         </div>
                         <div className="column">

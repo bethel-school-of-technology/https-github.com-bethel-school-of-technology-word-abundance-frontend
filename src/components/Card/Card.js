@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-// import Rate from '../Card/Rate';
+import Rate from './Rate';
+import Star from './Star';
+
 // import {Button} from '../Button';
 class Card extends Component {
     render() {
@@ -14,11 +16,13 @@ class Card extends Component {
 
                             <div className="card">
                                 <div className="content">
-                                    {/* <Rate/> */}
+                                  
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
                                         <p>By <a href=''>Adib</a></p>
-                                    </div>
+                                    </div>  
+                                    <Rate/>
+                                    <Star/>
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
@@ -32,6 +36,7 @@ class Card extends Component {
                                     <div className="description">
                                         <p>By <a href=''>Fiona </a></p>
                                     </div>
+                                    <Rate/>
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
