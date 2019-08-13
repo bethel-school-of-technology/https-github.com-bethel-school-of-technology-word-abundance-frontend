@@ -43,6 +43,7 @@ class App extends Component {
                         <Route path='/SideNav' component={SideNav} />
                         <Route path='/BackEnd' component={BackEnd} />
                         <Route path='/FrontEnd' component={FrontEnd} />
+                        <Route path='/PostList' component={PostList} />
                         
 
                     </Switch>
