@@ -5,13 +5,12 @@ const PostList = () => {
         <div className="ui three column grid">
             <div className="column">
                 <div className="ui segment">
-                    <img src='./images/hands.jpg' alt='myPhoto1' class='responsive'/>
+                    <img src='../../images/hands.jpg' alt='myPhoto1' class='responsive'/>
                 </div>
                 </div>
                 <div className="column">
                     <div className="ui segment">
-                    <img src='src/images/hands.jpg' alt='myPhoto2' class='responsive'/>
-                       
+                    <img src='../../images/abundant.jpg' alt='myPhoto2' class='responsive'/>
                     </div>
                     </div>
                     <div className="column">
