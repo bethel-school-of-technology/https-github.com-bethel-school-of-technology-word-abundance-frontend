@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+//HEAD
 import { exportAllDeclaration } from '@babel/types';
+
+//Shopping-cart-pop-up
 class Navbar extends Component {
 constructor(props) {
     super (props);

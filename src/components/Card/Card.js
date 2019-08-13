@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
+// HEAD
 import Rate from './Rate';
 import Star from './Star';
 
+
+// import Rate from './Rate'
+// Shopping-cart-pop-up
 // import {Button} from '../Button';
 class Card extends Component {
     render() {
         return (
-
-       
-<div>
+    
+        <div>
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-sm-12'>

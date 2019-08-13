@@ -1,3 +1,7 @@
+// HEAD
+
+
+//Shopping-cart-pop-up
 /* eslint-disable import/prefer-default-export */
 
 function getScroll(w, top) {
@@ -38,4 +42,8 @@ export function getOffsetLeft(el) {
   const w = doc.defaultView || doc.parentWindow;
   pos.left += getScroll(w);
   return pos.left;
+//HEAD
 }
+
+
+//Shopping-cart-pop-up
