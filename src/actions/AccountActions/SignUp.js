@@ -1,26 +1,43 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
-// import { reduxForm, Field } from 'redux-form';
-// import { compose } from 'redux';
-// import { connect } from 'react-redux';
+import axios from 'axios';
 class Signup extends Component {
-  state = {
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: ''
-  }
+  constructor(props) {
+    super(props)
+    this.state = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+}
   handleChange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.name]: e.target.value
     })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state)
-  }
+  }      
+  handleSubmit(){
+        const {firstName, lastName, email, password
+          } = this.state;
+        return axios.post('http://localhost:3001/users', {
+          firstName,
+          lastName,
+          email,
+          password
+        });
+      }
+
+      onSubmit(e){
+        e.preventDefault();
+    }
+
   render() {
     return (
+
+      <main>
+      <br/>     
       <div className='form-area-signup'>
         <h4>Sign Up</h4>
         <Form id='signUpStyle' onSubmit={this.handleChange} style={{ width: 'auto' }}>
@@ -60,6 +77,7 @@ class Signup extends Component {
           </FormGroup>
         </Form>
       </div>
+      </main>
     )
   }
 }
