@@ -33,7 +33,8 @@ const CarouselPage = () => {
           <MDBMask overlay="black-strong" />
           </MDBView>
           <MDBCarouselCaption>
-            <div id='connectHere'><a href='./SignUp'><h4 className="h3-responsive">Get Connected</h4></a>
+            <div id='connectHere'>
+           {/* <a href='./SignUp'><h4 className="h3-responsive">Get Connected</h4></a> */}
             </div>
           <br/>
           </MDBCarouselCaption>

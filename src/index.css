@@ -19,15 +19,15 @@
   color: black;
 }
 
-#connectHere {
+/* #connectHere {
   color: black;
   border: 1px solid white;
   background-color: white;
   margin-left: 13em;
   margin-right: 13em;
   opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
-}
+  filter: alpha(opacity=50); 
+} */
 
 
 .magnify {
@@ -67,7 +67,7 @@ background: rgba(0,0,0,0.0);
 background-size: stretch; 
 padding: 100px;
 }
-.form-area-signup {
+.form-area-signup, .form-area-Signin {
 position: relative;
 margin-top: 23em;
 left: 50%;

@@ -1,4 +1,3 @@
-// import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import {Provider} from 'react-redux';
@@ -20,10 +19,13 @@ import BackEnd from './pages/UserService.js/Tech/DevServices.js/BackEnd';
 import FrontEnd from './pages/UserService.js/Tech/DevServices.js/FrontEnd';
 import Card from './components/Card';
 import SignUp from './actions/AccountActions/SignUp';
+import Signin from './actions/AccountActions/Signin';
 import SideNav from './pages/Layout/SideNav';
 import Dashboard from './pages/DashboardEvents/Dashboard';
-
+import Footer from './pages/Layout/Footer';
 import PostList from './pages/Posts/PostList';
+import TechLanding from './pages/UserService.js/Tech/DevServices.js/TechLanding'
+// import Signout from "./components/auth/Signout";
 class App extends Component {
     render() {
         return (
@@ -40,12 +42,15 @@ class App extends Component {
                         <Route path='/Card' component={Card} />
                         <Route path='/shoppingCart' component={shoppingCart} />
                         <Route path='/signup' component={SignUp} />
+                        <Route path='/Signin' component={Signin} />   
                         <Route path='/SideNav' component={SideNav} />
                         <Route path='/BackEnd' component={BackEnd} />
                         <Route path='/FrontEnd' component={FrontEnd} />
                         <Route path='/PostList' component={PostList} />
-                        
-
+                        <Route path='/TechLanding' component={TechLanding} />
+                        {/* <Route path='/PostList' component={PostList} /> */}
+                        <Route path='/Footer' component={Footer} />
+                        {/* <Route path='/Signout' component={Signout} /> */}
                     </Switch>
                 </div>
             </BrowserRouter>
@@ -56,27 +61,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/* <Route path='/Rate' component={Rate} /> */ }
-{/* <Route path='/Landing' component={Landing} /> */ }
-{/* <Route path='/button' component={Button} /> */ }
-
-
-
-{/* <Route path='/categories' component={CategoryList} />
-                <Route path='/product' component={Product} />
-                <Route path='/service' component={Service} />
-                <Route path='/orders' component={Orders} />  */}
-{/* // import store from './store';
-                // import Button from './components/Card/Button';
-                // import { Rate, Star } from './components/Card/Rate';
-                // import { */}
-{/* //     FloatSearch
-                // } from './components/Card/FloatSearch';
-
-                // import CategoryList from './Components/CategoryList';
-                // import Product from './Components/Product';
-                // import Service from './Components/Service';
-                // import Orders from './Components/Orders'; */}
-
-

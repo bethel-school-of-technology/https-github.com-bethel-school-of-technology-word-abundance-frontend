@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 // HEAD
-import Rate from './Rate';
-import Star from './Star';
+
+// import Rate from './Rate';
+// import Star from './Star';
 
 
 // import Rate from './Rate'
@@ -11,10 +12,11 @@ class Card extends Component {
     render() {
         return (
     
-        <div>
+        <div> 
+            {/* <Rate/> */}
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-sm-12'>
+                    <div className='col-sm-18'>
                         <div className="ui cards raised-card">
 
                             <div className="card">
@@ -22,10 +24,10 @@ class Card extends Component {
                                   
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Adib</a></p>
+                                        <p>By <a href=''>Sir Isaac the Newt</a></p>
                                     </div>  
-                                    <Rate/>
-                                    <Star/>
+                                   
+                                    {/* <Star/> */}
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
@@ -37,9 +39,9 @@ class Card extends Component {
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Fiona </a></p>
+                                        <p>By <a href=''>Rolling Stones</a></p>
                                     </div>
-                                    <Rate/>
+                                    {/* <Rate/> */}
                                 </div>
                                 <div className="ui bottom attached button">
                                     <i className="add icon"></i>
@@ -51,7 +53,7 @@ class Card extends Component {
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Will</a> </p>
+                                        <p>By <a href=''>The Beatles</a> </p>
                                     </div>
                                 </div>
                                 <div className="ui bottom attached button">
@@ -59,6 +61,46 @@ class Card extends Component {
                                     <a href='/shoppingCart'>Add To Shopping Cart </a> 
     </div>
                             </div>
+                            <br />
+                            <div className="card">
+                                <div className="content">
+                                    <div className="header">Description Of Service</div>
+                                    <div className="description">
+                                        <p>By <a href=''>The Beatles</a> </p>
+                                    </div>
+                                </div>
+                                <div className="ui bottom attached button">
+                                    <i className="add icon"></i>
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
+    </div>
+                            </div>
+                            <br />
+                            <div className="card">
+                                <div className="content">
+                                    <div className="header">Description Of Service</div>
+                                    <div className="description">
+                                        <p>By <a href=''>Jesse James</a> </p>
+                                    </div>
+                                </div>
+                                <div className="ui bottom attached button">
+                                    <i className="add icon"></i>
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
+    </div>
+                            </div>
+                            <br />
+                            <div className="card">
+                                <div className="content">
+                                    <div className="header">Description Of Service</div>
+                                    <div className="description">
+                                        <p>By <a href=''>Elvis Presley</a> </p>
+                                    </div>
+                                </div>
+                                <div className="ui bottom attached button">
+                                    <i className="add icon"></i>
+                                    <a href='/shoppingCart'>Add To Shopping Cart </a> 
+    </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -66,14 +108,14 @@ class Card extends Component {
             <br/>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-sm-12'>
+                    <div className='col-sm-18'>
                         <div className="ui cards raised-card">
 
                             <div className="card">
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Olivia</a></p>
+                                        <p>By <a href=''>The incredible Wizzard of Oz</a></p>
                                     </div>
                                 </div>
                                 <br/>
@@ -87,7 +129,7 @@ class Card extends Component {
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Joel </a></p>
+                                        <p>By <a href=''>Archibald the Magnificent</a></p>
                                     </div>
                                 </div>
                                 <div className="ui bottom attached button">
@@ -100,7 +142,7 @@ class Card extends Component {
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Joel </a></p>
+                                        <p>By <a href=''>Napolion </a></p>
                                     </div>
                                 </div>
                                 <div className="ui bottom attached button">
@@ -113,7 +155,7 @@ class Card extends Component {
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Joel </a></p>
+                                        <p>By <a href=''>St. George the V. </a></p>
                                     </div>
                                 </div>
                                 <div className="ui bottom attached button">
@@ -126,7 +168,7 @@ class Card extends Component {
                                 <div className="content">
                                     <div className="header">Description Of Service</div>
                                     <div className="description">
-                                        <p>By <a href=''>Ben</a> </p>
+                                        <p>By <a href=''>Einstein</a> </p>
                                     </div>
                                 </div>
                                 <div className="ui bottom attached button">
