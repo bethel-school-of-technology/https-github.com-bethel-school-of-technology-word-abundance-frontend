@@ -1,47 +1,83 @@
 import React, { Component } from 'react';
-
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
+import axios from 'axios';
 class Signup extends Component {
-  state = {
-    email: '',
-    password: '',
-    firstName: '',
-    lastName: ''
-  }
+  constructor(props) {
+    super(props)
+    this.state = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+}
   handleChange = (e) => {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.name]: e.target.value
     })
-  }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log (this.state)
-  }
-  render(){
+  }      
+  handleSubmit(){
+        const {firstName, lastName, email, password
+          } = this.state;
+        return axios.post('http://localhost:3001/users', {
+          firstName,
+          lastName,
+          email,
+          password
+        });
+      }
+
+      onSubmit(e){
+        e.preventDefault();
+    }
+
+  render() {
     return (
-      <div className='container'>
-        <form onSubmit={this.handleSubmit} className='white'>
-          <h5 className='grey-text text-darken-3'>Sign Up</h5>
-          <div className='input-field'>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='lastName'>Last Name</label>
-            <input type='lastName' id='lastName' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <label htmlFor='firstName'>First Name</label>
-            <input type='firstName' id='firstName' onChange={this.handleChange}/>
-          </div>
-          <div className='input-field'>
-            <button className='btn pink lighten-1 z depth-0'>Sign Up</button>
-          </div>
-        </form>
+
+      <main>
+      <br/>     
+      <div className='form-area-signup'>
+        <h4>Sign Up</h4>
+        <Form id='signUpStyle' onSubmit={this.handleChange} style={{ width: 'auto' }}>
+
+          <FormGroup >
+
+            <Label for='firstName'>First Name: </Label>
+            <Input
+              type='text'
+              name='firstName'
+              onChange={this.handleChange} />
+          </FormGroup>
+
+          <FormGroup>
+            <Label for='lastName'>Last Name:</Label>
+            <Input
+              type='text'
+              name='lastName'
+              onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for='email'>Email:</Label>
+            <Input
+              type='text'
+              name='email'
+              onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup>
+            <Label for='password'>Create Password</Label>
+            <Input
+              type='password'
+              name='password'
+              onChange={this.handleChange} />
+          </FormGroup>
+          <FormGroup ref="form" onSubmit={this.handleSubmit}>
+            <Button type="submit">Submit</Button>
+          </FormGroup>
+        </Form>
       </div>
+      </main>
     )
   }
 }
@@ -141,7 +177,7 @@ export default Signup;
 //     e.preventDefault();
 
 //    const {email, password, name } = this.state;
-    
+
 //     // Check For Errors
 //     if (password=== '') {
 //       this.setState({ errors: { password: 'password is required' } });
@@ -170,7 +206,7 @@ export default Signup;
 
 //   render() {
 //     const { errors } = this.state;
-    
+
 //     return (
 //       <div className="landing">
 //         <div className="dark-overlay landing-inner text-light">

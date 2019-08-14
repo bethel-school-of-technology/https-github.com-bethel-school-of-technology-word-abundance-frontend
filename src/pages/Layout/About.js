@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import Landing from './Landing';
 
 class About extends Component {
     render() {
         return (
-            <div>
+            <div className='aboutAbundant'>
                 <br />
                 <br />
-                <Landing />
-                <div className="ui raised segment">
+                <br />
+                <div className="ui fluid segment">
                     <h3 className="ui header">About</h3>
-                    <p>Our mission is to join entrepreneurs around the world to bring quality marketing and digital edge to the communities who work so hard to bring us value.</p>
-                    <p>content content content content content content content content content content content.</p>
-                    <p>content content content content content content content content content content content content.</p>
+                    <p>Abundant seeks to bring quality content to the marketplace to address and eliminate poverty in our communities. We understand that by connecting the skillset of artist, musicians, business men and women and people of all backgrounds, we can bring change to our culture. </p>
+                    <p> Follow us on Social Media.</p>
+                    <p>Connect with our blog!! </p>
                 </div>
                 <br />
+                <br />
+
             </div>
         );
     }

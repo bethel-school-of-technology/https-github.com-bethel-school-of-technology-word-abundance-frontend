@@ -5,7 +5,8 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 
 const CarouselPage = () => {
   return (
-  <div className='LandingBG'>
+  <div className='LandingBG' >
+    
       <MDBContainer>
       <MDBCarousel
       activeItem={1}
@@ -28,31 +29,34 @@ const CarouselPage = () => {
         </MDBCarouselItem>
         <MDBCarouselItem itemId="2">
           <MDBView>
-          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/CommunityNew.jpg')} alt="smilingBaby" style={{ width: "100%"}}/> 
+          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/CommunityNew.jpg')} alt="CommunityNew" style={{ width: "100%"}}/> 
           <MDBMask overlay="black-strong" />
           </MDBView>
           <MDBCarouselCaption>
-            <div id='connectHere'><a href='./SignUp'><h4 className="h3-responsive">Get Connected</h4></a>
+            <div id='connectHere'>
+           {/* <a href='./SignUp'><h4 className="h3-responsive">Get Connected</h4></a> */}
             </div>
           <br/>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         <MDBCarouselItem itemId="3">
           <MDBView>
-          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/SolutionsNew2.jpg')} alt="smilingBaby" style={{ width: "100%"}}/> 
-          
+          <img src={require('/Users/oliviakatelyn/Documents/GitHub/word-abundance-frontend/src/images/SolutionsNew2.jpg')} alt="SolutionsNew2" style={{ width: "100%"}}/> 
+
           <MDBMask overlay="black-slight" />
           </MDBView>
           <MDBCarouselCaption>
-            
-            <h3 className="h3-responsive">Be a part of the solution</h3>
-            <p>Becoming a Partner</p>
+             
+            <h4 className="h3-responsive">
+            <p>Be a part of the solution</p>
+            </h4>
           </MDBCarouselCaption>
         </MDBCarouselItem>
       </MDBCarouselInner>
     </MDBCarousel>
     </MDBContainer>
-    </div>
+ 
+   </div>
   );
 }
 
