@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combineReducers } from "redux";
+import { createStore, applyMiddleware, combineReducers, compose } from "redux";
 import reduxThunk from "redux-thunk";
 import auth from "./reducers/auth";
 import { reducer as formReducer } from "redux-form";
@@ -52,7 +52,8 @@ const reducers = combineReducers({
 const store = createStore(
   reducers,
   { auth: { authenticated: localStorage.getItem("token") } },
-  applyMiddleware(reduxThunk)
+  compose (applyMiddleware(reduxThunk), 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 );
 
 export default store;
