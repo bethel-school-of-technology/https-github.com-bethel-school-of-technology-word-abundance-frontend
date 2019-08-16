@@ -17,7 +17,7 @@ export const signupUser = (userData, history) => dispatch => {
 
   //
   axios
-    .post(`${baseUrl}/users/signup`, userData)
+    .post(`${baseUrl}/user/signup`, userData)
     .then(res => history.push("/login"))
     .catch(err =>
       dispatch({
